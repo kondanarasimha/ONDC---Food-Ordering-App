@@ -43,7 +43,7 @@ body {
 
 .resturent-card-container {
   border-radius: 10px;
-  width: 200px;
+  width: 230px;
   margin-bottom: 20px;
   transition: all .15s;
   display: flex;
@@ -55,17 +55,19 @@ body {
 }
 
 .resturent-img-container img {
+  object-fit: cover;
   border-radius: 5px;
-  width: 190px;
+  width: 220px;
+  height: 150px;
   margin: 5px;
 }
 
 .resturent-details-container {
-  margin-left: 13px;
+  margin-left: 8px;
 }
 
-.resturent-details-container h2 {
-  display: inline;
+.resturent-details-container h3 {
+  margin: 0;
 }
 
 .resturent-delivery-container {

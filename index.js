@@ -5,10 +5,11 @@ import logo from './Images/ONDC-logo.png';
 import biryaniImg from './Images/mario-raj-ysmeQt1dzcw-unsplash.jpg';
 import deliveryIcon from './Images/directions_bike_24dp_FILL0_wght400_GRAD0_opsz24.png';
 import ratingIcon from './Images/star_half_24dp_FILL0_wght400_GRAD0_opsz24.png';
-import { data } from './data.js';
+import { restaurantsData } from './data.js';
 
 
-const Header = ()=> (
+const Header = ()=> {
+  return(
   <div className='header-container'>
     <div className='logo-container'>
     <img src={logo} alt="logo-png"/>
@@ -22,7 +23,7 @@ const Header = ()=> (
       </ul>
     </div>
   </div>
-);
+)};
 
 const Search = ()=> (
   <div>
@@ -30,53 +31,62 @@ const Search = ()=> (
   </div>
 )
 
-const CardDetails = ()=> (
+const CardDetails = (props)=> {
+  const {name, cloudinaryImageId, avgRating,
+        costForTwo, cuisines, locality, sla} = props.resDetails.info;
+
+
+  return(
   <div className='resturent-card-container'>
   <div className='resturent-img-container'>
-    <img src={biryaniImg}/>
+    <img src={`https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/`+cloudinaryImageId}/>
     <div className='resturent-details-container'>
-      <h2>Bilal</h2>
+      <h3>{name}</h3>
 
       <div className='resturent-delivery-container'>
       <img src={deliveryIcon}/>
-      <p>15-20 Min</p>
+      <p>{sla.deliveryTime} Mins</p>
       </div>
 
       <div className='resturent-rating-container'>
       <img src={ratingIcon}/>
-      <p>4.5</p>
+      <p>{avgRating}</p>
       </div>
 
       <div className='priceCents'>
-        <h3>TWO FOR 200 ₹</h3>
+        <h3>{costForTwo}</h3>
       </div>
 
-      <h6>Biryani, chicken, Mutton, southindia</h6>
-      <h4>Ongole</h4>
+      <h6>{cuisines.join(', ')}</h6>
+      <h4>{locality}</h4>
 
     </div>
   </div>
 </div>
-)
+)}
 
 
-const Card = ()=> (
+const Card = ()=> {
+  return(
   <div className='card-container'>
-    <CardDetails/>
-    <CardDetails/>
-    <CardDetails/>
-    <CardDetails/>
+
+    {restaurantsData.map((restaurantDetails)=> 
+      (
+        <CardDetails key={restaurantDetails.info.id} resDetails={restaurantDetails}/>
+      ))}
+  
   </div>
-)
+)}
 
 
-const AppLayout = ()=> (
+const AppLayout = ()=> {
+  return(
   <div className='app'>
     <Header/>
     <Search/>
     <Card/>
   </div>
-)
+)}
 
 
 

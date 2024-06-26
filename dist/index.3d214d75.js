@@ -2966,7 +2966,8 @@ var _directionsBike24DpFILL0Wght400GRAD0Opsz24PngDefault = parcelHelpers.interop
 var _starHalf24DpFILL0Wght400GRAD0Opsz24Png = require("./Images/star_half_24dp_FILL0_wght400_GRAD0_opsz24.png");
 var _starHalf24DpFILL0Wght400GRAD0Opsz24PngDefault = parcelHelpers.interopDefault(_starHalf24DpFILL0Wght400GRAD0Opsz24Png);
 var _dataJs = require("./data.js");
-const Header = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+const Header = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "header-container",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -2976,12 +2977,12 @@ const Header = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                     alt: "logo-png"
                 }, void 0, false, {
                     fileName: "index.js",
-                    lineNumber: 14,
+                    lineNumber: 15,
                     columnNumber: 5
                 }, undefined)
             }, void 0, false, {
                 fileName: "index.js",
-                lineNumber: 13,
+                lineNumber: 14,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -2992,80 +2993,83 @@ const Header = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                             children: "HOME"
                         }, void 0, false, {
                             fileName: "index.js",
-                            lineNumber: 18,
+                            lineNumber: 19,
                             columnNumber: 9
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "CONTACT"
                         }, void 0, false, {
                             fileName: "index.js",
-                            lineNumber: 19,
+                            lineNumber: 20,
                             columnNumber: 9
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "ABOUT"
                         }, void 0, false, {
                             fileName: "index.js",
-                            lineNumber: 20,
+                            lineNumber: 21,
                             columnNumber: 9
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                             children: "CART"
                         }, void 0, false, {
                             fileName: "index.js",
-                            lineNumber: 21,
+                            lineNumber: 22,
                             columnNumber: 9
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "index.js",
-                    lineNumber: 17,
+                    lineNumber: 18,
                     columnNumber: 7
                 }, undefined)
             }, void 0, false, {
                 fileName: "index.js",
-                lineNumber: 16,
+                lineNumber: 17,
                 columnNumber: 5
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "index.js",
-        lineNumber: 12,
+        lineNumber: 13,
         columnNumber: 3
     }, undefined);
+};
 _c = Header;
 const Search = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {}, void 0, false, {
             fileName: "index.js",
-            lineNumber: 29,
+            lineNumber: 30,
             columnNumber: 5
         }, undefined)
     }, void 0, false, {
         fileName: "index.js",
-        lineNumber: 28,
+        lineNumber: 29,
         columnNumber: 3
     }, undefined);
 _c1 = Search;
-const CardDetails = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+const CardDetails = (props)=>{
+    const { name, cloudinaryImageId, avgRating, costForTwo, cuisines, locality, sla } = props.resDetails.info;
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "resturent-card-container",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
             className: "resturent-img-container",
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                    src: (0, _marioRajYsmeQt1DzcwUnsplashJpgDefault.default)
+                    src: `https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/` + cloudinaryImageId
                 }, void 0, false, {
                     fileName: "index.js",
-                    lineNumber: 36,
+                    lineNumber: 42,
                     columnNumber: 5
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                     className: "resturent-details-container",
                     children: [
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                            children: "Bilal"
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                            children: name
                         }, void 0, false, {
                             fileName: "index.js",
-                            lineNumber: 38,
+                            lineNumber: 44,
                             columnNumber: 7
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -3075,20 +3079,23 @@ const CardDetails = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                     src: (0, _directionsBike24DpFILL0Wght400GRAD0Opsz24PngDefault.default)
                                 }, void 0, false, {
                                     fileName: "index.js",
-                                    lineNumber: 41,
+                                    lineNumber: 47,
                                     columnNumber: 7
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                    children: "15-20 Min"
-                                }, void 0, false, {
+                                    children: [
+                                        sla.deliveryTime,
+                                        " Mins"
+                                    ]
+                                }, void 0, true, {
                                     fileName: "index.js",
-                                    lineNumber: 42,
+                                    lineNumber: 48,
                                     columnNumber: 7
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "index.js",
-                            lineNumber: 40,
+                            lineNumber: 46,
                             columnNumber: 7
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -3098,127 +3105,117 @@ const CardDetails = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                                     src: (0, _starHalf24DpFILL0Wght400GRAD0Opsz24PngDefault.default)
                                 }, void 0, false, {
                                     fileName: "index.js",
-                                    lineNumber: 46,
+                                    lineNumber: 52,
                                     columnNumber: 7
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                                    children: "4.5"
+                                    children: avgRating
                                 }, void 0, false, {
                                     fileName: "index.js",
-                                    lineNumber: 47,
+                                    lineNumber: 53,
                                     columnNumber: 7
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "index.js",
-                            lineNumber: 45,
+                            lineNumber: 51,
                             columnNumber: 7
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                             className: "priceCents",
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                                children: "TWO FOR 200 \u20B9"
+                                children: costForTwo
                             }, void 0, false, {
                                 fileName: "index.js",
-                                lineNumber: 51,
+                                lineNumber: 57,
                                 columnNumber: 9
                             }, undefined)
                         }, void 0, false, {
                             fileName: "index.js",
-                            lineNumber: 50,
+                            lineNumber: 56,
                             columnNumber: 7
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h6", {
-                            children: "Biryani, chicken, Mutton, southindia"
+                            children: cuisines.join(", ")
                         }, void 0, false, {
                             fileName: "index.js",
-                            lineNumber: 54,
+                            lineNumber: 60,
                             columnNumber: 7
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                            children: "Ongole"
+                            children: locality
                         }, void 0, false, {
                             fileName: "index.js",
-                            lineNumber: 55,
+                            lineNumber: 61,
                             columnNumber: 7
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "index.js",
-                    lineNumber: 37,
+                    lineNumber: 43,
                     columnNumber: 5
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "index.js",
-            lineNumber: 35,
+            lineNumber: 41,
             columnNumber: 3
         }, undefined)
     }, void 0, false, {
         fileName: "index.js",
-        lineNumber: 34,
+        lineNumber: 40,
         columnNumber: 3
     }, undefined);
+};
 _c2 = CardDetails;
-const Card = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+const Card = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "card-container",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(CardDetails, {}, void 0, false, {
+        children: (0, _dataJs.restaurantsData).map((restaurantDetails)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(CardDetails, {
+                resDetails: restaurantDetails
+            }, restaurantDetails.info.id, false, {
                 fileName: "index.js",
-                lineNumber: 65,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(CardDetails, {}, void 0, false, {
-                fileName: "index.js",
-                lineNumber: 66,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(CardDetails, {}, void 0, false, {
-                fileName: "index.js",
-                lineNumber: 67,
-                columnNumber: 5
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(CardDetails, {}, void 0, false, {
-                fileName: "index.js",
-                lineNumber: 68,
-                columnNumber: 5
-            }, undefined)
-        ]
-    }, void 0, true, {
+                lineNumber: 75,
+                columnNumber: 9
+            }, undefined))
+    }, void 0, false, {
         fileName: "index.js",
-        lineNumber: 64,
+        lineNumber: 71,
         columnNumber: 3
     }, undefined);
+};
 _c3 = Card;
-const AppLayout = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+const AppLayout = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "app",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Header, {}, void 0, false, {
                 fileName: "index.js",
-                lineNumber: 75,
+                lineNumber: 85,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Search, {}, void 0, false, {
                 fileName: "index.js",
-                lineNumber: 76,
+                lineNumber: 86,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Card, {}, void 0, false, {
                 fileName: "index.js",
-                lineNumber: 77,
+                lineNumber: 87,
                 columnNumber: 5
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "index.js",
-        lineNumber: 74,
+        lineNumber: 84,
         columnNumber: 3
     }, undefined);
+};
 _c4 = AppLayout;
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
 root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
     fileName: "index.js",
-    lineNumber: 84,
+    lineNumber: 94,
     columnNumber: 13
 }, undefined));
 var _c, _c1, _c2, _c3, _c4;
@@ -27694,86 +27691,1408 @@ module.exports = require("6cf3795a8817662f").getBundleURL("UckoE") + "star_half_
 },{"6cf3795a8817662f":"lgJ39"}],"5pclG":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "data", ()=>data);
-const data = {
-    "id": "618037",
-    "name": "Jai Ganesh Bhojnalaya",
-    "cloudinaryImageId": "yzgqriufpzmloogcn2vl",
-    "locality": "Railway Colony",
-    "areaName": "Bus stand",
-    "costForTwo": "\u20B9200 for two",
-    "cuisines": [
-        "North Indian",
-        "South Indian",
-        "Indian",
-        "Chinese"
-    ],
-    "avgRating": 3.8,
-    "veg": true,
-    "parentId": "368432",
-    "avgRatingString": "3.8",
-    "totalRatingsString": "100+",
-    "sla": {
-        "deliveryTime": 50,
-        "lastMileTravel": 11,
-        "serviceability": "SERVICEABLE",
-        "slaString": "45-50 mins",
-        "lastMileTravelString": "11.0 km",
-        "iconType": "ICON_TYPE_EMPTY"
+parcelHelpers.export(exports, "restaurantsData", ()=>restaurantsData);
+const restaurantsData = [
+    {
+        "info": {
+            "id": "449795",
+            "name": "Domino's Pizza",
+            "cloudinaryImageId": "d0450ce1a6ba19ea60cd724471ed54a8",
+            "locality": "Anjaiah Road",
+            "areaName": "Ongole",
+            "costForTwo": "\u20B9400 for two",
+            "cuisines": [
+                "Pizzas",
+                "Italian",
+                "Pastas",
+                "Desserts"
+            ],
+            "avgRating": 4.2,
+            "parentId": "2456",
+            "avgRatingString": "4.2",
+            "totalRatingsString": "1K+",
+            "sla": {
+                "deliveryTime": 25,
+                "lastMileTravel": 1.7,
+                "serviceability": "SERVICEABLE",
+                "slaString": "20-25 mins",
+                "lastMileTravelString": "1.7 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2024-06-27 00:00:00",
+                "opened": true
+            },
+            "badges": {},
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {},
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "aggregatedDiscountInfoV3": {
+                "header": "20% OFF",
+                "subHeader": "UPTO \u20B950"
+            },
+            "loyaltyDiscoverPresentationInfo": {
+                "logoCtx": {
+                    "logo": "Swiggy%20One%20Lite/One_lite_vertical_logo.png"
+                },
+                "freedelMessage": "FREE DELIVERY",
+                "badgeType": "BADGE_TYPE_ONE_LITE"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+        },
+        "analytics": {},
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/dominos-pizza-anjaiah-road-ongole-ongole-449795",
+            "type": "WEBLINK"
+        }
     },
-    "availability": {
-        "nextCloseTime": "2024-06-26 23:00:00",
-        "opened": true
+    {
+        "info": {
+            "id": "136470",
+            "name": "KFC",
+            "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/4/17/a929110e-bc63-4ddb-8132-7c3f037ea5c9_136470.JPG",
+            "locality": "Guntur road",
+            "areaName": "Ongole",
+            "costForTwo": "\u20B9400 for two",
+            "cuisines": [
+                "Burgers",
+                "Fast Food",
+                "Rolls & Wraps"
+            ],
+            "avgRating": 4.1,
+            "parentId": "547",
+            "avgRatingString": "4.1",
+            "totalRatingsString": "10K+",
+            "sla": {
+                "deliveryTime": 18,
+                "lastMileTravel": 1,
+                "serviceability": "SERVICEABLE",
+                "slaString": "15-20 mins",
+                "lastMileTravelString": "1.0 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2024-06-26 23:00:00",
+                "opened": true
+            },
+            "badges": {},
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {},
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "aggregatedDiscountInfoV3": {
+                "header": "10% OFF",
+                "subHeader": "UPTO \u20B940"
+            },
+            "loyaltyDiscoverPresentationInfo": {
+                "logoCtx": {
+                    "logo": "Swiggy%20One%20Lite/One_lite_vertical_logo.png"
+                },
+                "freedelMessage": "FREE DELIVERY",
+                "badgeType": "BADGE_TYPE_ONE_LITE"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+        },
+        "analytics": {},
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/kfc-guntur-road-ongole-ongole-136470",
+            "type": "WEBLINK"
+        }
     },
-    "badges": {
-        "imageBadges": [
-            {
-                "imageId": "v1695133679/badges/Pure_Veg111.png",
-                "description": "pureveg"
-            }
-        ]
+    {
+        "info": {
+            "id": "148028",
+            "name": "Pizza Hut",
+            "cloudinaryImageId": "2b4f62d606d1b2bfba9ba9e5386fabb7",
+            "locality": "Guntur road",
+            "areaName": "Ongole",
+            "costForTwo": "\u20B9350 for two",
+            "cuisines": [
+                "Pizzas"
+            ],
+            "avgRating": 4.1,
+            "parentId": "721",
+            "avgRatingString": "4.1",
+            "totalRatingsString": "5K+",
+            "sla": {
+                "deliveryTime": 25,
+                "lastMileTravel": 1,
+                "serviceability": "SERVICEABLE",
+                "slaString": "20-25 mins",
+                "lastMileTravelString": "1.0 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2024-06-26 23:00:00",
+                "opened": true
+            },
+            "badges": {},
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {},
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "aggregatedDiscountInfoV3": {
+                "header": "40% OFF",
+                "subHeader": "UPTO \u20B980"
+            },
+            "loyaltyDiscoverPresentationInfo": {
+                "logoCtx": {
+                    "logo": "Swiggy%20One%20Lite/One_lite_vertical_logo.png"
+                },
+                "freedelMessage": "FREE DELIVERY",
+                "badgeType": "BADGE_TYPE_ONE_LITE"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+        },
+        "analytics": {},
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/pizza-hut-guntur-road-ongole-ongole-148028",
+            "type": "WEBLINK"
+        }
     },
-    "isOpen": true,
-    "type": "F",
-    "badgesV2": {
-        "entityBadges": {
-            "imageBased": {
-                "badgeObject": [
+    {
+        "info": {
+            "id": "758918",
+            "name": "NIC Ice Creams",
+            "cloudinaryImageId": "85825a6d74b1059a63a9b688de9f67ce",
+            "locality": "Ongole",
+            "areaName": "N.G.O Colony",
+            "costForTwo": "\u20B9120 for two",
+            "cuisines": [
+                "Ice Cream",
+                "Desserts"
+            ],
+            "avgRating": 4.5,
+            "veg": true,
+            "parentId": "6249",
+            "avgRatingString": "4.5",
+            "totalRatingsString": "100+",
+            "sla": {
+                "deliveryTime": 18,
+                "lastMileTravel": 0.6,
+                "serviceability": "SERVICEABLE",
+                "slaString": "15-20 mins",
+                "lastMileTravelString": "0.6 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2024-06-26 23:00:00",
+                "opened": true
+            },
+            "badges": {
+                "imageBadges": [
                     {
-                        "attributes": {
-                            "description": "pureveg",
-                            "imageId": "v1695133679/badges/Pure_Veg111.png"
-                        }
+                        "imageId": "v1695133679/badges/Pure_Veg111.png",
+                        "description": "pureveg"
                     }
                 ]
             },
-            "textBased": {},
-            "textExtendedBadges": {}
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {
+                        "badgeObject": [
+                            {
+                                "attributes": {
+                                    "description": "pureveg",
+                                    "imageId": "v1695133679/badges/Pure_Veg111.png"
+                                }
+                            }
+                        ]
+                    },
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "aggregatedDiscountInfoV3": {
+                "header": "\u20B9100 OFF",
+                "subHeader": "ABOVE \u20B9179",
+                "discountTag": "FLAT DEAL"
+            },
+            "loyaltyDiscoverPresentationInfo": {
+                "logoCtx": {
+                    "logo": "Swiggy%20One%20Lite/One_lite_vertical_logo.png"
+                },
+                "freedelMessage": "FREE DELIVERY",
+                "badgeType": "BADGE_TYPE_ONE_LITE"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+        },
+        "analytics": {},
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/nic-ice-creams-n-g-o-colony-ongole-758918",
+            "type": "WEBLINK"
         }
     },
-    "aggregatedDiscountInfoV3": {
-        "header": "\u20B9100 OFF",
-        "subHeader": "ABOVE \u20B9179",
-        "discountTag": "FLAT DEAL"
-    },
-    "orderabilityCommunication": {
-        "title": {},
-        "subTitle": {},
-        "message": {},
-        "customIcon": {}
-    },
-    "differentiatedUi": {
-        "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-        "differentiatedUiMediaDetails": {
-            "mediaType": "ADS_MEDIA_ENUM_IMAGE",
-            "lottie": {},
-            "video": {}
+    {
+        "info": {
+            "id": "654954",
+            "name": "Baskin Robbins - Ice Cream Desserts",
+            "cloudinaryImageId": "85ccae4e3576f9330af102c46ca85395",
+            "locality": "VIP Road",
+            "areaName": "Janardhan Nagar",
+            "costForTwo": "\u20B9250 for two",
+            "cuisines": [
+                "Desserts",
+                "Ice Cream"
+            ],
+            "avgRating": 4.5,
+            "veg": true,
+            "parentId": "5588",
+            "avgRatingString": "4.5",
+            "totalRatingsString": "100+",
+            "sla": {
+                "deliveryTime": 24,
+                "lastMileTravel": 2.5,
+                "serviceability": "SERVICEABLE",
+                "slaString": "20-25 mins",
+                "lastMileTravelString": "2.5 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2024-06-27 00:00:00",
+                "opened": true
+            },
+            "badges": {
+                "imageBadges": [
+                    {
+                        "imageId": "v1695133679/badges/Pure_Veg111.png",
+                        "description": "pureveg"
+                    }
+                ]
+            },
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {
+                        "badgeObject": [
+                            {
+                                "attributes": {
+                                    "description": "pureveg",
+                                    "imageId": "v1695133679/badges/Pure_Veg111.png"
+                                }
+                            }
+                        ]
+                    },
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "aggregatedDiscountInfoV3": {
+                "header": "\u20B9125 OFF",
+                "subHeader": "ABOVE \u20B9199",
+                "discountTag": "FLAT DEAL"
+            },
+            "loyaltyDiscoverPresentationInfo": {
+                "logoCtx": {
+                    "logo": "Swiggy%20One%20Lite/One_lite_vertical_logo.png"
+                },
+                "freedelMessage": "FREE DELIVERY",
+                "badgeType": "BADGE_TYPE_ONE_LITE"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+        },
+        "analytics": {},
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/baskin-robbins-ice-cream-desserts-vip-road-janardhan-nagar-ongole-654954",
+            "type": "WEBLINK"
         }
     },
-    "reviewsSummary": {},
-    "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-    "restaurantOfferPresentationInfo": {}
-};
+    {
+        "info": {
+            "id": "221345",
+            "name": "Ibaco",
+            "cloudinaryImageId": "gjuyirbz4fzdtsle3xlw",
+            "locality": "Lawyer Pet Extension",
+            "areaName": "Ongole",
+            "costForTwo": "\u20B9300 for two",
+            "cuisines": [
+                "Desserts",
+                "Sweets",
+                "Beverages"
+            ],
+            "avgRating": 4.3,
+            "veg": true,
+            "parentId": "3481",
+            "avgRatingString": "4.3",
+            "totalRatingsString": "500+",
+            "sla": {
+                "deliveryTime": 20,
+                "lastMileTravel": 2.5,
+                "serviceability": "SERVICEABLE",
+                "slaString": "20-25 mins",
+                "lastMileTravelString": "2.5 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2024-06-26 23:00:00",
+                "opened": true
+            },
+            "badges": {
+                "imageBadges": [
+                    {
+                        "imageId": "v1695133679/badges/Pure_Veg111.png",
+                        "description": "pureveg"
+                    }
+                ]
+            },
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {
+                        "badgeObject": [
+                            {
+                                "attributes": {
+                                    "description": "pureveg",
+                                    "imageId": "v1695133679/badges/Pure_Veg111.png"
+                                }
+                            }
+                        ]
+                    },
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "loyaltyDiscoverPresentationInfo": {
+                "logoCtx": {
+                    "logo": "Swiggy%20One%20Lite/One_lite_vertical_logo.png"
+                },
+                "freedelMessage": "FREE DELIVERY",
+                "badgeType": "BADGE_TYPE_ONE_LITE"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+        },
+        "analytics": {},
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/ibaco-lawyer-pet-extension-ongole-ongole-221345",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "519464",
+            "name": "Lakshmi's Kitchen",
+            "cloudinaryImageId": "qbgjnk4mri4wh3oaj2zw",
+            "locality": "Mangamoor Road",
+            "areaName": "Mangamuru Road",
+            "costForTwo": "\u20B9200 for two",
+            "cuisines": [
+                "North Indian",
+                "Chinese"
+            ],
+            "avgRating": 4.3,
+            "parentId": "310181",
+            "avgRatingString": "4.3",
+            "totalRatingsString": "1K+",
+            "sla": {
+                "deliveryTime": 20,
+                "lastMileTravel": 2.3,
+                "serviceability": "SERVICEABLE",
+                "slaString": "20-25 mins",
+                "lastMileTravelString": "2.3 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2024-06-26 23:30:00",
+                "opened": true
+            },
+            "badges": {},
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {},
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "aggregatedDiscountInfoV3": {
+                "header": "\u20B9100 OFF",
+                "subHeader": "ABOVE \u20B9179",
+                "discountTag": "FLAT DEAL"
+            },
+            "loyaltyDiscoverPresentationInfo": {
+                "logoCtx": {
+                    "logo": "Swiggy%20One%20Lite/One_lite_vertical_logo.png"
+                },
+                "freedelMessage": "FREE DELIVERY",
+                "badgeType": "BADGE_TYPE_ONE_LITE"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+        },
+        "analytics": {},
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/lakshmis-kitchen-mangamoor-road-mangamuru-road-ongole-519464",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "154038",
+            "name": "Cream Stone Ice Cream",
+            "cloudinaryImageId": "e6af7ef8b8ad04f12d748f144b602c0f",
+            "locality": "Guntur Road",
+            "areaName": "Gopal Nagar",
+            "costForTwo": "\u20B9300 for two",
+            "cuisines": [
+                "Ice Cream",
+                "Desserts",
+                "Beverages"
+            ],
+            "avgRating": 4.3,
+            "veg": true,
+            "parentId": "289",
+            "avgRatingString": "4.3",
+            "totalRatingsString": "1K+",
+            "sla": {
+                "deliveryTime": 15,
+                "lastMileTravel": 1,
+                "serviceability": "SERVICEABLE",
+                "slaString": "15-20 mins",
+                "lastMileTravelString": "1.0 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2024-06-26 23:00:00",
+                "opened": true
+            },
+            "badges": {},
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {},
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "loyaltyDiscoverPresentationInfo": {
+                "logoCtx": {
+                    "logo": "Swiggy%20One%20Lite/One_lite_vertical_logo.png"
+                },
+                "freedelMessage": "FREE DELIVERY",
+                "badgeType": "BADGE_TYPE_ONE_LITE"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+        },
+        "analytics": {},
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/cream-stone-ice-cream-guntur-road-gopal-nagar-ongole-154038",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "156108",
+            "name": "The Caramel Bakery & Fried Chicken Court",
+            "cloudinaryImageId": "uqwvziafrnamcrhsmc7r",
+            "locality": "RIMS Hospital Road",
+            "areaName": "Bhagya Nagar",
+            "costForTwo": "\u20B9250 for two",
+            "cuisines": [
+                "Continental",
+                "Pizzas",
+                "Burgers",
+                "Bakery",
+                "Beverages"
+            ],
+            "avgRating": 4.1,
+            "parentId": "206425",
+            "avgRatingString": "4.1",
+            "totalRatingsString": "1K+",
+            "sla": {
+                "deliveryTime": 35,
+                "lastMileTravel": 3.9,
+                "serviceability": "SERVICEABLE",
+                "slaString": "30-35 mins",
+                "lastMileTravelString": "3.9 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2024-06-26 21:45:00",
+                "opened": true
+            },
+            "badges": {},
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {},
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "aggregatedDiscountInfoV3": {
+                "header": "\u20B9100 OFF",
+                "subHeader": "ABOVE \u20B9179",
+                "discountTag": "FLAT DEAL"
+            },
+            "loyaltyDiscoverPresentationInfo": {
+                "logoCtx": {
+                    "logo": "Swiggy%20One%20Lite/One_lite_vertical_logo.png"
+                },
+                "freedelMessage": "FREE DELIVERY",
+                "badgeType": "BADGE_TYPE_ONE_LITE"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+        },
+        "analytics": {},
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/the-caramel-bakery-and-fried-chicken-court-rims-hospital-road-bhagya-nagar-ongole-156108",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "156111",
+            "name": "Hotel Paradise",
+            "cloudinaryImageId": "a4f87aedd4e9409bce6214ec389da411",
+            "locality": "Kurnool Road",
+            "areaName": "Venkateswara Nagar",
+            "costForTwo": "\u20B9300 for two",
+            "cuisines": [
+                "Biryani",
+                "North Indian",
+                "South Indian",
+                "Chinese"
+            ],
+            "avgRating": 4.2,
+            "parentId": "100979",
+            "avgRatingString": "4.2",
+            "totalRatingsString": "10K+",
+            "sla": {
+                "deliveryTime": 19,
+                "lastMileTravel": 1,
+                "serviceability": "SERVICEABLE",
+                "slaString": "15-20 mins",
+                "lastMileTravelString": "1.0 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2024-06-26 23:00:00",
+                "opened": true
+            },
+            "badges": {},
+            "select": true,
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {},
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "aggregatedDiscountInfoV3": {
+                "header": "\u20B9100 OFF",
+                "subHeader": "ABOVE \u20B9179",
+                "discountTag": "FLAT DEAL"
+            },
+            "loyaltyDiscoverPresentationInfo": {
+                "logoCtx": {
+                    "logo": "Swiggy%20One%20Lite/One_lite_vertical_logo.png"
+                },
+                "freedelMessage": "FREE DELIVERY",
+                "badgeType": "BADGE_TYPE_ONE_LITE"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+        },
+        "analytics": {},
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/hotel-paradise-kurnool-road-venkateswara-nagar-ongole-156111",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "154808",
+            "name": "Makers of Milkshakes",
+            "cloudinaryImageId": "s3dxxkiu16mxkvfg4oya",
+            "locality": "Lawyer Pet Extension",
+            "areaName": "Ongole",
+            "costForTwo": "\u20B9150 for two",
+            "cuisines": [
+                "Beverages",
+                "Desserts",
+                "Ice Cream"
+            ],
+            "avgRating": 4.5,
+            "veg": true,
+            "parentId": "5632",
+            "avgRatingString": "4.5",
+            "totalRatingsString": "1K+",
+            "sla": {
+                "deliveryTime": 22,
+                "lastMileTravel": 2.5,
+                "serviceability": "SERVICEABLE",
+                "slaString": "20-25 mins",
+                "lastMileTravelString": "2.5 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2024-06-26 23:50:00",
+                "opened": true
+            },
+            "badges": {
+                "imageBadges": [
+                    {
+                        "imageId": "v1695133679/badges/Pure_Veg111.png",
+                        "description": "pureveg"
+                    }
+                ]
+            },
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {
+                        "badgeObject": [
+                            {
+                                "attributes": {
+                                    "description": "pureveg",
+                                    "imageId": "v1695133679/badges/Pure_Veg111.png"
+                                }
+                            }
+                        ]
+                    },
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "aggregatedDiscountInfoV3": {
+                "header": "10% OFF",
+                "subHeader": "ABOVE \u20B9900",
+                "discountTag": "FLAT DEAL"
+            },
+            "loyaltyDiscoverPresentationInfo": {
+                "logoCtx": {
+                    "logo": "Swiggy%20One%20Lite/One_lite_vertical_logo.png"
+                },
+                "freedelMessage": "FREE DELIVERY",
+                "badgeType": "BADGE_TYPE_ONE_LITE"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+        },
+        "analytics": {},
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/makers-of-milkshakes-lawyer-pet-extension-ongole-ongole-154808",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "512527",
+            "name": "Kritunga",
+            "cloudinaryImageId": "2d04fd5ce331ef04f47ef9cc587ebf21",
+            "locality": "Bhagya Nagar",
+            "areaName": "Janardhan Nagar",
+            "costForTwo": "\u20B9300 for two",
+            "cuisines": [
+                "North Indian",
+                "Chinese",
+                "Biryani",
+                "Snacks",
+                "Sweets",
+                "Beverages"
+            ],
+            "avgRating": 3.8,
+            "parentId": "572",
+            "avgRatingString": "3.8",
+            "totalRatingsString": "1K+",
+            "sla": {
+                "deliveryTime": 36,
+                "lastMileTravel": 3,
+                "serviceability": "SERVICEABLE",
+                "slaString": "35-40 mins",
+                "lastMileTravelString": "3.0 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2024-06-26 23:57:00",
+                "opened": true
+            },
+            "badges": {},
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {},
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "aggregatedDiscountInfoV3": {
+                "header": "\u20B9100 OFF",
+                "subHeader": "ABOVE \u20B9179",
+                "discountTag": "FLAT DEAL"
+            },
+            "loyaltyDiscoverPresentationInfo": {
+                "logoCtx": {
+                    "logo": "Swiggy%20One%20Lite/One_lite_vertical_logo.png"
+                },
+                "freedelMessage": "FREE DELIVERY",
+                "badgeType": "BADGE_TYPE_ONE_LITE"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+        },
+        "analytics": {},
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/kritunga-bhagya-nagar-janardhan-nagar-ongole-512527",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "654956",
+            "name": "Gourmet Ice Cream Cakes by Baskin Robbins",
+            "cloudinaryImageId": "d679c532ca07a6f3fd6d89d603861412",
+            "locality": "VIP Road",
+            "areaName": "Janardhan Nagar",
+            "costForTwo": "\u20B9200 for two",
+            "cuisines": [
+                "Ice Cream Cakes",
+                "Desserts",
+                "Ice Cream",
+                "Bakery"
+            ],
+            "avgRating": 4.6,
+            "veg": true,
+            "parentId": "21932",
+            "avgRatingString": "4.6",
+            "totalRatingsString": "20+",
+            "sla": {
+                "deliveryTime": 25,
+                "lastMileTravel": 2.5,
+                "serviceability": "SERVICEABLE",
+                "slaString": "20-25 mins",
+                "lastMileTravelString": "2.5 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2024-06-27 00:00:00",
+                "opened": true
+            },
+            "badges": {
+                "imageBadges": [
+                    {
+                        "imageId": "v1695133679/badges/Pure_Veg111.png",
+                        "description": "pureveg"
+                    }
+                ]
+            },
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {
+                        "badgeObject": [
+                            {
+                                "attributes": {
+                                    "description": "pureveg",
+                                    "imageId": "v1695133679/badges/Pure_Veg111.png"
+                                }
+                            }
+                        ]
+                    },
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "aggregatedDiscountInfoV3": {
+                "header": "\u20B9100 OFF",
+                "subHeader": "ABOVE \u20B9179",
+                "discountTag": "FLAT DEAL"
+            },
+            "loyaltyDiscoverPresentationInfo": {
+                "logoCtx": {
+                    "logo": "Swiggy%20One%20Lite/One_lite_vertical_logo.png"
+                },
+                "freedelMessage": "FREE DELIVERY",
+                "badgeType": "BADGE_TYPE_ONE_LITE"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+        },
+        "analytics": {},
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/gourmet-ice-cream-cakes-by-baskin-robbins-vip-road-janardhan-nagar-ongole-654956",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "758919",
+            "name": "Grameen Kulfi",
+            "cloudinaryImageId": "930b886678eb9de74b5a3150bdd0f405",
+            "locality": "Ongole",
+            "areaName": "N.G.O Colony",
+            "costForTwo": "\u20B9120 for two",
+            "cuisines": [
+                "Ice Cream",
+                "Desserts"
+            ],
+            "avgRating": 4.6,
+            "veg": true,
+            "parentId": "12175",
+            "avgRatingString": "4.6",
+            "totalRatingsString": "50+",
+            "sla": {
+                "deliveryTime": 18,
+                "lastMileTravel": 0.6,
+                "serviceability": "SERVICEABLE",
+                "slaString": "15-20 mins",
+                "lastMileTravelString": "0.6 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2024-06-26 23:00:00",
+                "opened": true
+            },
+            "badges": {
+                "imageBadges": [
+                    {
+                        "imageId": "v1695133679/badges/Pure_Veg111.png",
+                        "description": "pureveg"
+                    }
+                ]
+            },
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {
+                        "badgeObject": [
+                            {
+                                "attributes": {
+                                    "description": "pureveg",
+                                    "imageId": "v1695133679/badges/Pure_Veg111.png"
+                                }
+                            }
+                        ]
+                    },
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "aggregatedDiscountInfoV3": {
+                "header": "EVERY ITEM",
+                "subHeader": "@ \u20B999"
+            },
+            "loyaltyDiscoverPresentationInfo": {
+                "logoCtx": {
+                    "logo": "Swiggy%20One%20Lite/One_lite_vertical_logo.png"
+                },
+                "freedelMessage": "FREE DELIVERY",
+                "badgeType": "BADGE_TYPE_ONE_LITE"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+        },
+        "analytics": {},
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/grameen-kulfi-n-g-o-colony-ongole-758919",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "687739",
+            "name": "Red Bucket Biryani",
+            "cloudinaryImageId": "37ebf0f55b0be5e8896c4acc2dd08958",
+            "locality": "Guntur Road",
+            "areaName": "Gopal Nagar",
+            "costForTwo": "\u20B9300 for two",
+            "cuisines": [
+                "Biryani"
+            ],
+            "avgRating": 4,
+            "parentId": "306664",
+            "avgRatingString": "4.0",
+            "totalRatingsString": "100+",
+            "sla": {
+                "deliveryTime": 18,
+                "lastMileTravel": 1.3,
+                "serviceability": "SERVICEABLE",
+                "slaString": "15-20 mins",
+                "lastMileTravelString": "1.3 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2024-06-26 23:00:00",
+                "opened": true
+            },
+            "badges": {},
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {},
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "loyaltyDiscoverPresentationInfo": {
+                "logoCtx": {
+                    "logo": "Swiggy%20One%20Lite/One_lite_vertical_logo.png"
+                },
+                "freedelMessage": "FREE DELIVERY",
+                "badgeType": "BADGE_TYPE_ONE_LITE"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+        },
+        "analytics": {},
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/red-bucket-biryani-guntur-road-gopal-nagar-ongole-687739",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "861522",
+            "name": "Pastas By Pizza Hut",
+            "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/4/1/648cb7c5-d298-438f-963b-cd8d0dd02f04_861522.jpg",
+            "locality": "Guntur road",
+            "areaName": "Janardhan Nagar",
+            "costForTwo": "\u20B9400 for two",
+            "cuisines": [
+                "Pastas"
+            ],
+            "avgRating": 3.7,
+            "parentId": "306806",
+            "avgRatingString": "3.7",
+            "totalRatingsString": "10+",
+            "sla": {
+                "deliveryTime": 33,
+                "lastMileTravel": 1,
+                "serviceability": "SERVICEABLE",
+                "slaString": "30-35 mins",
+                "lastMileTravelString": "1.0 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2024-06-26 23:00:00",
+                "opened": true
+            },
+            "badges": {},
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {},
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "aggregatedDiscountInfoV3": {
+                "header": "\u20B9100 OFF",
+                "subHeader": "ABOVE \u20B9179",
+                "discountTag": "FLAT DEAL"
+            },
+            "loyaltyDiscoverPresentationInfo": {
+                "logoCtx": {
+                    "logo": "Swiggy%20One%20Lite/One_lite_vertical_logo.png"
+                },
+                "freedelMessage": "FREE DELIVERY",
+                "badgeType": "BADGE_TYPE_ONE_LITE"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "isNewlyOnboarded": true,
+            "restaurantOfferPresentationInfo": {}
+        },
+        "analytics": {},
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/pastas-by-pizza-hut-guntur-road-janardhan-nagar-ongole-861522",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "722512",
+            "name": "The Belgian Waffle Co.",
+            "cloudinaryImageId": "5116a385bac0548e06c33c08350fbf11",
+            "locality": "MANGAMUR ROAD",
+            "areaName": "Kothamamidipalem",
+            "costForTwo": "\u20B9200 for two",
+            "cuisines": [
+                "Waffle",
+                "Desserts",
+                "Ice Cream"
+            ],
+            "avgRating": 4.3,
+            "veg": true,
+            "parentId": "2233",
+            "avgRatingString": "4.3",
+            "totalRatingsString": "100+",
+            "sla": {
+                "deliveryTime": 37,
+                "lastMileTravel": 2.3,
+                "serviceability": "SERVICEABLE",
+                "slaString": "35-40 mins",
+                "lastMileTravelString": "2.3 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2024-06-26 23:00:00",
+                "opened": true
+            },
+            "badges": {
+                "imageBadges": [
+                    {
+                        "imageId": "v1695133679/badges/Pure_Veg111.png",
+                        "description": "pureveg"
+                    }
+                ]
+            },
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {
+                        "badgeObject": [
+                            {
+                                "attributes": {
+                                    "description": "pureveg",
+                                    "imageId": "v1695133679/badges/Pure_Veg111.png"
+                                }
+                            }
+                        ]
+                    },
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "loyaltyDiscoverPresentationInfo": {
+                "logoCtx": {
+                    "logo": "Swiggy%20One%20Lite/One_lite_vertical_logo.png"
+                },
+                "freedelMessage": "FREE DELIVERY",
+                "badgeType": "BADGE_TYPE_ONE_LITE"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+        },
+        "analytics": {},
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/the-belgian-waffle-co-mangamur-road-kothamamidipalem-ongole-722512",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "154028",
+            "name": "OFC Take Away",
+            "cloudinaryImageId": "fenxg6sxbm7j2wglzwbr",
+            "locality": "Mangamuru Road",
+            "areaName": "Mangamuru Road",
+            "costForTwo": "\u20B9250 for two",
+            "cuisines": [
+                "Continental",
+                "Pizzas",
+                "Burgers",
+                "Beverages"
+            ],
+            "avgRating": 4.2,
+            "parentId": "151023",
+            "avgRatingString": "4.2",
+            "totalRatingsString": "5K+",
+            "sla": {
+                "deliveryTime": 37,
+                "lastMileTravel": 2.3,
+                "serviceability": "SERVICEABLE",
+                "slaString": "35-40 mins",
+                "lastMileTravelString": "2.3 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2024-06-26 22:00:00",
+                "opened": true
+            },
+            "badges": {},
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {},
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "aggregatedDiscountInfoV3": {
+                "header": "\u20B9100 OFF",
+                "subHeader": "ABOVE \u20B9179",
+                "discountTag": "FLAT DEAL"
+            },
+            "loyaltyDiscoverPresentationInfo": {
+                "logoCtx": {
+                    "logo": "Swiggy%20One%20Lite/One_lite_vertical_logo.png"
+                },
+                "freedelMessage": "FREE DELIVERY",
+                "badgeType": "BADGE_TYPE_ONE_LITE"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+        },
+        "analytics": {},
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/ofc-take-away-mangamuru-road-ongole-154028",
+            "type": "WEBLINK"
+        }
+    },
+    {
+        "info": {
+            "id": "154047",
+            "name": "The Shawarma Company",
+            "cloudinaryImageId": "yelakf8ravy6t6bf9cb7",
+            "locality": "Club Sqaure",
+            "areaName": "Club Square",
+            "costForTwo": "\u20B9250 for two",
+            "cuisines": [
+                "Arabian"
+            ],
+            "avgRating": 3.9,
+            "parentId": "5269",
+            "avgRatingString": "3.9",
+            "totalRatingsString": "500+",
+            "sla": {
+                "deliveryTime": 48,
+                "lastMileTravel": 11.9,
+                "serviceability": "SERVICEABLE",
+                "slaString": "45-50 mins",
+                "lastMileTravelString": "11.9 km",
+                "iconType": "ICON_TYPE_EMPTY"
+            },
+            "availability": {
+                "nextCloseTime": "2024-06-26 23:45:00",
+                "opened": true
+            },
+            "badges": {},
+            "isOpen": true,
+            "type": "F",
+            "badgesV2": {
+                "entityBadges": {
+                    "imageBased": {},
+                    "textBased": {},
+                    "textExtendedBadges": {}
+                }
+            },
+            "aggregatedDiscountInfoV3": {
+                "header": "\u20B9100 OFF",
+                "subHeader": "ABOVE \u20B9179",
+                "discountTag": "FLAT DEAL"
+            },
+            "differentiatedUi": {
+                "displayType": "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
+                "differentiatedUiMediaDetails": {
+                    "mediaType": "ADS_MEDIA_ENUM_IMAGE",
+                    "lottie": {},
+                    "video": {}
+                }
+            },
+            "reviewsSummary": {},
+            "displayType": "RESTAURANT_DISPLAY_TYPE_DEFAULT",
+            "restaurantOfferPresentationInfo": {}
+        },
+        "analytics": {},
+        "cta": {
+            "link": "https://www.swiggy.com/restaurants/the-shawarma-company-club-sqaure-club-square-ongole-154047",
+            "type": "WEBLINK"
+        }
+    }
+];
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}]},["km5uZ","1xC6H","bB7Pu"], "bB7Pu", "parcelRequire77dd")
 
