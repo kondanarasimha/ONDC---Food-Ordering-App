@@ -1,10 +1,10 @@
-import { resturentImgsLink } from '../utiles/cdn-images.js';
+import { resturentImgsLink } from '../utiles/urls.js';
 import deliveryIcon from '../../Images/directions_bike_24dp_FILL0_wght400_GRAD0_opsz24.png';
 import ratingIcon from '../../Images/star_half_24dp_FILL0_wght400_GRAD0_opsz24.png';
 
 
 export const CardDetails = (props)=> {
-  const {name, cloudinaryImageId, avgRating,
+  const {name, cloudinaryImageId, avgRating, totalRatingsString,
         costForTwo, cuisines, locality, sla} = props.resDetails.info;
 
   return(
@@ -21,7 +21,7 @@ export const CardDetails = (props)=> {
 
       <div className='resturent-rating-container'>
       <img src={ratingIcon}/>
-      <p>{avgRating}</p>
+      <p>{avgRating} • {totalRatingsString}</p>
       </div>
 
       <div className='priceCents'>

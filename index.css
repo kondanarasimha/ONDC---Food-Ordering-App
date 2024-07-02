@@ -9,11 +9,11 @@ body {
   border-radius: 10px;
   box-shadow: 0px 5px 6px rgb(169, 168, 168);
   margin-bottom: 30px;
+  background-color: white;
 }
 
 .logo-container {
-  margin-left: 15px;
-  margin-top: 5px;
+  margin: 5px 5px 0px 15px;
 }
 
 .logo-container img {
@@ -25,26 +25,84 @@ body {
 .nav-container ul {
   list-style-type: none;
   display: flex;
+  justify-content: space-evenly;
+  margin-right: 15px;
 }
 
 .nav-container ul li {
   padding: 12px;
-  font-size: 20px;
+  font-size: 18px;
   color: rgb(30, 30, 30);
+  cursor: pointer;
 }
 
+.body-container {
+  margin: 0px 100px 0px 100px;
+}
 
-/* search container */
+.filterStrip-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0px 20px 25px 20px;
+}
+
+.filter-btn-container {
+  display: flex;
+  column-gap: 20px;
+}
+
+.filter-btn-container button {
+  border: none;
+  cursor: pointer;
+  border-radius: 2px;
+  height: 30px;
+  transition: all 0.15s;
+}
+
+.search-container {
+  display: flex;
+}
+
+.search-container input {
+  padding: 4px;
+  border:solid 1px;
+  width: 400px;
+  height: 25px;
+  margin-left: 2px;
+  border-radius: 2px;
+}
+
+.search-container button {
+  margin-left: 5px;
+  width: 40px;
+  background-color: white;
+  border:solid 1px;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.reset-icon {
+  object-fit: cover;
+  width: 25px;
+  height: 20px;
+  padding-top: 2px;
+}
+
+.search-container button img {
+  object-fit: cover;
+  width: 25px;
+  height: 20px;
+  padding-top: 2px;
+}
 
 .card-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  margin: 0px 100px 0px 100px;
   justify-items: center;
   column-gap: 0px;
   row-gap: 10px;
 }
-
 
 .resturent-card-container {
   width: 230px;

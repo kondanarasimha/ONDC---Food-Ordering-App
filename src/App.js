@@ -1,16 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { Header } from './components/Header.js';
-import { RestaurantCard } from './components/RestaurantCard.js';
-import { Search } from './components/Search.js';
+import { Body } from './components/Body.js';
 
 
 const AppLayout = ()=> {
   return(
   <div className='app'>
     <Header/>
-    <Search/>
-    <RestaurantCard/>
+    <Body/>
   </div>
 )}
 

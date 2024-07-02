@@ -1,4 +1,4 @@
-export const restaurantsData =   [
+/*export const data =   [
                       {
                         "info": {
                           "id": "449795",
@@ -1712,3 +1712,184 @@ export const restaurantsData =   [
                           "type": "WEBLINK"
                         }
                       }]
+*/
+
+
+
+export const data = [{
+  "info": {
+    "id": "449795",
+    "name": "Domino's Pizza",
+    "cloudinaryImageId": "d0450ce1a6ba19ea60cd724471ed54a8",
+    "locality": "Anjaiah Road",
+    "areaName": "Ongole",
+    "costForTwo": "₹400 for two",
+    "veg":false,
+    "price":40000,
+    "cuisines": [
+      "Pizzas",
+      "Italian",
+      "Pastas",
+      "Desserts"
+    ],
+    "avgRating": 4.2,
+    "parentId": "2456",
+    "avgRatingString": "4.2",
+    "totalRatingsString": "1K+",
+    "sla": {
+      "deliveryTime": 25,
+    }}
+},{
+  "info": {
+    "id": "136470",
+    "name": "KFC",
+    "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/4/17/a929110e-bc63-4ddb-8132-7c3f037ea5c9_136470.JPG",
+    "locality": "Guntur road",
+    "areaName": "Ongole",
+    "costForTwo": "₹400 for two",
+    "veg":false,
+    "price":40000,
+    "cuisines": [
+      "Burgers",
+      "Fast Food",
+      "Rolls & Wraps"
+    ],
+    "avgRating": 4.1,
+    "parentId": "547",
+    "avgRatingString": "4.1",
+    "totalRatingsString": "10K+",
+    "sla": {
+      "deliveryTime": 18,
+    }}
+},{
+  "info": {
+    "id": "148028",
+    "name": "Pizza Hut",
+    "cloudinaryImageId": "2b4f62d606d1b2bfba9ba9e5386fabb7",
+    "locality": "Guntur road",
+    "areaName": "Ongole",
+    "costForTwo": "₹300 for two",
+    "price":30000,
+    "veg":false,
+    "cuisines": [
+      "Pizzas"
+    ],
+    "avgRating": 3.1,
+    "parentId": "721",
+    "avgRatingString": "4.1",
+    "totalRatingsString": "5K+",
+    "sla": {
+      "deliveryTime": 25
+    }}, 
+},{
+  "info": {
+    "id": "758918",
+    "name": "NIC Ice Creams",
+    "cloudinaryImageId": "85825a6d74b1059a63a9b688de9f67ce",
+    "locality": "Ongole",
+    "areaName": "N.G.O Colony",
+    "costForTwo": "₹120 for two",
+    "price":120000,
+    "veg":true,
+    "cuisines": [
+      "Ice Cream",
+      "Desserts"
+    ],
+    "avgRating": 4.5,
+    "veg": true,
+    "parentId": "6249",
+    "avgRatingString": "4.5",
+    "totalRatingsString": "100+",
+    "sla": {
+      "deliveryTime": 18,
+    }},
+},{
+  "info": {
+    "id": "654954",
+    "name": "Baskin Robbins - Ice Cream Desserts",
+    "cloudinaryImageId": "85ccae4e3576f9330af102c46ca85395",
+    "locality": "VIP Road",
+    "areaName": "Janardhan Nagar",
+    "costForTwo": "₹250 for two",
+    "price":250000,
+    "veg":true,
+    "cuisines": [
+      "Desserts",
+      "Ice Cream"
+    ],
+    "avgRating": 3.5,
+    "veg": true,
+    "parentId": "5588",
+    "avgRatingString": "4.5",
+    "totalRatingsString": "100+",
+    "sla": {
+      "deliveryTime": 24,
+    }}
+},{
+  "info": {
+    "id": "221345",
+    "name": "Ibaco",
+    "cloudinaryImageId": "gjuyirbz4fzdtsle3xlw",
+    "locality": "Lawyer Pet Extension",
+    "areaName": "Ongole",
+    "costForTwo": "₹300 for two",
+    "price":30000,
+    "veg":true,
+    "cuisines": [
+      "Desserts",
+      "Sweets",
+      "Beverages"
+    ],
+    "avgRating": 4.3,
+    "veg": true,
+    "parentId": "3481",
+    "avgRatingString": "4.3",
+    "totalRatingsString": "500+",
+    "sla": {
+      "deliveryTime": 20,
+    }}
+},{
+  "info": {
+    "id": "519464",
+    "name": "Lakshmi's Kitchen",
+    "cloudinaryImageId": "qbgjnk4mri4wh3oaj2zw",
+    "locality": "Mangamoor Road",
+    "areaName": "Mangamuru Road",
+    "costForTwo": "₹200 for two",
+    "price":20000,
+    "veg":false,
+    "cuisines": [
+      "North Indian",
+      "Chinese"
+    ],
+    "avgRating": 3.3,
+    "parentId": "310181",
+    "avgRatingString": "4.3",
+    "totalRatingsString": "1K+",
+    "sla": {
+      "deliveryTime": 20,
+    }}
+},{
+  "info": {
+    "id": "154038",
+    "name": "Cream Stone Ice Cream",
+    "cloudinaryImageId": "e6af7ef8b8ad04f12d748f144b602c0f",
+    "locality": "Guntur Road",
+    "areaName": "Gopal Nagar",
+    "costForTwo": "₹300 for two",
+    "price":30000,
+    "veg":true,
+    "cuisines": [
+      "Ice Cream",
+      "Desserts",
+      "Beverages"
+    ],
+    "avgRating": 3.3,
+    "veg": true,
+    "parentId": "289",
+    "avgRatingString": "4.3",
+    "totalRatingsString": "1K+",
+    "sla": {
+      "deliveryTime": 15,
+    }}
+}]
