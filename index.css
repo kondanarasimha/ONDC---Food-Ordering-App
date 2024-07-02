@@ -180,3 +180,27 @@ body {
   margin: 0px 0px 10px 5px;
   color: rgba(2, 6, 12, 0.6);
 }
+
+
+.shimmer-card-container {
+  width: 230px;
+  height: 230px;
+  border-radius: 10px;
+  margin-bottom: 50px;  
+  background-color: rgb(255, 255, 255);
+}  
+
+.shimmer-img-container {
+  width: 220px;
+  height: 255px;
+  margin: 5px;
+  border-radius: 5px;
+  background-color: rgb(242, 242, 242);
+}
+
+.Shimmer-filter-container {
+  height: 40px;
+  border-radius: 5px;
+  margin: 18px;
+  background-color: rgb(242, 242, 242);
+}

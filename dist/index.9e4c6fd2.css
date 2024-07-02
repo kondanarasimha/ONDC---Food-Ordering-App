@@ -168,4 +168,27 @@ body {
   color: #02060c99;
   margin: 0 0 10px 5px;
 }
+
+.shimmer-card-container {
+  background-color: #fff;
+  border-radius: 10px;
+  width: 230px;
+  height: 230px;
+  margin-bottom: 50px;
+}
+
+.shimmer-img-container {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  width: 220px;
+  height: 255px;
+  margin: 5px;
+}
+
+.Shimmer-filter-container {
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  height: 40px;
+  margin: 18px;
+}
 /*# sourceMappingURL=index.9e4c6fd2.css.map */

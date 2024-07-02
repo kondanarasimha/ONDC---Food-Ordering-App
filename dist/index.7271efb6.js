@@ -27553,6 +27553,7 @@ var _search24DpFILL0Wght400GRAD0Opsz24PngDefault = parcelHelpers.interopDefault(
 var _resetSettings24DpFILL0Wght400GRAD0Opsz24Png = require("../../Images/reset_settings_24dp_FILL0_wght400_GRAD0_opsz24.png");
 var _resetSettings24DpFILL0Wght400GRAD0Opsz24PngDefault = parcelHelpers.interopDefault(_resetSettings24DpFILL0Wght400GRAD0Opsz24Png);
 var _urlsJs = require("../utiles/urls.js");
+var _shimmerCardsJs = require("./ShimmerCards.js");
 var _s = $RefreshSig$();
 const Body = ()=>{
     _s();
@@ -27561,9 +27562,38 @@ const Body = ()=>{
         fetchData();
     }, []);
     async function fetchData() {
-        const data = await fetch((0, _urlsJs.apiUrl));
+        const data = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
         const jsonData = await data.json();
         setRestaurantsData(jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    }
+    if (restaurantsData.length === 0) {
+        const shimmerLen = Array(20).fill(1);
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "body-container",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerCardsJs.ShimmerFilterStrip), {}, void 0, false, {
+                    fileName: "src/components/Body.js",
+                    lineNumber: 27,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "card-container",
+                    children: shimmerLen.map((data, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerCardsJs.ShimmerCards), {}, index, false, {
+                            fileName: "src/components/Body.js",
+                            lineNumber: 29,
+                            columnNumber: 42
+                        }, undefined))
+                }, void 0, false, {
+                    fileName: "src/components/Body.js",
+                    lineNumber: 28,
+                    columnNumber: 9
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/Body.js",
+            lineNumber: 26,
+            columnNumber: 7
+        }, undefined);
     }
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "body-container",
@@ -27578,7 +27608,7 @@ const Body = ()=>{
                                 placeholder: "Chicken Biryani"
                             }, void 0, false, {
                                 fileName: "src/components/Body.js",
-                                lineNumber: 25,
+                                lineNumber: 40,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27586,18 +27616,18 @@ const Body = ()=>{
                                     src: (0, _search24DpFILL0Wght400GRAD0Opsz24PngDefault.default)
                                 }, void 0, false, {
                                     fileName: "src/components/Body.js",
-                                    lineNumber: 27,
+                                    lineNumber: 42,
                                     columnNumber: 13
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/components/Body.js",
-                                lineNumber: 26,
+                                lineNumber: 41,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 24,
+                        lineNumber: 39,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27612,12 +27642,12 @@ const Body = ()=>{
                                     src: (0, _resetSettings24DpFILL0Wght400GRAD0Opsz24PngDefault.default)
                                 }, void 0, false, {
                                     fileName: "src/components/Body.js",
-                                    lineNumber: 33,
+                                    lineNumber: 48,
                                     columnNumber: 14
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/components/Body.js",
-                                lineNumber: 31,
+                                lineNumber: 46,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27628,7 +27658,7 @@ const Body = ()=>{
                                 children: "Top Rating"
                             }, void 0, false, {
                                 fileName: "src/components/Body.js",
-                                lineNumber: 35,
+                                lineNumber: 50,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27639,7 +27669,7 @@ const Body = ()=>{
                                 children: "Fast Delivery"
                             }, void 0, false, {
                                 fileName: "src/components/Body.js",
-                                lineNumber: 40,
+                                lineNumber: 55,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27650,19 +27680,19 @@ const Body = ()=>{
                                 children: "Rs 150-300"
                             }, void 0, false, {
                                 fileName: "src/components/Body.js",
-                                lineNumber: 45,
+                                lineNumber: 60,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 30,
+                        lineNumber: 45,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Body.js",
-                lineNumber: 23,
+                lineNumber: 38,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27671,18 +27701,18 @@ const Body = ()=>{
                         resDetails: restaurantDetails
                     }, restaurantDetails.info.id, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 53,
+                        lineNumber: 68,
                         columnNumber: 11
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 52,
+                lineNumber: 67,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Body.js",
-        lineNumber: 21,
+        lineNumber: 36,
         columnNumber: 5
     }, undefined);
 };
@@ -27696,7 +27726,7 @@ $RefreshReg$(_c, "Body");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./CardDetails.js":"4xR6h","react":"21dqq","../../Images/search_24dp_FILL0_wght400_GRAD0_opsz24.png":"kuWfn","../../Images/reset_settings_24dp_FILL0_wght400_GRAD0_opsz24.png":"lHvbU","../utiles/urls.js":"aw5Ei"}],"4xR6h":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./CardDetails.js":"4xR6h","react":"21dqq","../../Images/search_24dp_FILL0_wght400_GRAD0_opsz24.png":"kuWfn","../../Images/reset_settings_24dp_FILL0_wght400_GRAD0_opsz24.png":"lHvbU","../utiles/urls.js":"aw5Ei","./ShimmerCards.js":"bWELN"}],"4xR6h":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$6320 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27864,6 +27894,50 @@ module.exports = require("72697e4a5a02f24f").getBundleURL("aXMci") + "search_24d
 },{"72697e4a5a02f24f":"lgJ39"}],"lHvbU":[function(require,module,exports) {
 module.exports = require("50b0f67c40a49501").getBundleURL("aXMci") + "reset_settings_24dp_FILL0_wght400_GRAD0_opsz24.470775f6.png" + "?" + Date.now();
 
-},{"50b0f67c40a49501":"lgJ39"}]},["9wh9R","1xC6H","2kQhy"], "2kQhy", "parcelRequire77dd")
+},{"50b0f67c40a49501":"lgJ39"}],"bWELN":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$f77b = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$f77b.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "ShimmerCards", ()=>ShimmerCards);
+parcelHelpers.export(exports, "ShimmerFilterStrip", ()=>ShimmerFilterStrip);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const ShimmerCards = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "shimmer-card-container",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "shimmer-img-container"
+        }, void 0, false, {
+            fileName: "src/components/ShimmerCards.js",
+            lineNumber: 3,
+            columnNumber: 11
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/ShimmerCards.js",
+        lineNumber: 2,
+        columnNumber: 9
+    }, undefined);
+_c = ShimmerCards;
+const ShimmerFilterStrip = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "Shimmer-filter-container"
+    }, void 0, false, {
+        fileName: "src/components/ShimmerCards.js",
+        lineNumber: 9,
+        columnNumber: 3
+    }, undefined);
+_c1 = ShimmerFilterStrip;
+var _c, _c1;
+$RefreshReg$(_c, "ShimmerCards");
+$RefreshReg$(_c1, "ShimmerFilterStrip");
+
+  $parcel$ReactRefreshHelpers$f77b.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["9wh9R","1xC6H","2kQhy"], "2kQhy", "parcelRequire77dd")
 
 //# sourceMappingURL=index.7271efb6.js.map

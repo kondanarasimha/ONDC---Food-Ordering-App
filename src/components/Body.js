@@ -3,6 +3,8 @@ import { CardDetails } from './CardDetails.js';
 import searchIcon from '../../Images/search_24dp_FILL0_wght400_GRAD0_opsz24.png';
 import restIcon from '../../Images/reset_settings_24dp_FILL0_wght400_GRAD0_opsz24.png';
 import { apiUrl } from '../utiles/urls.js';
+import { ShimmerCards, ShimmerFilterStrip } from './ShimmerCards.js';
+
 
 export const Body = ()=> {
   const [restaurantsData, setRestaurantsData] = useState([]);
@@ -12,9 +14,22 @@ export const Body = ()=> {
   },[]);
 
   async function fetchData () {
-    const data = await fetch(apiUrl);
+    const data = await fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING');
     const jsonData = await data.json();
     setRestaurantsData(jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+  }
+
+  if(restaurantsData.length === 0) {
+    const shimmerLen = Array(20).fill(1);
+    
+    return (
+      <div className='body-container'>
+        <ShimmerFilterStrip/>
+        <div className="card-container">
+          {shimmerLen.map((data,index)=> <ShimmerCards key={index}/>)}
+        </div>
+      </div>
+    )
   }
 
   return(
