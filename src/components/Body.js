@@ -41,12 +41,14 @@ export const Body = ()=> {
         <div className="search-container">
           <input onChange={(keys)=> {
             setSearchText(keys.target.value);
-          }} placeholder="Chicken Biryani"/>
+          }} placeholder="Search Restaurants"/>
+
           <button onClick={(event)=> {
             const searchedRestaurents = restaurantsData.filter(restaurantDetails=> (((restaurantDetails.info.name).toLowerCase()).includes((searchText).toLowerCase())));
             searchedRestaurents.length === 0 ? alert('No Such Restaurents Found') : (setRestaurantsData(searchedRestaurents));
           }}><img src={searchIcon}/></button>
         </div>
+        
         <div className="filter-btn-container">
           <button onClick={()=> {
             setRatingBtnSty(null);
@@ -61,14 +63,15 @@ export const Body = ()=> {
           }}>Top Rating</button>
 
           <button style={fstDelBtnSty} onClick={()=> {
-            const fastDelivery = restaurantsData.filter(restaurantData=> restaurantData.info.sla.deliveryTime <= 45);
-            fstDelBtnSty === null ? (setFstDelBtnSty(btnStyle),setRestaurantsData(fastDelivery)) :  (setFstDelBtnSty(null),fetchData());
+            const leastDelTime = Math.min(...restaurantsData.map(restaurantData => (restaurantData.info.sla.deliveryTime)));            
+            const fastDelivery = restaurantsData.filter(restaurantData=> restaurantData.info.sla.deliveryTime <= leastDelTime + leastDelTime);
+            fstDelBtnSty === null ? (setFstDelBtnSty(btnStyle), setRestaurantsData(fastDelivery)) :  (setFstDelBtnSty(null), fetchData());
           }}>Fast Delivery</button>
 
           <button style={lowRsBtnSty} onClick={()=> {
-            const lowPrice = restaurantsData.filter((restaurantData)=> (restaurantData.info.costForTwo <= `₹${300} for two`));
+            const lowPrice = restaurantsData.filter((restaurantData)=> (restaurantData.info.costForTwo <= `₹${200} for two`));
             lowRsBtnSty === null ? (setLowRsBtnSty(btnStyle),setRestaurantsData(lowPrice)) : (setLowRsBtnSty(null),fetchData());
-          }}>Rs &lt; 300</button>
+          }}>Rs &lt; 200</button>
         </div>
       </div>
 
