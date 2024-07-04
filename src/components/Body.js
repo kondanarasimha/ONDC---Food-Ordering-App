@@ -8,15 +8,18 @@ import { ShimmerCards, ShimmerFilterStrip } from './ShimmerCards.js';
 
 export const Body = ()=> {
   const [restaurantsData, setRestaurantsData] = useState([]);
+  const [ratingBtnSty, setRatingBtnSty] = useState(null);
+  const [fstDelBtnSty, setFstDelBtnSty] = useState(null);
+  const [lowRsBtnSty, setLowRsBtnSty] = useState(null);
+  const btnStyle = {backgroundColor : 'rgb(50, 50, 56)', color : 'white'};
 
-  useEffect(()=> {
-    fetchData();
-  },[]);
+  useEffect(()=> {fetchData()},[]);
+
 
   async function fetchData () {
-    const data = await fetch('https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.9715987&lng=77.5945627&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING');
+    const data = await fetch(apiUrl);
     const jsonData = await data.json();
-    setRestaurantsData(jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    setRestaurantsData(jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
   }
 
   if(restaurantsData.length === 0) {
@@ -44,23 +47,26 @@ export const Body = ()=> {
         </div>
         <div className="filter-btn-container">
           <button onClick={()=> {
+            setRatingBtnSty(null);
+            setFstDelBtnSty(null);
+            setLowRsBtnSty(null);
             fetchData();
           }}><img className='reset-icon' src={restIcon}></img></button>
 
-          <button onClick={()=>{
+          <button style={ratingBtnSty} onClick={()=>{
             const topRatedRestaurants = restaurantsData.filter(restaurantData=> restaurantData.info.avgRating > 4);
-            setRestaurantsData(topRatedRestaurants);
+            ratingBtnSty === null ? (setRatingBtnSty(btnStyle),setRestaurantsData(topRatedRestaurants)): (setRatingBtnSty(null),fetchData());
           }}>Top Rating</button>
 
-          <button onClick={()=> {
-            const fastDelivery = restaurantsData.filter(restaurantData=> restaurantData.info.sla.deliveryTime <= 35);
-            setRestaurantsData(fastDelivery);
+          <button style={fstDelBtnSty} onClick={()=> {
+            const fastDelivery = restaurantsData.filter(restaurantData=> restaurantData.info.sla.deliveryTime <= 45);
+            fstDelBtnSty === null ? (setFstDelBtnSty(btnStyle),setRestaurantsData(fastDelivery)) :  (setFstDelBtnSty(null),fetchData());
           }}>Fast Delivery</button>
 
-          <button onClick={()=> {
+          <button style={lowRsBtnSty} onClick={()=> {
             const lowPrice = restaurantsData.filter((restaurantData)=> (restaurantData.info.costForTwo <= `₹${300} for two`));
-            setRestaurantsData(lowPrice);
-          }}>Rs 150-300</button>
+            lowRsBtnSty === null ? (setLowRsBtnSty(btnStyle),setRestaurantsData(lowPrice)) : (setLowRsBtnSty(null),fetchData());
+          }}>Rs &lt; 300</button>
         </div>
       </div>
 
