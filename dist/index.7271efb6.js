@@ -27561,6 +27561,7 @@ const Body = ()=>{
     const [ratingBtnSty, setRatingBtnSty] = (0, _react.useState)(null);
     const [fstDelBtnSty, setFstDelBtnSty] = (0, _react.useState)(null);
     const [lowRsBtnSty, setLowRsBtnSty] = (0, _react.useState)(null);
+    const [searchText, setSearchText] = (0, _react.useState)(null);
     const btnStyle = {
         backgroundColor: "rgb(50, 50, 56)",
         color: "white"
@@ -27580,25 +27581,25 @@ const Body = ()=>{
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerCardsJs.ShimmerFilterStrip), {}, void 0, false, {
                     fileName: "src/components/Body.js",
-                    lineNumber: 30,
+                    lineNumber: 29,
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                     className: "card-container",
                     children: shimmerLen.map((data, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerCardsJs.ShimmerCards), {}, index, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 32,
+                            lineNumber: 31,
                             columnNumber: 42
                         }, undefined))
                 }, void 0, false, {
                     fileName: "src/components/Body.js",
-                    lineNumber: 31,
+                    lineNumber: 30,
                     columnNumber: 9
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/Body.js",
-            lineNumber: 29,
+            lineNumber: 28,
             columnNumber: 7
         }, undefined);
     }
@@ -27612,29 +27613,36 @@ const Body = ()=>{
                         className: "search-container",
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                                onChange: (keys)=>{
+                                    setSearchText(keys.target.value);
+                                },
                                 placeholder: "Chicken Biryani"
                             }, void 0, false, {
                                 fileName: "src/components/Body.js",
-                                lineNumber: 43,
+                                lineNumber: 42,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                onClick: (event)=>{
+                                    const searchedRestaurents = restaurantsData.filter((restaurantDetails)=>restaurantDetails.info.name.toLowerCase().includes(searchText.toLowerCase()));
+                                    searchedRestaurents.length === 0 ? alert("No Such Restaurents Found") : setRestaurantsData(searchedRestaurents);
+                                },
                                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                                     src: (0, _search24DpFILL0Wght400GRAD0Opsz24PngDefault.default)
                                 }, void 0, false, {
                                     fileName: "src/components/Body.js",
-                                    lineNumber: 45,
-                                    columnNumber: 13
+                                    lineNumber: 48,
+                                    columnNumber: 14
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/components/Body.js",
-                                lineNumber: 44,
+                                lineNumber: 45,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 42,
+                        lineNumber: 41,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27652,12 +27660,12 @@ const Body = ()=>{
                                     src: (0, _resetSettings24DpFILL0Wght400GRAD0Opsz24PngDefault.default)
                                 }, void 0, false, {
                                     fileName: "src/components/Body.js",
-                                    lineNumber: 54,
+                                    lineNumber: 56,
                                     columnNumber: 14
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/components/Body.js",
-                                lineNumber: 49,
+                                lineNumber: 51,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27669,7 +27677,7 @@ const Body = ()=>{
                                 children: "Top Rating"
                             }, void 0, false, {
                                 fileName: "src/components/Body.js",
-                                lineNumber: 56,
+                                lineNumber: 58,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27681,7 +27689,7 @@ const Body = ()=>{
                                 children: "Fast Delivery"
                             }, void 0, false, {
                                 fileName: "src/components/Body.js",
-                                lineNumber: 61,
+                                lineNumber: 63,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27693,19 +27701,19 @@ const Body = ()=>{
                                 children: "Rs < 300"
                             }, void 0, false, {
                                 fileName: "src/components/Body.js",
-                                lineNumber: 66,
+                                lineNumber: 68,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 48,
+                        lineNumber: 50,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Body.js",
-                lineNumber: 41,
+                lineNumber: 40,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -27714,22 +27722,22 @@ const Body = ()=>{
                         resDetails: restaurantDetails
                     }, restaurantDetails.info.id, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 74,
+                        lineNumber: 76,
                         columnNumber: 11
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 73,
+                lineNumber: 75,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Body.js",
-        lineNumber: 39,
+        lineNumber: 38,
         columnNumber: 5
     }, undefined);
 };
-_s(Body, "BB99SNMe0WLoYque303TDrYghoM=");
+_s(Body, "adTm1mRVhPgNCEfRCxLqAq8rWSI=");
 _c = Body;
 var _c;
 $RefreshReg$(_c, "Body");

@@ -11,10 +11,9 @@ export const Body = ()=> {
   const [ratingBtnSty, setRatingBtnSty] = useState(null);
   const [fstDelBtnSty, setFstDelBtnSty] = useState(null);
   const [lowRsBtnSty, setLowRsBtnSty] = useState(null);
+  const [searchText, setSearchText] = useState(null);
   const btnStyle = {backgroundColor : 'rgb(50, 50, 56)', color : 'white'};
-
   useEffect(()=> {fetchData()},[]);
-
 
   async function fetchData () {
     const data = await fetch(apiUrl);
@@ -40,10 +39,13 @@ export const Body = ()=> {
 
       <div className="filterStrip-container">
         <div className="search-container">
-          <input placeholder="Chicken Biryani"/>
-          <button>
-            <img src={searchIcon}/>
-          </button>
+          <input onChange={(keys)=> {
+            setSearchText(keys.target.value);
+          }} placeholder="Chicken Biryani"/>
+          <button onClick={(event)=> {
+            const searchedRestaurents = restaurantsData.filter(restaurantDetails=> (((restaurantDetails.info.name).toLowerCase()).includes((searchText).toLowerCase())));
+            searchedRestaurents.length === 0 ? alert('No Such Restaurents Found') : (setRestaurantsData(searchedRestaurents));
+          }}><img src={searchIcon}/></button>
         </div>
         <div className="filter-btn-container">
           <button onClick={()=> {
