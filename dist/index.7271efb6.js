@@ -27624,6 +27624,7 @@ const Body = ()=>{
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                                 onClick: (event)=>{
+                                    if (searchText === null) return alert("Enter Restaurent Name");
                                     const searchedRestaurents = restaurantsData.filter((restaurantDetails)=>restaurantDetails.info.name.toLowerCase().includes(searchText.toLowerCase()));
                                     searchedRestaurents.length === 0 ? alert("No Such Restaurents Found") : setRestaurantsData(searchedRestaurents);
                                 },
@@ -27631,7 +27632,7 @@ const Body = ()=>{
                                     src: (0, _search24DpFILL0Wght400GRAD0Opsz24PngDefault.default)
                                 }, void 0, false, {
                                     fileName: "src/components/Body.js",
-                                    lineNumber: 49,
+                                    lineNumber: 52,
                                     columnNumber: 14
                                 }, undefined)
                             }, void 0, false, {
@@ -27660,12 +27661,12 @@ const Body = ()=>{
                                     src: (0, _resetSettings24DpFILL0Wght400GRAD0Opsz24PngDefault.default)
                                 }, void 0, false, {
                                     fileName: "src/components/Body.js",
-                                    lineNumber: 57,
+                                    lineNumber: 61,
                                     columnNumber: 14
                                 }, undefined)
                             }, void 0, false, {
                                 fileName: "src/components/Body.js",
-                                lineNumber: 52,
+                                lineNumber: 56,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27677,20 +27678,20 @@ const Body = ()=>{
                                 children: "Top Rating"
                             }, void 0, false, {
                                 fileName: "src/components/Body.js",
-                                lineNumber: 59,
+                                lineNumber: 63,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                                 style: fstDelBtnSty,
                                 onClick: ()=>{
-                                    const fastDelivery = restaurantsData.map((restaurantData)=>restaurantData.info.sla.deliveryTime).sort();
-                                    console.log(fastDelivery);
-                                // fstDelBtnSty === null ? (setFstDelBtnSty(btnStyle), setRestaurantsData(fastDelivery)) :  (setFstDelBtnSty(null), fetchData());
+                                    const leastDelTime = Math.min(...restaurantsData.map((restaurantData)=>restaurantData.info.sla.deliveryTime));
+                                    const fastDelivery = restaurantsData.filter((restaurantData)=>restaurantData.info.sla.deliveryTime <= leastDelTime + 10);
+                                    fstDelBtnSty === null ? (setFstDelBtnSty(btnStyle), setRestaurantsData(fastDelivery)) : (setFstDelBtnSty(null), fetchData());
                                 },
                                 children: "Fast Delivery"
                             }, void 0, false, {
                                 fileName: "src/components/Body.js",
-                                lineNumber: 64,
+                                lineNumber: 68,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27702,13 +27703,13 @@ const Body = ()=>{
                                 children: "Rs < 200"
                             }, void 0, false, {
                                 fileName: "src/components/Body.js",
-                                lineNumber: 70,
+                                lineNumber: 74,
                                 columnNumber: 11
                             }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 51,
+                        lineNumber: 55,
                         columnNumber: 9
                     }, undefined)
                 ]
@@ -27723,12 +27724,12 @@ const Body = ()=>{
                         resDetails: restaurantDetails
                     }, restaurantDetails.info.id, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 78,
+                        lineNumber: 82,
                         columnNumber: 11
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 77,
+                lineNumber: 81,
                 columnNumber: 7
             }, undefined)
         ]

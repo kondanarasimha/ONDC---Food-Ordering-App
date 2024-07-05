@@ -55,9 +55,11 @@ body {
 .filter-btn-container button {
   border: none;
   cursor: pointer;
-  border-radius: 2px;
   height: 30px;
   transition: all 0.15s;
+  background-color: white;
+  border: solid 1px rgb(50, 50, 56);
+  border-radius: 3px;
 }
 
 .search-container {

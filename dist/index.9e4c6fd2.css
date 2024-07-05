@@ -54,8 +54,9 @@ body {
 
 .filter-btn-container button {
   cursor: pointer;
-  border: none;
-  border-radius: 2px;
+  background-color: #fff;
+  border: 1px solid #323238;
+  border-radius: 3px;
   height: 30px;
   transition: all .15s;
 }

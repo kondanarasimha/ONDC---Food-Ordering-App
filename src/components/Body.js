@@ -44,6 +44,9 @@ export const Body = ()=> {
           }} placeholder="Search Restaurants"/>
 
           <button onClick={(event)=> {
+            if(searchText === null) {
+              return alert('Enter Restaurent Name');
+            }
             const searchedRestaurents = restaurantsData.filter(restaurantDetails=> (((restaurantDetails.info.name).toLowerCase()).includes((searchText).toLowerCase())));
             searchedRestaurents.length === 0 ? alert('No Such Restaurents Found') : (setRestaurantsData(searchedRestaurents));
           }}><img src={searchIcon}/></button>
@@ -64,7 +67,7 @@ export const Body = ()=> {
 
           <button style={fstDelBtnSty} onClick={()=> {
             const leastDelTime = Math.min(...restaurantsData.map(restaurantData => (restaurantData.info.sla.deliveryTime)));            
-            const fastDelivery = restaurantsData.filter(restaurantData=> restaurantData.info.sla.deliveryTime <= leastDelTime + leastDelTime);
+            const fastDelivery = restaurantsData.filter(restaurantData=> restaurantData.info.sla.deliveryTime <= leastDelTime + 10);
             fstDelBtnSty === null ? (setFstDelBtnSty(btnStyle), setRestaurantsData(fastDelivery)) :  (setFstDelBtnSty(null), fetchData());
           }}>Fast Delivery</button>
 
