@@ -8,6 +8,7 @@ import { ShimmerCards, ShimmerFilterStrip } from './ShimmerCards.js';
 
 export const Body = ()=> {
   const [restaurantsData, setRestaurantsData] = useState([]);
+  const [filterRestaurants, setFilterRestaurants] = useState([]);
   const [ratingBtnSty, setRatingBtnSty] = useState(null);
   const [fstDelBtnSty, setFstDelBtnSty] = useState(null);
   const [lowRsBtnSty, setLowRsBtnSty] = useState(null);
@@ -18,7 +19,9 @@ export const Body = ()=> {
   async function fetchData () {
     const data = await fetch(apiUrl);
     const jsonData = await data.json();
-    setRestaurantsData(jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
+    const restaurantData = jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+    setRestaurantsData(restaurantData);
+    setFilterRestaurants(restaurantData);
   }
 
   if(restaurantsData.length === 0) {
@@ -48,7 +51,7 @@ export const Body = ()=> {
               return alert('Enter Restaurent Name');
             }
             const searchedRestaurents = restaurantsData.filter(restaurantDetails=> (((restaurantDetails.info.name).toLowerCase()).includes((searchText).toLowerCase())));
-            searchedRestaurents.length === 0 ? alert('No Such Restaurents Found') : (setRestaurantsData(searchedRestaurents));
+            searchedRestaurents.length === 0 ? alert('No Such Restaurents Found') : (setFilterRestaurants(searchedRestaurents));
           }}><img src={searchIcon}/></button>
         </div>
         
@@ -57,28 +60,28 @@ export const Body = ()=> {
             setRatingBtnSty(null);
             setFstDelBtnSty(null);
             setLowRsBtnSty(null);
-            fetchData();
+            setFilterRestaurants(restaurantsData);
           }}><img className='reset-icon' src={restIcon}></img></button>
 
           <button style={ratingBtnSty} onClick={()=>{
-            const topRatedRestaurants = restaurantsData.filter(restaurantData=> restaurantData.info.avgRating > 4);
-            ratingBtnSty === null ? (setRatingBtnSty(btnStyle),setRestaurantsData(topRatedRestaurants)): (setRatingBtnSty(null),fetchData());
+            const topRatedRestaurants = restaurantsData.filter(restaurantData=> restaurantData.info.avgRating > 4.0);
+            ratingBtnSty === null ? (setRatingBtnSty(btnStyle),setFilterRestaurants(topRatedRestaurants)): (setRatingBtnSty(null),setFilterRestaurants(restaurantsData));
           }}>Top Rating</button>
 
           <button style={fstDelBtnSty} onClick={()=> {
             const leastDelTime = Math.min(...restaurantsData.map(restaurantData => (restaurantData.info.sla.deliveryTime)));            
             const fastDelivery = restaurantsData.filter(restaurantData=> restaurantData.info.sla.deliveryTime <= leastDelTime + 10);
-            fstDelBtnSty === null ? (setFstDelBtnSty(btnStyle), setRestaurantsData(fastDelivery)) :  (setFstDelBtnSty(null), fetchData());
+            fstDelBtnSty === null ? (setFstDelBtnSty(btnStyle), setFilterRestaurants(fastDelivery)) :  (setFstDelBtnSty(null), setFilterRestaurants(restaurantsData));
           }}>Fast Delivery</button>
 
           <button style={lowRsBtnSty} onClick={()=> {
             const lowPrice = restaurantsData.filter((restaurantData)=> (restaurantData.info.costForTwo <= `₹${200} for two`));
-            lowRsBtnSty === null ? (setLowRsBtnSty(btnStyle),setRestaurantsData(lowPrice)) : (setLowRsBtnSty(null),fetchData());
+            lowRsBtnSty === null ? (setLowRsBtnSty(btnStyle), setFilterRestaurants(lowPrice)) : (setLowRsBtnSty(null), setFilterRestaurants(restaurantsData));
           }}>Rs &lt; 200</button>
         </div>
       </div>
 
-      <div className='card-container'>{restaurantsData.map((restaurantDetails)=> (
+      <div className='card-container'>{filterRestaurants.map((restaurantDetails)=> (
           <CardDetails key={restaurantDetails.info.id} resDetails={restaurantDetails}/>))}
       </div>
 
