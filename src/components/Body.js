@@ -65,18 +65,25 @@ export const Body = ()=> {
 
           <button style={ratingBtnSty} onClick={()=>{
             const topRatedRestaurants = restaurantsData.filter(restaurantData=> restaurantData.info.avgRating > 4.0);
-            ratingBtnSty === null ? (setRatingBtnSty(btnStyle),setFilterRestaurants(topRatedRestaurants)): (setRatingBtnSty(null),setFilterRestaurants(restaurantsData));
+            ratingBtnSty === null ? (setRatingBtnSty(btnStyle), setFstDelBtnSty(null),
+            setLowRsBtnSty(null), 
+            setFilterRestaurants(topRatedRestaurants)) : 
+            (setRatingBtnSty(null),setFilterRestaurants(restaurantsData));
           }}>Top Rating</button>
 
           <button style={fstDelBtnSty} onClick={()=> {
             const leastDelTime = Math.min(...restaurantsData.map(restaurantData => (restaurantData.info.sla.deliveryTime)));            
             const fastDelivery = restaurantsData.filter(restaurantData=> restaurantData.info.sla.deliveryTime <= leastDelTime + 10);
-            fstDelBtnSty === null ? (setFstDelBtnSty(btnStyle), setFilterRestaurants(fastDelivery)) :  (setFstDelBtnSty(null), setFilterRestaurants(restaurantsData));
+            fstDelBtnSty === null ? (setFstDelBtnSty(btnStyle), setRatingBtnSty(null), setLowRsBtnSty(null),
+            setFilterRestaurants(fastDelivery)) :  
+            (setFstDelBtnSty(null), setFilterRestaurants(restaurantsData));
           }}>Fast Delivery</button>
 
           <button style={lowRsBtnSty} onClick={()=> {
             const lowPrice = restaurantsData.filter((restaurantData)=> (restaurantData.info.costForTwo <= `₹${200} for two`));
-            lowRsBtnSty === null ? (setLowRsBtnSty(btnStyle), setFilterRestaurants(lowPrice)) : (setLowRsBtnSty(null), setFilterRestaurants(restaurantsData));
+            lowRsBtnSty === null ? (setLowRsBtnSty(btnStyle), setFilterRestaurants(lowPrice), setRatingBtnSty(null),
+            setFstDelBtnSty(null)) : 
+            (setLowRsBtnSty(null), setFilterRestaurants(restaurantsData));
           }}>Rs &lt; 200</button>
         </div>
       </div>
