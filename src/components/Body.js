@@ -14,6 +14,7 @@ export const Body = ()=> {
   const [lowRsBtnSty, setLowRsBtnSty] = useState(null);
   const [searchText, setSearchText] = useState(null);
   const btnStyle = {backgroundColor : 'rgb(50, 50, 56)', color : 'white'};
+  
   useEffect(()=> {fetchData()},[]);
 
   async function fetchData () {
