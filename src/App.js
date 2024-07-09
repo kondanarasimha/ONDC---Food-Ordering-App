@@ -6,6 +6,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Contact } from './components/Contact.js';
 import { About } from './components/About.js';
 import { Cart } from './components/Cart.js';
+import { Error } from './components/Error.js';
 
 
 
@@ -21,6 +22,7 @@ const appRouter = createBrowserRouter([
   {
     path: '/',
     element: <AppLayout />,
+    errorElement: <Error />
   },
   {
     path: '/contact',
