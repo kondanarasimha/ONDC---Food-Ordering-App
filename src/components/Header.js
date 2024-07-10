@@ -1,4 +1,5 @@
 import logo from '../../Images/ONDC-logo.png';
+import { Link } from 'react-router-dom';
 
 
 export const Header = ()=> {
@@ -9,10 +10,10 @@ export const Header = ()=> {
     </div>
     <div className='nav-container'>
       <ul>
-        <li>HOME</li>
-        <li>CONTACT</li>
-        <li>ABOUT</li>
-        <li>CART</li>
+        <li><Link to="/">HOME</Link></li>
+        <li><Link to="/contact">CONTACT</Link></li>
+        <li><Link to="/about">ABOUT</Link></li>
+        <li><Link to="/cart">CART</Link></li>
       </ul>
     </div>
   </div>
