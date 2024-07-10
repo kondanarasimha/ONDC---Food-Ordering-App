@@ -2973,7 +2973,7 @@ const AppLayout = ()=>{
                 lineNumber: 16,
                 columnNumber: 5
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyJs.Body), {}, void 0, false, {
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
                 fileName: "src/App.js",
                 lineNumber: 17,
                 columnNumber: 5
@@ -2994,34 +2994,44 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
             lineNumber: 24,
             columnNumber: 14
         }, undefined),
+        children: [
+            {
+                path: "/",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyJs.Body), {}, void 0, false, {
+                    fileName: "src/App.js",
+                    lineNumber: 28,
+                    columnNumber: 18
+                }, undefined)
+            },
+            {
+                path: "/contact",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contactJs.Contact), {}, void 0, false, {
+                    fileName: "src/App.js",
+                    lineNumber: 32,
+                    columnNumber: 18
+                }, undefined)
+            },
+            {
+                path: "/about",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutJs.About), {}, void 0, false, {
+                    fileName: "src/App.js",
+                    lineNumber: 36,
+                    columnNumber: 18
+                }, undefined)
+            },
+            {
+                path: "/cart",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cartJs.Cart), {}, void 0, false, {
+                    fileName: "src/App.js",
+                    lineNumber: 40,
+                    columnNumber: 18
+                }, undefined)
+            }
+        ],
         errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorJs.Error), {}, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 25,
+            lineNumber: 43,
             columnNumber: 19
-        }, undefined)
-    },
-    {
-        path: "/contact",
-        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contactJs.Contact), {}, void 0, false, {
-            fileName: "src/App.js",
-            lineNumber: 29,
-            columnNumber: 14
-        }, undefined)
-    },
-    {
-        path: "/about",
-        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutJs.About), {}, void 0, false, {
-            fileName: "src/App.js",
-            lineNumber: 33,
-            columnNumber: 14
-        }, undefined)
-    },
-    {
-        path: "/cart",
-        element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cartJs.Cart), {}, void 0, false, {
-            fileName: "src/App.js",
-            lineNumber: 37,
-            columnNumber: 14
         }, undefined)
     }
 ]);
@@ -3030,7 +3040,7 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterP
     router: appRouter
 }, void 0, false, {
     fileName: "src/App.js",
-    lineNumber: 43,
+    lineNumber: 49,
     columnNumber: 13
 }, undefined));
 var _c;
