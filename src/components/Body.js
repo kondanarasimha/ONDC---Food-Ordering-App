@@ -4,6 +4,7 @@ import searchIcon from '../../Images/search_24dp_FILL0_wght400_GRAD0_opsz24.png'
 import restIcon from '../../Images/reset_settings_24dp_FILL0_wght400_GRAD0_opsz24.png';
 import { apiUrl } from '../utiles/urls.js';
 import { ShimmerCards, ShimmerFilterStrip } from './ShimmerCards.js';
+import { Link } from 'react-router-dom';
 
 
 export const Body = ()=> {
@@ -90,7 +91,8 @@ export const Body = ()=> {
       </div>
 
       <div className='card-container'>{filterRestaurants.map((restaurantDetails)=> (
-          <CardDetails key={restaurantDetails.info.id} resDetails={restaurantDetails}/>))}
+        <Link key={restaurantDetails.info.id} to={`/restaurant/${restaurantDetails.info.id}`}><CardDetails resDetails={restaurantDetails}/></Link>
+        ))}
       </div>
 
     </div>

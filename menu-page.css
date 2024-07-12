@@ -1,0 +1,69 @@
+.menu-body {
+  margin: 20px 250px 0px 250px;
+}
+
+.resturent-header-container {
+  border-radius: 10px;
+}
+
+.res-details-container {
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px rgba(179, 179, 179, 0.834);
+  border: solid 1px rgb(50, 50, 56);
+}
+
+.res-rating-price {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  border-bottom: solid 1px rgb(50, 50, 56);
+  margin-bottom: 10px;
+}
+
+.res-rating-price h4 {
+  font-weight: bold;
+  padding: 0px 10px 0px 5px;
+  margin: 0px;
+  text-align: center;
+}
+
+.res-location-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.res-location-container h5 {
+  font-weight: lighter;
+  margin: 0px;
+  margin-left: 5px;
+}
+
+.outlet {
+  font-weight: bold;
+}
+
+.menu-ratingIcon {
+  width: 25px;
+  height: 25px;
+  padding-left: 10px;
+} 
+
+.location-icon,
+.delivery-icon {
+  width: 25px;
+  height: 25px;
+}
+
+.del-container {
+  display: flex;
+  align-items: center;
+  margin: 0px 0px 10px 10px;
+}
+
+.del-container h5 {
+  font-weight: bold;
+  margin: 0px 0px 0px 5px;
+}
