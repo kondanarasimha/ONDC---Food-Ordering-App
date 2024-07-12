@@ -2964,24 +2964,25 @@ var _contactJs = require("./components/Contact.js");
 var _aboutJs = require("./components/About.js");
 var _cartJs = require("./components/Cart.js");
 var _errorJs = require("./components/Error.js");
+var _resturentMenuJs = require("./components/ResturentMenu.js");
 const AppLayout = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "app",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _headerJs.Header), {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 16,
+                lineNumber: 17,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Outlet), {}, void 0, false, {
                 fileName: "src/App.js",
-                lineNumber: 17,
+                lineNumber: 18,
                 columnNumber: 5
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/App.js",
-        lineNumber: 15,
+        lineNumber: 16,
         columnNumber: 3
     }, undefined);
 };
@@ -2991,7 +2992,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
         path: "/",
         element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AppLayout, {}, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 24,
+            lineNumber: 25,
             columnNumber: 14
         }, undefined),
         children: [
@@ -2999,7 +3000,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _bodyJs.Body), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 28,
+                    lineNumber: 29,
                     columnNumber: 18
                 }, undefined)
             },
@@ -3007,7 +3008,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/contact",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _contactJs.Contact), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 32,
+                    lineNumber: 33,
                     columnNumber: 18
                 }, undefined)
             },
@@ -3015,7 +3016,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/about",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutJs.About), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 36,
+                    lineNumber: 37,
                     columnNumber: 18
                 }, undefined)
             },
@@ -3023,14 +3024,22 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                 path: "/cart",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cartJs.Cart), {}, void 0, false, {
                     fileName: "src/App.js",
-                    lineNumber: 40,
+                    lineNumber: 41,
+                    columnNumber: 18
+                }, undefined)
+            },
+            {
+                path: "/restaurant/:id",
+                element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _resturentMenuJs.ResturentMenu), {}, void 0, false, {
+                    fileName: "src/App.js",
+                    lineNumber: 45,
                     columnNumber: 18
                 }, undefined)
             }
         ],
         errorElement: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _errorJs.Error), {}, void 0, false, {
             fileName: "src/App.js",
-            lineNumber: 43,
+            lineNumber: 48,
             columnNumber: 19
         }, undefined)
     }
@@ -3040,7 +3049,7 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.RouterP
     router: appRouter
 }, void 0, false, {
     fileName: "src/App.js",
-    lineNumber: 49,
+    lineNumber: 54,
     columnNumber: 13
 }, undefined));
 var _c;
@@ -3051,7 +3060,7 @@ $RefreshReg$(_c, "AppLayout");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./components/Header.js":"hsJbF","./components/Body.js":"8yaV8","react-router-dom":"9xmpe","./components/Contact.js":"cgAOG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/About.js":"9R1Eu","./components/Cart.js":"h8J3U","./components/Error.js":"kvula"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./components/Header.js":"hsJbF","./components/Body.js":"8yaV8","react-router-dom":"9xmpe","./components/Contact.js":"cgAOG","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/About.js":"9R1Eu","./components/Cart.js":"h8J3U","./components/Error.js":"kvula","./components/ResturentMenu.js":"csHCM"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -35044,8 +35053,10 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "resturentImgsLink", ()=>resturentImgsLink);
 parcelHelpers.export(exports, "apiUrl", ()=>apiUrl);
+parcelHelpers.export(exports, "resturentMenuUrl", ()=>resturentMenuUrl);
 const resturentImgsLink = `https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/`;
-const apiUrl = "https://cors-anywhere.herokuapp.com/https://www.swiggy.com/dapi/restaurants/list/v5?lat=15.43175011569534&lng=80.04333905875683&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
+const apiUrl = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=15.43175011569534&lng=80.04333905875683&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
+const resturentMenuUrl = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=15.43175011569534&lng=80.04333905875683&restaurantId=341421";
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aEfPD":[function(require,module,exports) {
 module.exports = require("5d7cfbcb095b1780").getBundleURL("aXMci") + "directions_bike_24dp_FILL0_wght400_GRAD0_opsz24.42429ca7.png" + "?" + Date.now();
@@ -35266,6 +35277,173 @@ $RefreshReg$(_c, "Error");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","react-router-dom":"9xmpe"}]},["9wh9R","1xC6H","2kQhy"], "2kQhy", "parcelRequire77dd")
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","react-router-dom":"9xmpe"}],"csHCM":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$027e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$027e.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "ResturentMenu", ()=>ResturentMenu);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _urls = require("../utiles/urls");
+var _starHalf24DpFILL0Wght400GRAD0Opsz24Png = require("../../Images/star_half_24dp_FILL0_wght400_GRAD0_opsz24.png");
+var _starHalf24DpFILL0Wght400GRAD0Opsz24PngDefault = parcelHelpers.interopDefault(_starHalf24DpFILL0Wght400GRAD0Opsz24Png);
+var _pinDrop24Dp000000FILL0Wght400GRAD0Opsz24Png = require("../../Images/pin_drop_24dp_000000_FILL0_wght400_GRAD0_opsz24.png");
+var _pinDrop24Dp000000FILL0Wght400GRAD0Opsz24PngDefault = parcelHelpers.interopDefault(_pinDrop24Dp000000FILL0Wght400GRAD0Opsz24Png);
+var _directionsBike24DpFILL0Wght400GRAD0Opsz24Png = require("../../Images/directions_bike_24dp_FILL0_wght400_GRAD0_opsz24.png");
+var _directionsBike24DpFILL0Wght400GRAD0Opsz24PngDefault = parcelHelpers.interopDefault(_directionsBike24DpFILL0Wght400GRAD0Opsz24Png);
+var _s = $RefreshSig$();
+const ResturentMenu = ()=>{
+    _s();
+    const [menuDetails, setMenuDetails] = (0, _react.useState)();
+    (0, _react.useEffect)(()=>{
+        menuItemsData();
+    }, []);
+    async function menuItemsData() {
+        const data = await fetch((0, _urls.resturentMenuUrl));
+        const jsonData = await data.json();
+        setMenuDetails(jsonData);
+    }
+    console.log(menuDetails);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "menu-body",
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "resturent-header-container",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "resturent-name",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                        children: "Citi Cafe"
+                    }, void 0, false, {
+                        fileName: "src/components/ResturentMenu.js",
+                        lineNumber: 25,
+                        columnNumber: 11
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/components/ResturentMenu.js",
+                    lineNumber: 24,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "res-details-container",
+                    children: [
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "res-rating-price",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                    className: "menu-ratingIcon",
+                                    src: (0, _starHalf24DpFILL0Wght400GRAD0Opsz24PngDefault.default)
+                                }, void 0, false, {
+                                    fileName: "src/components/ResturentMenu.js",
+                                    lineNumber: 30,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                    children: "Rating | Rupees 150"
+                                }, void 0, false, {
+                                    fileName: "src/components/ResturentMenu.js",
+                                    lineNumber: 31,
+                                    columnNumber: 13
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/ResturentMenu.js",
+                            lineNumber: 29,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "res-location-container",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                    className: "location-icon",
+                                    src: (0, _pinDrop24Dp000000FILL0Wght400GRAD0Opsz24PngDefault.default)
+                                }, void 0, false, {
+                                    fileName: "src/components/ResturentMenu.js",
+                                    lineNumber: 35,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                    children: [
+                                        "Outlet ",
+                                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                                            className: "city",
+                                            children: "Ongole"
+                                        }, void 0, false, {
+                                            fileName: "src/components/ResturentMenu.js",
+                                            lineNumber: 36,
+                                            columnNumber: 24
+                                        }, undefined)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "src/components/ResturentMenu.js",
+                                    lineNumber: 36,
+                                    columnNumber: 13
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/ResturentMenu.js",
+                            lineNumber: 34,
+                            columnNumber: 11
+                        }, undefined),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                            className: "del-container",
+                            children: [
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                    className: "delivery-icon",
+                                    src: (0, _directionsBike24DpFILL0Wght400GRAD0Opsz24PngDefault.default)
+                                }, void 0, false, {
+                                    fileName: "src/components/ResturentMenu.js",
+                                    lineNumber: 40,
+                                    columnNumber: 13
+                                }, undefined),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                    children: "30-40"
+                                }, void 0, false, {
+                                    fileName: "src/components/ResturentMenu.js",
+                                    lineNumber: 41,
+                                    columnNumber: 13
+                                }, undefined)
+                            ]
+                        }, void 0, true, {
+                            fileName: "src/components/ResturentMenu.js",
+                            lineNumber: 39,
+                            columnNumber: 11
+                        }, undefined)
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/ResturentMenu.js",
+                    lineNumber: 28,
+                    columnNumber: 9
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/ResturentMenu.js",
+            lineNumber: 22,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/ResturentMenu.js",
+        lineNumber: 21,
+        columnNumber: 5
+    }, undefined);
+};
+_s(ResturentMenu, "L8yJ2WgdARObO8/BOn3QYoTP1ws=");
+_c = ResturentMenu;
+var _c;
+$RefreshReg$(_c, "ResturentMenu");
+
+  $parcel$ReactRefreshHelpers$027e.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","../utiles/urls":"aw5Ei","../../Images/star_half_24dp_FILL0_wght400_GRAD0_opsz24.png":"3Gmti","../../Images/pin_drop_24dp_000000_FILL0_wght400_GRAD0_opsz24.png":"jdzo8","../../Images/directions_bike_24dp_FILL0_wght400_GRAD0_opsz24.png":"aEfPD"}],"jdzo8":[function(require,module,exports) {
+module.exports = require("156f49c10250a153").getBundleURL("aXMci") + "pin_drop_24dp_000000_FILL0_wght400_GRAD0_opsz24.9e1de5a5.png" + "?" + Date.now();
+
+},{"156f49c10250a153":"lgJ39"}]},["9wh9R","1xC6H","2kQhy"], "2kQhy", "parcelRequire77dd")
 
 //# sourceMappingURL=index.7271efb6.js.map

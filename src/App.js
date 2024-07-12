@@ -7,6 +7,7 @@ import { Contact } from './components/Contact.js';
 import { About } from './components/About.js';
 import { Cart } from './components/Cart.js';
 import { Error } from './components/Error.js';
+import { ResturentMenu } from './components/ResturentMenu.js';
 
 
 
@@ -37,8 +38,12 @@ const appRouter = createBrowserRouter([
       },
       {
         path: '/cart',
-        element: <Cart />
+        element: <Cart/>
       },
+      {
+        path: '/restaurant/:id',
+        element: <ResturentMenu/>
+      }
     ],
     errorElement: <Error />
   },

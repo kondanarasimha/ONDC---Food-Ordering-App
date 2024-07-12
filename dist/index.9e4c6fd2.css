@@ -1,5 +1,4 @@
 body {
-  margin: 5px;
   font-family: Poppins, sans-serif;
 }
 
@@ -13,7 +12,7 @@ body {
 }
 
 .logo-container {
-  margin: 5px 5px 0 15px;
+  margin: 5px 5px 0 40px;
 }
 
 .logo-container img {
@@ -24,16 +23,20 @@ body {
 
 .nav-container ul {
   justify-content: space-evenly;
-  margin-right: 15px;
+  column-gap: 30px;
+  margin-right: 50px;
   list-style-type: none;
   display: flex;
 }
 
 .nav-container ul li {
-  color: #1e1e1e;
-  cursor: pointer;
   padding: 12px;
+}
+
+.nav-container ul li a {
+  color: #1e1e1e;
   font-size: 18px;
+  text-decoration: none;
 }
 
 .body-container {
@@ -93,7 +96,7 @@ body {
 .card-container {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-items: center;
-  gap: 10px 0;
+  column-gap: 0;
   display: grid;
 }
 
@@ -191,5 +194,75 @@ body {
   border-radius: 5px;
   height: 40px;
   margin: 18px;
+}
+
+.menu-body {
+  margin: 60px 250px 0;
+}
+
+.resturent-header-container {
+  border-radius: 10px;
+}
+
+.resturent-name h2 {
+  margin: 10px;
+}
+
+.res-details-container {
+  border: 1px solid #8c6d49;
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px #b3b3b3d5;
+}
+
+.res-rating-price {
+  border-bottom: 1px solid #8c6d49;
+  border-radius: 5px;
+  align-items: center;
+  height: 40px;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+.res-rating-price h3 {
+  text-align: center;
+  margin: 0;
+  padding: 0 10px 0 5px;
+  font-weight: bold;
+}
+
+.res-location-container {
+  margin-bottom: 10px;
+  padding: 10px;
+  display: flex;
+}
+
+.res-location-container h3 {
+  margin: 0 0 0 5px;
+  font-weight: lighter;
+}
+
+.city {
+  font-weight: bold;
+}
+
+.menu-ratingIcon {
+  width: 25px;
+  height: 25px;
+  padding-left: 10px;
+}
+
+.location-icon, .delivery-icon {
+  width: 25px;
+  height: 25px;
+}
+
+.del-container {
+  margin-left: 10px;
+  display: flex;
+}
+
+.del-container h3 {
+  margin: 0 0 10px 6px;
+  font-weight: normal;
 }
 /*# sourceMappingURL=index.9e4c6fd2.css.map */

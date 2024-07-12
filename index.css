@@ -1,6 +1,5 @@
 body {
   font-family: "Poppins", sans-serif;
-  margin: 5px;
 }
 
 .header-container {
@@ -13,7 +12,7 @@ body {
 }
 
 .logo-container {
-  margin: 5px 5px 0px 15px;
+  margin: 5px 5px 0px 40px;
 }
 
 .logo-container img {
@@ -26,14 +25,18 @@ body {
   list-style-type: none;
   display: flex;
   justify-content: space-evenly;
-  margin-right: 15px;
+  column-gap: 30px;
+  margin-right: 50px;
 }
 
 .nav-container ul li {
   padding: 12px;
+}
+
+.nav-container ul li a {
+  text-decoration: none;
   font-size: 18px;
   color: rgb(30, 30, 30);
-  cursor: pointer;
 }
 
 .body-container {
@@ -103,7 +106,6 @@ body {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   justify-items: center;
   column-gap: 0px;
-  row-gap: 10px;
 }
 
 .resturent-card-container {
@@ -205,4 +207,77 @@ body {
   border-radius: 5px;
   margin: 18px;
   background-color: rgb(242, 242, 242);
+}
+
+.menu-body {
+  margin: 60px 250px 0px 250px;
+}
+
+.resturent-header-container {
+  border-radius: 10px;
+}
+
+.resturent-name h2 {
+  margin: 10px;
+}
+
+.res-details-container {
+  border-radius: 5px;
+  box-shadow: 1px 1px 10px rgba(179, 179, 179, 0.834);
+  border: solid 1px rgb(140, 109, 73);
+}
+
+.res-rating-price {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  border-bottom: solid 1px rgb(140, 109, 73);
+  margin-bottom: 10px;
+}
+
+.res-rating-price h3 {
+  font-weight: bold;
+  padding: 0px 10px 0px 5px;
+  margin: 0px;
+  text-align: center;
+}
+
+.res-location-container {
+  display: flex;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.res-location-container h3 {
+  font-weight: lighter;
+  margin: 0px;
+  margin-left: 5px;
+}
+
+.city {
+  font-weight: bold;
+}
+
+.menu-ratingIcon {
+  width: 25px;
+  height: 25px;
+  padding-left: 10px;
+} 
+
+.location-icon,
+.delivery-icon {
+  width: 25px;
+  height: 25px;
+}
+
+.del-container {
+  display: flex;
+  margin-left: 10px;
+}
+
+.del-container h3 {
+  font-weight: normal;
+  margin: 0px;
+  margin: 0px 0px 10px 6px;
 }
