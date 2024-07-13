@@ -2,13 +2,13 @@ import { useState, useEffect } from "react";
 import { resturentMenuUrl } from "../utiles/urls";
 import { MenuHeader } from "./MenuHeader.js";
 import { useParams } from "react-router-dom";
+import { TopPicksCards } from "./TopPicksCards.js";
 
 
 export const ResturentMenu = ()=> {
   const paramId = useParams();
   const restaurantId = paramId.id;
-  console.log(paramId);
-  
+
   const [menuDetails, setMenuDetails] = useState(null);
 
   useEffect(()=> {menuItemsData()},[]);
@@ -26,6 +26,8 @@ export const ResturentMenu = ()=> {
   return(
     <div className="menu-body">
       <MenuHeader props={menuDetails}/>
+      <TopPicksCards props={menuDetails}/>
+      
     </div>
   )
 };

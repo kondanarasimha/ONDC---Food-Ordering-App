@@ -66,7 +66,7 @@ export const Body = ()=> {
           }}><img className='reset-icon' src={restIcon}></img></button>
 
           <button style={ratingBtnSty} onClick={()=>{
-            const topRatedRestaurants = restaurantsData.filter(restaurantData=> restaurantData.info.avgRating > 4.0);
+            const topRatedRestaurants = restaurantsData.filter(restaurantData=> restaurantData.info.avgRating >= 4.0);
             ratingBtnSty === null ? (setRatingBtnSty(btnStyle), setFstDelBtnSty(null),
             setLowRsBtnSty(null), 
             setFilterRestaurants(topRatedRestaurants)) : 

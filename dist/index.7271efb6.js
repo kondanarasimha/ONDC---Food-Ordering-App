@@ -27323,13 +27323,20 @@ const Header = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "logo-container",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                    src: (0, _ondcLogoPngDefault.default),
-                    alt: "logo-png"
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                    to: "/",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                        src: (0, _ondcLogoPngDefault.default),
+                        alt: "logo-png"
+                    }, void 0, false, {
+                        fileName: "src/components/Header.js",
+                        lineNumber: 9,
+                        columnNumber: 20
+                    }, undefined)
                 }, void 0, false, {
                     fileName: "src/components/Header.js",
                     lineNumber: 9,
-                    columnNumber: 5
+                    columnNumber: 7
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/Header.js",
@@ -34824,7 +34831,7 @@ const Body = ()=>{
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                                 style: ratingBtnSty,
                                 onClick: ()=>{
-                                    const topRatedRestaurants = restaurantsData.filter((restaurantData)=>restaurantData.info.avgRating > 4.0);
+                                    const topRatedRestaurants = restaurantsData.filter((restaurantData)=>restaurantData.info.avgRating >= 4.0);
                                     ratingBtnSty === null ? (setRatingBtnSty(btnStyle), setFstDelBtnSty(null), setLowRsBtnSty(null), setFilterRestaurants(topRatedRestaurants)) : (setRatingBtnSty(null), setFilterRestaurants(restaurantsData));
                                 },
                                 children: "Top Rating"
@@ -35074,9 +35081,11 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "resturentImgsLink", ()=>resturentImgsLink);
 parcelHelpers.export(exports, "apiUrl", ()=>apiUrl);
 parcelHelpers.export(exports, "resturentMenuUrl", ()=>resturentMenuUrl);
+parcelHelpers.export(exports, "carouselImgUrl", ()=>carouselImgUrl);
 const resturentImgsLink = `https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/`;
 const apiUrl = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=15.43175011569534&lng=80.04333905875683&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
 const resturentMenuUrl = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=15.43175011569534&lng=80.04333905875683&restaurantId=";
+const carouselImgUrl = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_292,h_300/";
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aEfPD":[function(require,module,exports) {
 module.exports = require("5d7cfbcb095b1780").getBundleURL("aXMci") + "directions_bike_24dp_FILL0_wght400_GRAD0_opsz24.42429ca7.png" + "?" + Date.now();
@@ -35315,12 +35324,12 @@ var _react = require("react");
 var _urls = require("../utiles/urls");
 var _menuHeaderJs = require("./MenuHeader.js");
 var _reactRouterDom = require("react-router-dom");
+var _topPicksCardsJs = require("./TopPicksCards.js");
 var _s = $RefreshSig$();
 const ResturentMenu = ()=>{
     _s();
     const paramId = (0, _reactRouterDom.useParams)();
     const restaurantId = paramId.id;
-    console.log(paramId);
     const [menuDetails, setMenuDetails] = (0, _react.useState)(null);
     (0, _react.useEffect)(()=>{
         menuItemsData();
@@ -35333,14 +35342,23 @@ const ResturentMenu = ()=>{
     if (menuDetails === null) return;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "menu-body",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _menuHeaderJs.MenuHeader), {
-            props: menuDetails
-        }, void 0, false, {
-            fileName: "src/components/ResturentMenu.js",
-            lineNumber: 28,
-            columnNumber: 7
-        }, undefined)
-    }, void 0, false, {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _menuHeaderJs.MenuHeader), {
+                props: menuDetails
+            }, void 0, false, {
+                fileName: "src/components/ResturentMenu.js",
+                lineNumber: 28,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topPicksCardsJs.TopPicksCards), {
+                props: menuDetails
+            }, void 0, false, {
+                fileName: "src/components/ResturentMenu.js",
+                lineNumber: 29,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
         fileName: "src/components/ResturentMenu.js",
         lineNumber: 27,
         columnNumber: 5
@@ -35360,7 +35378,7 @@ $RefreshReg$(_c, "ResturentMenu");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","../utiles/urls":"aw5Ei","./MenuHeader.js":"fYuCi","react-router-dom":"9xmpe"}],"fYuCi":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","../utiles/urls":"aw5Ei","./MenuHeader.js":"fYuCi","react-router-dom":"9xmpe","./TopPicksCards.js":"cavOn"}],"fYuCi":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$bcb5 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -35525,6 +35543,164 @@ $RefreshReg$(_c, "MenuHeader");
 },{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../utiles/urls":"aw5Ei","../../Images/star_half_24dp_FILL0_wght400_GRAD0_opsz24.png":"3Gmti","../../Images/pin_drop_24dp_000000_FILL0_wght400_GRAD0_opsz24.png":"jdzo8","../../Images/directions_bike_24dp_FILL0_wght400_GRAD0_opsz24.png":"aEfPD","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../../Images/star_half_24dp_F19E39_FILL0_wght400_GRAD0_opsz24.png":"6wMDu"}],"jdzo8":[function(require,module,exports) {
 module.exports = require("156f49c10250a153").getBundleURL("aXMci") + "pin_drop_24dp_000000_FILL0_wght400_GRAD0_opsz24.9e1de5a5.png" + "?" + Date.now();
 
-},{"156f49c10250a153":"lgJ39"}]},["9wh9R","1xC6H","2kQhy"], "2kQhy", "parcelRequire77dd")
+},{"156f49c10250a153":"lgJ39"}],"cavOn":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$41fe = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$41fe.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "TopPicksCards", ()=>TopPicksCards);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _carouselsMenu = require("./CarouselsMenu");
+const TopPicksCards = (props)=>{
+    const carouselsData = props.props.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[1].card.card.carousel;
+    const { title } = props.props.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[1].card.card;
+    if (carouselsData === undefined) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+            className: "menu-title",
+            children: "- Menu -"
+        }, void 0, false, {
+            fileName: "src/components/TopPicksCards.js",
+            lineNumber: 7,
+            columnNumber: 17
+        }, undefined)
+    }, void 0, false, {
+        fileName: "src/components/TopPicksCards.js",
+        lineNumber: 7,
+        columnNumber: 12
+    }, undefined);
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                className: "menu-title",
+                children: "- Menu -"
+            }, void 0, false, {
+                fileName: "src/components/TopPicksCards.js",
+                lineNumber: 11,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "carousel-container",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "TopPick-title",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                            children: title
+                        }, void 0, false, {
+                            fileName: "src/components/TopPicksCards.js",
+                            lineNumber: 14,
+                            columnNumber: 9
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/components/TopPicksCards.js",
+                        lineNumber: 13,
+                        columnNumber: 7
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "carousel-img-container",
+                        children: carouselsData.map((carouselData)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _carouselsMenu.CarouselsMenu), {
+                                props: carouselData
+                            }, void 0, false, {
+                                fileName: "src/components/TopPicksCards.js",
+                                lineNumber: 18,
+                                columnNumber: 46
+                            }, undefined))
+                    }, void 0, false, {
+                        fileName: "src/components/TopPicksCards.js",
+                        lineNumber: 17,
+                        columnNumber: 7
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/TopPicksCards.js",
+                lineNumber: 12,
+                columnNumber: 5
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/TopPicksCards.js",
+        lineNumber: 10,
+        columnNumber: 5
+    }, undefined);
+};
+_c = TopPicksCards;
+var _c;
+$RefreshReg$(_c, "TopPicksCards");
+
+  $parcel$ReactRefreshHelpers$41fe.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./CarouselsMenu":"GC8jZ"}],"GC8jZ":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$b4ca = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$b4ca.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "CarouselsMenu", ()=>CarouselsMenu);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _urls = require("../utiles/urls");
+const CarouselsMenu = (props)=>{
+    const { creativeId } = props.props;
+    const { price } = props.props.dish.info;
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                src: (0, _urls.carouselImgUrl) + creativeId
+            }, void 0, false, {
+                fileName: "src/components/CarouselsMenu.js",
+                lineNumber: 8,
+                columnNumber: 9
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "btn-price-container",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        children: "ADD"
+                    }, void 0, false, {
+                        fileName: "src/components/CarouselsMenu.js",
+                        lineNumber: 10,
+                        columnNumber: 11
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
+                        children: [
+                            "\u20B9",
+                            (price / 100).toFixed(0)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/CarouselsMenu.js",
+                        lineNumber: 11,
+                        columnNumber: 11
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/CarouselsMenu.js",
+                lineNumber: 9,
+                columnNumber: 9
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/CarouselsMenu.js",
+        lineNumber: 7,
+        columnNumber: 7
+    }, undefined);
+};
+_c = CarouselsMenu;
+var _c;
+$RefreshReg$(_c, "CarouselsMenu");
+
+  $parcel$ReactRefreshHelpers$b4ca.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../utiles/urls":"aw5Ei"}]},["9wh9R","1xC6H","2kQhy"], "2kQhy", "parcelRequire77dd")
 
 //# sourceMappingURL=index.7271efb6.js.map

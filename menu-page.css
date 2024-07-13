@@ -67,3 +67,58 @@
   font-weight: bold;
   margin: 0px 0px 0px 5px;
 }
+
+.menu-title {
+  margin-top: 50px;
+  color: rgba(2, 6, 12, 0.6);
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.carousel-container {
+  margin-top: 50px;
+}
+
+.carousel-img-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+}
+
+.TopPick-title h3 {
+  font-weight: bold;
+}
+
+.carousel-img-container img {
+  width: 250px;
+  object-fit: fill;
+  border-radius: 8px;
+  position: relative;
+}
+
+.carousel-img-container button {
+  position: absolute;
+  z-index: 1;
+  margin: -45px 0px 0px 150px;
+  background-color: white;
+  border: none;
+  width: 90px;
+  height: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  color: rgb(13, 151, 13);
+  transition: all 0.15s;
+}
+
+.btn-price-container h5 {
+  color: white;
+  position: absolute;
+  letter-spacing: 1px;
+  margin: -40px 0px 0px 15px;
+  text-shadow: 0px 0px 4px #000000;
+}
+
+.carousel-img-container button:active {
+  opacity: 0.9;
+}
