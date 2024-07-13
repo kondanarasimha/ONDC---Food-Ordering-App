@@ -52,6 +52,9 @@ export const Body = ()=> {
             if(searchText === null) {
               return alert('Enter Restaurent Name');
             }
+            setRatingBtnSty(null);
+            setFstDelBtnSty(null);
+            setLowRsBtnSty(null);
             const searchedRestaurents = restaurantsData.filter(restaurantDetails=> (((restaurantDetails.info.name).toLowerCase()).includes((searchText).toLowerCase())));
             searchedRestaurents.length === 0 ? alert('No Such Restaurents Found') : (setFilterRestaurants(searchedRestaurents));
           }}><img src={searchIcon}/></button>
