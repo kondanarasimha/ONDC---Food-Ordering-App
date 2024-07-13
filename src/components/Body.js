@@ -91,7 +91,7 @@ export const Body = ()=> {
       </div>
 
       <div className='card-container'>{filterRestaurants.map((restaurantDetails)=> (
-        <Link key={restaurantDetails.info.id} to={`/restaurant/${restaurantDetails.info.id}`}><CardDetails resDetails={restaurantDetails}/></Link>
+        <Link key={restaurantDetails.info.id} to={`/restaurant/${restaurantDetails.info.id}`}> <CardDetails resDetails={restaurantDetails}/> </Link>
         ))}
       </div>
 

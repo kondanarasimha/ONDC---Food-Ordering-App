@@ -5,9 +5,9 @@ import { useParams } from "react-router-dom";
 
 
 export const ResturentMenu = ()=> {
-
   const paramId = useParams();
   const restaurantId = paramId.id;
+  console.log(paramId);
   
   const [menuDetails, setMenuDetails] = useState(null);
 
@@ -24,6 +24,8 @@ export const ResturentMenu = ()=> {
   }
 
   return(
-    <MenuHeader props={menuDetails}/>
+    <div className="menu-body">
+      <MenuHeader props={menuDetails}/>
+    </div>
   )
 };

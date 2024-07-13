@@ -1,6 +1,7 @@
 import { resturentImgsLink } from '../utiles/urls.js';
 import deliveryIcon from '../../Images/directions_bike_24dp_FILL0_wght400_GRAD0_opsz24.png';
-import ratingIcon from '../../Images/star_half_24dp_FILL0_wght400_GRAD0_opsz24.png';
+import highRatingIcon from '../../Images/star_half_24dp_FILL0_wght400_GRAD0_opsz24.png';
+import lowRatingIcon from '../../Images/star_half_24dp_F19E39_FILL0_wght400_GRAD0_opsz24.png';
 
 
 export const CardDetails = (props)=> {
@@ -20,8 +21,9 @@ export const CardDetails = (props)=> {
       </div>
 
       <div className='resturent-rating-container'>
-      <img src={ratingIcon}/>
-      <p>{avgRating} • {totalRatingsString}</p>
+      {avgRating >= 4 ? <img src={highRatingIcon}/> : <img src={lowRatingIcon}/>}
+      <p>{avgRating} • {totalRatingsString}
+      </p>
       </div>
 
       <div className='priceCents'>
