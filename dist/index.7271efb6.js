@@ -35085,10 +35085,12 @@ parcelHelpers.export(exports, "resturentImgsLink", ()=>resturentImgsLink);
 parcelHelpers.export(exports, "apiUrl", ()=>apiUrl);
 parcelHelpers.export(exports, "resturentMenuUrl", ()=>resturentMenuUrl);
 parcelHelpers.export(exports, "carouselImgUrl", ()=>carouselImgUrl);
+parcelHelpers.export(exports, "itemImgUrl", ()=>itemImgUrl);
 const resturentImgsLink = `https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/`;
 const apiUrl = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=15.43175011569534&lng=80.04333905875683&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
 const resturentMenuUrl = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=15.43175011569534&lng=80.04333905875683&restaurantId=";
 const carouselImgUrl = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_292,h_300/";
+const itemImgUrl = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/";
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"aEfPD":[function(require,module,exports) {
 module.exports = require("5d7cfbcb095b1780").getBundleURL("aXMci") + "directions_bike_24dp_FILL0_wght400_GRAD0_opsz24.42429ca7.png" + "?" + Date.now();
@@ -35328,12 +35330,15 @@ var _urls = require("../utiles/urls");
 var _menuHeaderJs = require("./MenuHeader.js");
 var _reactRouterDom = require("react-router-dom");
 var _topPicksCardsJs = require("./TopPicksCards.js");
+var _menuItemsJs = require("./MenuItems.js");
+var _menuItemCardJs = require("./MenuItemCard.js");
 var _s = $RefreshSig$();
 const ResturentMenu = ()=>{
     _s();
     const paramId = (0, _reactRouterDom.useParams)();
     const restaurantId = paramId.id;
     const [menuDetails, setMenuDetails] = (0, _react.useState)(null);
+    const itemsData = menuDetails?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[4]?.card?.card;
     (0, _react.useEffect)(()=>{
         menuItemsData();
     }, []);
@@ -35348,22 +35353,45 @@ const ResturentMenu = ()=>{
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _menuHeaderJs.MenuHeader), {
                 props: menuDetails
-            }, void 0, false, {
+            }, 1, false, {
                 fileName: "src/components/ResturentMenu.js",
-                lineNumber: 28,
+                lineNumber: 33,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topPicksCardsJs.TopPicksCards), {
                 props: menuDetails
-            }, void 0, false, {
+            }, 2, false, {
                 fileName: "src/components/ResturentMenu.js",
-                lineNumber: 29,
+                lineNumber: 34,
                 columnNumber: 7
-            }, undefined)
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _menuItemsJs.MenuItems), {
+                menuItems: menuDetails
+            }, 3, false, {
+                fileName: "src/components/ResturentMenu.js",
+                lineNumber: 35,
+                columnNumber: 7
+            }, undefined),
+            !itemsData.text && itemsData.itemCards.map((itemCard)=>{
+                return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "regular-card-container",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _menuItemCardJs.MenuItemCard), {
+                        cardInfo: itemCard.card.info
+                    }, itemCard.card.info.id, false, {
+                        fileName: "src/components/ResturentMenu.js",
+                        lineNumber: 39,
+                        columnNumber: 13
+                    }, undefined)
+                }, void 0, false, {
+                    fileName: "src/components/ResturentMenu.js",
+                    lineNumber: 38,
+                    columnNumber: 11
+                }, undefined);
+            })
         ]
     }, void 0, true, {
         fileName: "src/components/ResturentMenu.js",
-        lineNumber: 27,
+        lineNumber: 32,
         columnNumber: 5
     }, undefined);
 };
@@ -35381,7 +35409,7 @@ $RefreshReg$(_c, "ResturentMenu");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","../utiles/urls":"aw5Ei","./MenuHeader.js":"fYuCi","react-router-dom":"9xmpe","./TopPicksCards.js":"cavOn"}],"fYuCi":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","../utiles/urls":"aw5Ei","./MenuHeader.js":"fYuCi","react-router-dom":"9xmpe","./TopPicksCards.js":"cavOn","./MenuItems.js":"eO6OB","./MenuItemCard.js":"frB8e"}],"fYuCi":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$bcb5 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -35595,32 +35623,34 @@ const TopPicksCards = (props)=>{
                         }, void 0, false, {
                             fileName: "src/components/TopPicksCards.js",
                             lineNumber: 14,
-                            columnNumber: 9
+                            columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/TopPicksCards.js",
                         lineNumber: 13,
-                        columnNumber: 7
+                        columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "carousel-img-container",
-                        children: carouselsData.map((carouselData)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _carouselsMenu.CarouselsMenu), {
-                                props: carouselData
-                            }, void 0, false, {
+                        children: carouselsData.map((carouselData)=>{
+                            return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _carouselsMenu.CarouselsMenu), {
+                                data: carouselData
+                            }, carouselData.dish.info.id, false, {
                                 fileName: "src/components/TopPicksCards.js",
-                                lineNumber: 18,
-                                columnNumber: 46
-                            }, undefined))
+                                lineNumber: 19,
+                                columnNumber: 20
+                            }, undefined);
+                        })
                     }, void 0, false, {
                         fileName: "src/components/TopPicksCards.js",
                         lineNumber: 17,
-                        columnNumber: 7
+                        columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/TopPicksCards.js",
                 lineNumber: 12,
-                columnNumber: 5
+                columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
@@ -35651,8 +35681,8 @@ parcelHelpers.export(exports, "CarouselsMenu", ()=>CarouselsMenu);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _urls = require("../utiles/urls");
 const CarouselsMenu = (props)=>{
-    const { creativeId } = props.props;
-    const { price } = props.props.dish.info;
+    const { creativeId } = props.data;
+    const { price, defaultPrice } = props.data.dish.info;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
@@ -35672,15 +35702,24 @@ const CarouselsMenu = (props)=>{
                         lineNumber: 10,
                         columnNumber: 11
                     }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
+                    price === undefined ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
                         children: [
                             "\u20B9",
-                            (price / 100).toFixed(0)
+                            (defaultPrice / 100).toFixed()
                         ]
                     }, void 0, true, {
                         fileName: "src/components/CarouselsMenu.js",
                         lineNumber: 11,
-                        columnNumber: 11
+                        columnNumber: 34
+                    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
+                        children: [
+                            "\u20B9",
+                            (price / 100).toFixed()
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/CarouselsMenu.js",
+                        lineNumber: 11,
+                        columnNumber: 77
                     }, undefined)
                 ]
             }, void 0, true, {
@@ -35704,6 +35743,238 @@ $RefreshReg$(_c, "CarouselsMenu");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../utiles/urls":"aw5Ei"}]},["9wh9R","1xC6H","2kQhy"], "2kQhy", "parcelRequire77dd")
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../utiles/urls":"aw5Ei"}],"eO6OB":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$88e5 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$88e5.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "MenuItems", ()=>MenuItems);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _menuItemCardJs = require("./MenuItemCard.js");
+var _s = $RefreshSig$();
+const MenuItems = (props)=>{
+    _s();
+    const [isOpen, setIsOpen] = (0, _react.useState)(true);
+    const menuData = props?.menuItems?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
+    const recommendData = menuData[2].card.card;
+    const { title, itemCards } = recommendData;
+    function btnHandler() {
+        setIsOpen(!isOpen);
+    }
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "menuItems-container",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                onClick: ()=>{
+                    btnHandler();
+                },
+                className: "dropDown-heading-container",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                    children: [
+                        title,
+                        "(",
+                        itemCards.length,
+                        ")"
+                    ]
+                }, void 0, true, {
+                    fileName: "src/components/MenuItems.js",
+                    lineNumber: 18,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/MenuItems.js",
+                lineNumber: 17,
+                columnNumber: 7
+            }, undefined),
+            isOpen ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "dropDown-list",
+                children: [
+                    itemCards.map((itemCard)=>{
+                        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _menuItemCardJs.MenuItemCard), {
+                            cardInfo: itemCard.card.info
+                        }, itemCard.card.info.id, false, {
+                            fileName: "src/components/MenuItems.js",
+                            lineNumber: 23,
+                            columnNumber: 18
+                        }, undefined);
+                    }),
+                    " "
+                ]
+            }, void 0, true, {
+                fileName: "src/components/MenuItems.js",
+                lineNumber: 21,
+                columnNumber: 17
+            }, undefined) : "",
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "regular-items-container",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                    className: "regular-items",
+                    children: "Regular Menu"
+                }, void 0, false, {
+                    fileName: "src/components/MenuItems.js",
+                    lineNumber: 27,
+                    columnNumber: 9
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/MenuItems.js",
+                lineNumber: 26,
+                columnNumber: 9
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/MenuItems.js",
+        lineNumber: 15,
+        columnNumber: 5
+    }, undefined);
+};
+_s(MenuItems, "mEi83NlPXQzy/XIDfTYWzOSvaHw=");
+_c = MenuItems;
+var _c;
+$RefreshReg$(_c, "MenuItems");
+
+  $parcel$ReactRefreshHelpers$88e5.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","react":"21dqq","./MenuItemCard.js":"frB8e"}],"frB8e":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$be0e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$be0e.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "MenuItemCard", ()=>MenuItemCard);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _urlsJs = require("../utiles/urls.js");
+var _starHalf24DpF19E39FILL0Wght400GRAD0Opsz24Png = require("../../Images/star_half_24dp_F19E39_FILL0_wght400_GRAD0_opsz24.png");
+var _starHalf24DpFILL0Wght400GRAD0Opsz24Png = require("../../Images/star_half_24dp_FILL0_wght400_GRAD0_opsz24.png");
+const MenuItemCard = (props)=>{
+    const { name, itemAttribute, price, ratings, description, imageId, defaultPrice } = props.cardInfo;
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "dish-container",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "dish-details-container",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                        children: itemAttribute.vegClassifier
+                    }, void 0, false, {
+                        fileName: "src/components/MenuItemCard.js",
+                        lineNumber: 12,
+                        columnNumber: 9
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                        children: name
+                    }, void 0, false, {
+                        fileName: "src/components/MenuItemCard.js",
+                        lineNumber: 13,
+                        columnNumber: 9
+                    }, undefined),
+                    price === undefined ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                        children: [
+                            "\u20B9 ",
+                            (defaultPrice / 100).toFixed()
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/MenuItemCard.js",
+                        lineNumber: 14,
+                        columnNumber: 32
+                    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                        children: [
+                            "\u20B9 ",
+                            (price / 100).toFixed()
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/MenuItemCard.js",
+                        lineNumber: 14,
+                        columnNumber: 78
+                    }, undefined),
+                    ratings.aggregatedRating.rating === undefined ? null : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
+                        children: [
+                            ratings.aggregatedRating.rating,
+                            "(",
+                            ratings.aggregatedRating.ratingCountV2,
+                            ")"
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/MenuItemCard.js",
+                        lineNumber: 16,
+                        columnNumber: 10
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "item-description-container",
+                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h6", {
+                            children: description
+                        }, void 0, false, {
+                            fileName: "src/components/MenuItemCard.js",
+                            lineNumber: 18,
+                            columnNumber: 11
+                        }, undefined)
+                    }, void 0, false, {
+                        fileName: "src/components/MenuItemCard.js",
+                        lineNumber: 17,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/MenuItemCard.js",
+                lineNumber: 11,
+                columnNumber: 7
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "dish-img-container",
+                children: [
+                    imageId === undefined ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "emptyImg-container"
+                    }, void 0, false, {
+                        fileName: "src/components/MenuItemCard.js",
+                        lineNumber: 23,
+                        columnNumber: 34
+                    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                        src: (0, _urlsJs.itemImgUrl) + imageId
+                    }, void 0, false, {
+                        fileName: "src/components/MenuItemCard.js",
+                        lineNumber: 23,
+                        columnNumber: 74
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                        className: "itemAdd-btn",
+                        children: "ADD"
+                    }, void 0, false, {
+                        fileName: "src/components/MenuItemCard.js",
+                        lineNumber: 24,
+                        columnNumber: 9
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/MenuItemCard.js",
+                lineNumber: 22,
+                columnNumber: 7
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/MenuItemCard.js",
+        lineNumber: 9,
+        columnNumber: 5
+    }, undefined);
+};
+_c = MenuItemCard;
+var _c;
+$RefreshReg$(_c, "MenuItemCard");
+
+  $parcel$ReactRefreshHelpers$be0e.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../utiles/urls.js":"aw5Ei","../../Images/star_half_24dp_F19E39_FILL0_wght400_GRAD0_opsz24.png":"6wMDu","../../Images/star_half_24dp_FILL0_wght400_GRAD0_opsz24.png":"3Gmti"}]},["9wh9R","1xC6H","2kQhy"], "2kQhy", "parcelRequire77dd")
 
 //# sourceMappingURL=index.7271efb6.js.map

@@ -94,7 +94,7 @@
   position: relative;
 }
 
-.carousel-img-container button {
+.carousel-img-container button, .dish-img-container button {
   z-index: 1;
   cursor: pointer;
   color: #0d970d;
@@ -118,6 +118,82 @@
 }
 
 .carousel-img-container button:active {
+  opacity: .9;
+}
+
+.menuItems-container {
+  margin-top: 30px;
+}
+
+.dropDown-heading-container h3, .regular-items-container h3 {
+  margin: 10px 0 0;
+  padding: 5px;
+}
+
+.dropDown-heading-container {
+  cursor: pointer;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.regular-items-container {
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.dish-container {
+  border-bottom: 1px solid #d6d6d6;
+  justify-content: space-between;
+  display: flex;
+}
+
+.dish-container h4, .dish-container h3, .dish-container h6 {
+  margin: 0;
+}
+
+.dish-container h5 {
+  margin: 10px 0;
+}
+
+.dish-container h4 {
+  margin-bottom: 10px;
+}
+
+.dish-container h6 {
+  font-weight: lighter;
+}
+
+.dish-details-container {
+  width: 500px;
+  margin: 10px;
+}
+
+.item-description-container {
+  max-width: 500px;
+}
+
+.dish-img-container {
+  margin: 20px;
+  position: relative;
+}
+
+.dish-img-container img, .emptyImg-container {
+  object-fit: cover;
+  border-radius: 10px;
+  width: 130px;
+  height: 130px;
+  margin-bottom: 5px;
+  position: relative;
+}
+
+.dish-img-container button {
+  width: 70px;
+  height: 25px;
+  position: absolute;
+  top: 160px;
+  right: 30px;
+  box-shadow: 0 0 5px #202020e4;
+}
+
+.dish-img-container button:active {
   opacity: .9;
 }
 /*# sourceMappingURL=index.00269f1a.css.map */

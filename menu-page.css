@@ -96,7 +96,8 @@
   position: relative;
 }
 
-.carousel-img-container button {
+.carousel-img-container button,
+.dish-img-container button{
   position: absolute;
   z-index: 1;
   margin: -45px 0px 0px 150px;
@@ -120,5 +121,85 @@
 }
 
 .carousel-img-container button:active {
+  opacity: 0.9;
+}
+
+.menuItems-container {
+  margin-top: 30px;
+}
+
+.dropDown-heading-container h3,
+.regular-items-container h3 {
+  margin: 10px 0px 0px 0px;
+  padding: 5px;
+}
+
+.dropDown-heading-container {
+  border-bottom: 1px solid #d6d6d6;
+  cursor: pointer;
+}
+
+.regular-items-container {
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.dish-container {
+  display: flex;  
+  justify-content: space-between;
+  border-bottom: 1px solid #d6d6d6;
+}
+
+.dish-container h4,
+.dish-container h3,
+.dish-container h6 {
+  margin:0px;
+}
+
+.dish-container h5 {
+  margin: 10px 0px 10px 0px;
+}
+
+.dish-container h4 {
+  margin-bottom: 10px;
+}
+
+.dish-container h6 {
+  font-weight: lighter;
+}
+
+.dish-details-container {
+  margin: 10px;
+  width: 500px;
+}
+
+.item-description-container {
+  max-width: 500px;
+}
+
+.dish-img-container {
+  margin: 20px;
+  position: relative;
+}
+
+.dish-img-container img,
+.emptyImg-container {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  position: relative;
+  border-radius: 10px;
+  margin-bottom: 5px;
+}
+
+.dish-img-container button {
+  width: 70px;
+  height: 25px;
+  position: absolute;
+  right: 30px;
+  top: 160px;
+  box-shadow: 0px 0px 5px rgba(32, 32, 32, 0.895);
+}
+
+.dish-img-container button:active {
   opacity: 0.9;
 }

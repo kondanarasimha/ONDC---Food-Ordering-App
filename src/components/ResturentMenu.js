@@ -3,6 +3,9 @@ import { resturentMenuUrl } from "../utiles/urls";
 import { MenuHeader } from "./MenuHeader.js";
 import { useParams } from "react-router-dom";
 import { TopPicksCards } from "./TopPicksCards.js";
+import { MenuHeader } from "./MenuHeader.js";
+import { MenuItems } from "./MenuItems.js";
+import { MenuItemCard } from "./MenuItemCard.js";
 
 
 export const ResturentMenu = ()=> {
@@ -10,7 +13,8 @@ export const ResturentMenu = ()=> {
   const restaurantId = paramId.id;
 
   const [menuDetails, setMenuDetails] = useState(null);
-
+  const itemsData = menuDetails?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[4]?.card?.card;
+  
   useEffect(()=> {menuItemsData()},[]);
 
   async function menuItemsData() {
@@ -23,11 +27,19 @@ export const ResturentMenu = ()=> {
     return
   }
 
+
   return(
     <div className="menu-body">
-      <MenuHeader props={menuDetails}/>
-      <TopPicksCards props={menuDetails}/>
-      
+      <MenuHeader key={1} props={menuDetails}/>
+      <TopPicksCards key={2} props={menuDetails}/>
+      <MenuItems key={3} menuItems={menuDetails}/>
+      {!itemsData.text && itemsData.itemCards.map((itemCard)=> {
+        return(
+          <div className="regular-card-container">
+            <MenuItemCard key={itemCard.card.info.id} cardInfo={itemCard.card.info}/>
+          </div>
+        )
+      })}
     </div>
   )
 };
