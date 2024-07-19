@@ -35824,8 +35824,8 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "MenuItemCard", ()=>MenuItemCard);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _urlsJs = require("../utiles/urls.js");
-var _starHalf24DpF19E39FILL0Wght400GRAD0Opsz24Png = require("../../Images/star_half_24dp_F19E39_FILL0_wght400_GRAD0_opsz24.png");
-var _starHalf24DpFILL0Wght400GRAD0Opsz24Png = require("../../Images/star_half_24dp_FILL0_wght400_GRAD0_opsz24.png");
+var _star24Dp000000FILL0Wght400GRAD0Opsz24Png = require("../../Images/star_24dp_000000_FILL0_wght400_GRAD0_opsz24.png");
+var _star24Dp000000FILL0Wght400GRAD0Opsz24PngDefault = parcelHelpers.interopDefault(_star24Dp000000FILL0Wght400GRAD0Opsz24Png);
 const MenuItemCard = (props)=>{
     const { name, itemAttribute, price, ratings, description, imageId, defaultPrice } = props.cardInfo;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35838,14 +35838,14 @@ const MenuItemCard = (props)=>{
                         children: itemAttribute.vegClassifier
                     }, void 0, false, {
                         fileName: "src/components/MenuItemCard.js",
-                        lineNumber: 12,
+                        lineNumber: 11,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                         children: name
                     }, void 0, false, {
                         fileName: "src/components/MenuItemCard.js",
-                        lineNumber: 13,
+                        lineNumber: 12,
                         columnNumber: 9
                     }, undefined),
                     price === undefined ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
@@ -35855,7 +35855,7 @@ const MenuItemCard = (props)=>{
                         ]
                     }, void 0, true, {
                         fileName: "src/components/MenuItemCard.js",
-                        lineNumber: 14,
+                        lineNumber: 13,
                         columnNumber: 32
                     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                         children: [
@@ -35864,19 +35864,36 @@ const MenuItemCard = (props)=>{
                         ]
                     }, void 0, true, {
                         fileName: "src/components/MenuItemCard.js",
-                        lineNumber: 14,
+                        lineNumber: 13,
                         columnNumber: 79
                     }, undefined),
-                    ratings.aggregatedRating.rating === undefined ? null : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
+                    ratings.aggregatedRating.rating === undefined ? null : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "dishRating-container",
                         children: [
-                            ratings.aggregatedRating.rating,
-                            "(",
-                            ratings.aggregatedRating.ratingCountV2,
-                            ")"
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                className: "dishRating-Icon",
+                                src: (0, _star24Dp000000FILL0Wght400GRAD0Opsz24PngDefault.default)
+                            }, void 0, false, {
+                                fileName: "src/components/MenuItemCard.js",
+                                lineNumber: 15,
+                                columnNumber: 48
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
+                                children: [
+                                    ratings.aggregatedRating.rating,
+                                    "(",
+                                    ratings.aggregatedRating.ratingCountV2,
+                                    ")"
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/MenuItemCard.js",
+                                lineNumber: 15,
+                                columnNumber: 104
+                            }, undefined)
                         ]
                     }, void 0, true, {
                         fileName: "src/components/MenuItemCard.js",
-                        lineNumber: 16,
+                        lineNumber: 15,
                         columnNumber: 10
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35885,18 +35902,18 @@ const MenuItemCard = (props)=>{
                             children: description
                         }, void 0, false, {
                             fileName: "src/components/MenuItemCard.js",
-                            lineNumber: 18,
+                            lineNumber: 17,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/MenuItemCard.js",
-                        lineNumber: 17,
+                        lineNumber: 16,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/MenuItemCard.js",
-                lineNumber: 11,
+                lineNumber: 10,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35906,13 +35923,13 @@ const MenuItemCard = (props)=>{
                         className: "emptyImg-container"
                     }, void 0, false, {
                         fileName: "src/components/MenuItemCard.js",
-                        lineNumber: 23,
+                        lineNumber: 22,
                         columnNumber: 34
                     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
                         src: (0, _urlsJs.itemImgUrl) + imageId
                     }, void 0, false, {
                         fileName: "src/components/MenuItemCard.js",
-                        lineNumber: 23,
+                        lineNumber: 22,
                         columnNumber: 74
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -35920,19 +35937,19 @@ const MenuItemCard = (props)=>{
                         children: "ADD"
                     }, void 0, false, {
                         fileName: "src/components/MenuItemCard.js",
-                        lineNumber: 24,
+                        lineNumber: 23,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/MenuItemCard.js",
-                lineNumber: 22,
+                lineNumber: 21,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/MenuItemCard.js",
-        lineNumber: 9,
+        lineNumber: 8,
         columnNumber: 5
     }, undefined);
 };
@@ -35945,7 +35962,10 @@ $RefreshReg$(_c, "MenuItemCard");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../utiles/urls.js":"aw5Ei","../../Images/star_half_24dp_F19E39_FILL0_wght400_GRAD0_opsz24.png":"6wMDu","../../Images/star_half_24dp_FILL0_wght400_GRAD0_opsz24.png":"3Gmti"}],"1tPuv":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../utiles/urls.js":"aw5Ei","../../Images/star_24dp_000000_FILL0_wght400_GRAD0_opsz24.png":"gEVtW"}],"gEVtW":[function(require,module,exports) {
+module.exports = require("735d29ad8d60290").getBundleURL("aXMci") + "star_24dp_000000_FILL0_wght400_GRAD0_opsz24.29c2a4e9.png" + "?" + Date.now();
+
+},{"735d29ad8d60290":"lgJ39"}],"1tPuv":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$e6de = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;

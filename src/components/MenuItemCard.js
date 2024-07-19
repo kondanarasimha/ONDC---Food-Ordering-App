@@ -1,6 +1,5 @@
 import { itemImgUrl } from "../utiles/urls.js";
-import { topRatingIcon } from "../../Images/star_half_24dp_F19E39_FILL0_wght400_GRAD0_opsz24.png";
-import { lowRatingIcon } from "../../Images/star_half_24dp_FILL0_wght400_GRAD0_opsz24.png";
+import ratingIcon  from "../../Images/star_24dp_000000_FILL0_wght400_GRAD0_opsz24.png";
 
 export const MenuItemCard = (props)=> {
   const {name, itemAttribute, price, ratings, description, imageId, defaultPrice} = props.cardInfo;  
@@ -13,7 +12,7 @@ export const MenuItemCard = (props)=> {
         <h3>{name}</h3>
         {price === undefined ? <h4> ₹ {((defaultPrice)/100).toFixed()}</h4> : <h4>₹ {((price)/100).toFixed()}</h4>}
         {ratings.aggregatedRating.rating === undefined ? null : 
-        (<h5>{ratings.aggregatedRating.rating}({ratings.aggregatedRating.ratingCountV2})</h5>)}
+        (<div className="dishRating-container"><img className="dishRating-Icon" src={ratingIcon}></img><h5>{ratings.aggregatedRating.rating}({ratings.aggregatedRating.ratingCountV2})</h5></div>)}
         <div className="item-description-container">
           <h6>{description}</h6>
         </div>

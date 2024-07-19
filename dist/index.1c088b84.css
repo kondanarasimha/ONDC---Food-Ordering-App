@@ -196,4 +196,18 @@
 .dish-img-container button:active {
   opacity: .9;
 }
+
+.dishRating-container {
+  margin: 0 0 4px;
+  display: flex;
+}
+
+.dishRating-container h5 {
+  margin: 0 0 0 4px;
+}
+
+.dishRating-Icon {
+  width: 20px;
+  height: 20px;
+}
 /*# sourceMappingURL=index.1c088b84.css.map */

@@ -203,3 +203,17 @@
 .dish-img-container button:active {
   opacity: 0.9;
 }
+
+.dishRating-container {
+  display: flex;
+  margin: 0px 0px 4px 0px;
+}
+
+.dishRating-container h5 {
+  margin: 0px 0px 0px 4px;
+}
+
+.dishRating-Icon {
+  width: 20px;
+  height: 20px;
+}
