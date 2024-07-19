@@ -1,0 +1,42 @@
+.about-body {
+    margin: 0px 100px 0px 100px;
+}
+
+.about-body h1 {
+  text-align: center;
+}
+
+.profile-container {
+  display: flex;
+  justify-content: center;
+  column-gap: 10px;
+
+}
+
+.img-container img {
+  width: 180px;
+  border-radius: 5%;
+}
+
+.profile-details-container h2 {
+  margin-bottom: 9px;
+  color: rgb(176, 176, 176);
+}
+
+.profile-details-container h3 {
+  margin: 0px;
+}
+
+.profile-details-container h4 {
+  margin: 0px 0px 3px 0px;
+  font-weight: normal;
+}
+
+.text-container {
+  width: auto;
+  margin-bottom: 50px;
+}
+
+.text-container p {
+  text-align: justify;
+}

@@ -4,7 +4,7 @@ import { Header } from './components/Header.js';
 import { Body } from './components/Body.js';
 import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
 import { Contact } from './components/Contact.js';
-import { About } from './components/About.js';
+import { AboutClass } from './components/AboutClass.js';
 import { Cart } from './components/Cart.js';
 import { Error } from './components/Error.js';
 import { ResturentMenu } from './components/ResturentMenu.js';
@@ -34,7 +34,7 @@ const appRouter = createBrowserRouter([
       },
       {
         path: '/about',
-        element: <About/>
+        element: <AboutClass name={'nani'}/>
       },
       {
         path: '/cart',

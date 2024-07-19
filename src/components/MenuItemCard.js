@@ -11,7 +11,7 @@ export const MenuItemCard = (props)=> {
       <div className="dish-details-container">
         <h4>{itemAttribute.vegClassifier}</h4>
         <h3>{name}</h3>
-        {price === undefined ? <h4>₹ {((defaultPrice)/100).toFixed()}</h4> : <h4>₹ {((price)/100).toFixed()}</h4>}
+        {price === undefined ? <h4> ₹ {((defaultPrice)/100).toFixed()}</h4> : <h4>₹ {((price)/100).toFixed()}</h4>}
         {ratings.aggregatedRating.rating === undefined ? null : 
         (<h5>{ratings.aggregatedRating.rating}({ratings.aggregatedRating.ratingCountV2})</h5>)}
         <div className="item-description-container">

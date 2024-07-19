@@ -11,6 +11,10 @@ export const MenuItems = (props)=> {
     setIsOpen(!isOpen);
   }
 
+  if(itemCards === undefined) {
+    return;
+  }
+
   return(
     <div className="menuItems-container">
 
@@ -23,7 +27,7 @@ export const MenuItems = (props)=> {
           return(<MenuItemCard key={itemCard.card.info.id} cardInfo={itemCard.card.info}/>)
         })} </div> : ''}
         
-        <div className="regular-items-container">
+        <div key={5} className="regular-items-container">
         <h3 className="regular-items">Regular Menu</h3>
         </div>
 

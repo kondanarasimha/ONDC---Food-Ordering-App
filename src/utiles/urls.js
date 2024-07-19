@@ -7,3 +7,5 @@ export const resturentMenuUrl = 'https://www.swiggy.com/dapi/menu/pl?page-type=R
 export const carouselImgUrl = 'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_292,h_300/';
 
 export const itemImgUrl = 'https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_300,h_300,c_fit/';
+
+export const gitHubApiUrl ='https://api.github.com/users/kondanarasimha';

@@ -26,7 +26,7 @@ export const Body = ()=> {
     setFilterRestaurants(restaurantData);
   }
 
-  if(restaurantsData.length === 0) {
+  if(restaurantsData === undefined || restaurantsData.length === 0) {
     const shimmerLen = Array(20).fill(1);
     
     return (

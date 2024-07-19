@@ -13,8 +13,8 @@ export const ResturentMenu = ()=> {
   const restaurantId = paramId.id;
 
   const [menuDetails, setMenuDetails] = useState(null);
-  const itemsData = menuDetails?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[4]?.card?.card;
-  
+  const itemsData = menuDetails?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[4]?.card?.card.itemCards;
+    
   useEffect(()=> {menuItemsData()},[]);
 
   async function menuItemsData() {
@@ -27,13 +27,12 @@ export const ResturentMenu = ()=> {
     return
   }
 
-
   return(
-    <div className="menu-body">
+    <div key={0} className="menu-body">
       <MenuHeader key={1} props={menuDetails}/>
       <TopPicksCards key={2} props={menuDetails}/>
       <MenuItems key={3} menuItems={menuDetails}/>
-      {!itemsData.text && itemsData.itemCards.map((itemCard)=> {
+      {itemsData && itemsData.map((itemCard)=> {
         return(
           <div className="regular-card-container">
             <MenuItemCard key={itemCard.card.info.id} cardInfo={itemCard.card.info}/>
