@@ -1,5 +1,5 @@
 import React from "react";
-import { gitHubApiUrl } from "../utiles/urls.js";
+import { useGitHubApi } from "../utiles/useGitHubApi.js";
 import { AboutTextClass } from "./AboutTextClass.js";
 
 
@@ -7,13 +7,12 @@ export class AboutClass extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      profileData : {}
+      profileData : ""
     }
   }
 
   async componentDidMount() {
-    const data = await fetch(gitHubApiUrl);
-    const jsonProfileData = await data.json();
+    const jsonProfileData = await useGitHubApi();
     this.setState({profileData : this.state.profileData = jsonProfileData});
   }
 

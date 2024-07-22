@@ -1,8 +1,6 @@
 import { resturentImgsLink } from '../utiles/urls.js';
 import deliveryIcon from '../../Images/directions_bike_24dp_FILL0_wght400_GRAD0_opsz24.png';
-import highRatingIcon from '../../Images/star_half_24dp_FILL0_wght400_GRAD0_opsz24.png';
-import lowRatingIcon from '../../Images/star_half_24dp_F19E39_FILL0_wght400_GRAD0_opsz24.png';
-
+import { useStartRating } from '../utiles/useStartRating.js';
 
 export const CardDetails = (props)=> {
   const {name, cloudinaryImageId, avgRating, totalRatingsString,
@@ -21,7 +19,7 @@ export const CardDetails = (props)=> {
       </div>
 
       <div className='resturent-rating-container'>
-      {avgRating >= 4 ? <img src={highRatingIcon}/> : <img src={lowRatingIcon}/>}
+      {useStartRating(avgRating,'')}
       <p>{avgRating} • {totalRatingsString}
       </p>
       </div>

@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react';
 import { CardDetails } from './CardDetails.js';
 import searchIcon from '../../Images/search_24dp_FILL0_wght400_GRAD0_opsz24.png';
 import restIcon from '../../Images/reset_settings_24dp_FILL0_wght400_GRAD0_opsz24.png';
-import { apiUrl } from '../utiles/urls.js';
 import { ShimmerCards, ShimmerFilterStrip } from './ShimmerCards.js';
 import { Link } from 'react-router-dom';
+import { useRestaurantsData } from '../utiles/useRestaurantsData.js';
 
 
 export const Body = ()=> {
@@ -16,12 +16,10 @@ export const Body = ()=> {
   const [searchText, setSearchText] = useState(null);
   const btnStyle = {backgroundColor : 'rgb(50, 50, 56)', color : 'white'};
   
-  useEffect(()=> {fetchData()},[]);
+  useEffect(()=> {restaurantData()},[]);
 
-  async function fetchData () {
-    const data = await fetch(apiUrl);
-    const jsonData = await data.json();
-    const restaurantData = jsonData?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+  async function restaurantData () {
+    const restaurantData = await useRestaurantsData();
     setRestaurantsData(restaurantData);
     setFilterRestaurants(restaurantData);
   }
