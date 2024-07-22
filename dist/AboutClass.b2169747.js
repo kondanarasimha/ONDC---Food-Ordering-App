@@ -640,12 +640,12 @@ class AboutClass extends (0, _reactDefault.default).Component {
                 }, void 0, false, {
                     fileName: "src/components/AboutClass.js",
                     lineNumber: 22,
-                    columnNumber: 9
+                    columnNumber: 11
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutTextClassJs.AboutTextClass), {}, void 0, false, {
                     fileName: "src/components/AboutClass.js",
                     lineNumber: 24,
-                    columnNumber: 9
+                    columnNumber: 11
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                     className: "profile-container",
@@ -657,12 +657,12 @@ class AboutClass extends (0, _reactDefault.default).Component {
                             }, void 0, false, {
                                 fileName: "src/components/AboutClass.js",
                                 lineNumber: 28,
-                                columnNumber: 13
+                                columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "src/components/AboutClass.js",
                             lineNumber: 27,
-                            columnNumber: 11
+                            columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                             className: "profile-details-container",
@@ -672,21 +672,21 @@ class AboutClass extends (0, _reactDefault.default).Component {
                                 }, void 0, false, {
                                     fileName: "src/components/AboutClass.js",
                                     lineNumber: 31,
-                                    columnNumber: 13
+                                    columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
                                     children: this.state.profileData.name
                                 }, void 0, false, {
                                     fileName: "src/components/AboutClass.js",
                                     lineNumber: 32,
-                                    columnNumber: 13
+                                    columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
                                     children: this.state.profileData.bio
                                 }, void 0, false, {
                                     fileName: "src/components/AboutClass.js",
                                     lineNumber: 33,
-                                    columnNumber: 13
+                                    columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
                                     href: this.state.profileData.html_url,
@@ -695,25 +695,25 @@ class AboutClass extends (0, _reactDefault.default).Component {
                                 }, void 0, false, {
                                     fileName: "src/components/AboutClass.js",
                                     lineNumber: 34,
-                                    columnNumber: 13
+                                    columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/AboutClass.js",
                             lineNumber: 30,
-                            columnNumber: 11
+                            columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/AboutClass.js",
                     lineNumber: 26,
-                    columnNumber: 9
+                    columnNumber: 11
                 }, this)
             ]
         }, void 0, true, {
             fileName: "src/components/AboutClass.js",
             lineNumber: 21,
-            columnNumber: 7
+            columnNumber: 9
         }, this);
     }
 }

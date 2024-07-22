@@ -10,7 +10,6 @@
   display: flex;
   justify-content: center;
   column-gap: 10px;
-
 }
 
 .img-container img {
@@ -39,4 +38,23 @@
 
 .text-container p {
   text-align: justify;
+}
+
+.shimmer-text-container {
+  background-color: rgb(242, 242, 242);
+  height: 200px; 
+  border-radius: 10px; 
+  margin-bottom: 20px;
+}
+
+.shimmer-profile-container {
+  display: flex;
+  justify-content: center;
+}
+
+.shimmer-profile-data {
+  background-color: rgb(242, 242, 242);
+  width: 400px;
+  height: 200px;
+  border-radius: 10px; 
 }

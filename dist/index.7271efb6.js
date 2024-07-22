@@ -2961,10 +2961,10 @@ var _headerJs = require("./components/Header.js");
 var _bodyJs = require("./components/Body.js");
 var _reactRouterDom = require("react-router-dom");
 var _contactJs = require("./components/Contact.js");
-// import { AboutClass } from './components/AboutClass.js';
 var _cartJs = require("./components/Cart.js");
 var _errorJs = require("./components/Error.js");
 var _resturentMenuJs = require("./components/ResturentMenu.js");
+var _aboutClassShimmerJs = require("./components/AboutClassShimmer.js");
 const AboutClass = /*#__PURE__*/ (0, _react.lazy)(()=>require("5a9343cdad8cde4"));
 _c = AboutClass;
 const AppLayout = ()=>{
@@ -3017,9 +3017,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
             {
                 path: "/about",
                 element: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _react.Suspense), {
-                    fallback: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                        children: "loading"
-                    }, void 0, false, {
+                    fallback: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutClassShimmerJs.AboutClassShimmer), {}, void 0, false, {
                         fileName: "src/App.js",
                         lineNumber: 37,
                         columnNumber: 38
@@ -3027,7 +3025,7 @@ const appRouter = (0, _reactRouterDom.createBrowserRouter)([
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(AboutClass, {}, void 0, false, {
                         fileName: "src/App.js",
                         lineNumber: 37,
-                        columnNumber: 56
+                        columnNumber: 60
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/App.js",
@@ -3076,7 +3074,7 @@ $RefreshReg$(_c1, "AppLayout");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./components/Header.js":"hsJbF","./components/Body.js":"8yaV8","react-router-dom":"9xmpe","./components/Cart.js":"h8J3U","./components/Error.js":"kvula","./components/ResturentMenu.js":"csHCM","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/Contact.js":"cgAOG","5a9343cdad8cde4":"d5FGH"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom/client":"lOjBx","./components/Header.js":"hsJbF","./components/Body.js":"8yaV8","react-router-dom":"9xmpe","./components/Cart.js":"h8J3U","./components/Error.js":"kvula","./components/ResturentMenu.js":"csHCM","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./components/Contact.js":"cgAOG","5a9343cdad8cde4":"d5FGH","./components/AboutClassShimmer.js":"gqDaP"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("ee51401569654d91");
 
@@ -36107,6 +36105,65 @@ module.exports = function(loader, type) {
     };
 };
 
-},{}]},["9wh9R","1xC6H","2kQhy"], "2kQhy", "parcelRequire77dd")
+},{}],"gqDaP":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$06e8 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$06e8.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "AboutClassShimmer", ()=>AboutClassShimmer);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+const AboutClassShimmer = ()=>{
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "about-body",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                children: "ABOUT"
+            }, void 0, false, {
+                fileName: "src/components/AboutClassShimmer.js",
+                lineNumber: 4,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-text-container"
+            }, void 0, false, {
+                fileName: "src/components/AboutClassShimmer.js",
+                lineNumber: 5,
+                columnNumber: 5
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "shimmer-profile-container",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "shimmer-profile-data"
+                }, void 0, false, {
+                    fileName: "src/components/AboutClassShimmer.js",
+                    lineNumber: 7,
+                    columnNumber: 7
+                }, undefined)
+            }, void 0, false, {
+                fileName: "src/components/AboutClassShimmer.js",
+                lineNumber: 6,
+                columnNumber: 5
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "src/components/AboutClassShimmer.js",
+        lineNumber: 3,
+        columnNumber: 3
+    }, undefined);
+};
+_c = AboutClassShimmer;
+var _c;
+$RefreshReg$(_c, "AboutClassShimmer");
+
+  $parcel$ReactRefreshHelpers$06e8.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["9wh9R","1xC6H","2kQhy"], "2kQhy", "parcelRequire77dd")
 
 //# sourceMappingURL=index.7271efb6.js.map

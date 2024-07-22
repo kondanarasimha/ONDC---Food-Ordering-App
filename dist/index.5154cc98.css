@@ -39,4 +39,23 @@
 .text-container p {
   text-align: justify;
 }
+
+.shimmer-text-container {
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  height: 200px;
+  margin-bottom: 20px;
+}
+
+.shimmer-profile-container {
+  justify-content: center;
+  display: flex;
+}
+
+.shimmer-profile-data {
+  background-color: #f2f2f2;
+  border-radius: 10px;
+  width: 400px;
+  height: 200px;
+}
 /*# sourceMappingURL=index.5154cc98.css.map */
