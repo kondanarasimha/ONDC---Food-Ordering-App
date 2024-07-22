@@ -3,7 +3,7 @@ import { useGitHubApi } from "../utiles/useGitHubApi.js";
 import { AboutTextClass } from "./AboutTextClass.js";
 
 
-export class AboutClass extends React.Component {
+class AboutClass extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -38,3 +38,5 @@ export class AboutClass extends React.Component {
     )
   }
 }
+
+export default AboutClass;
