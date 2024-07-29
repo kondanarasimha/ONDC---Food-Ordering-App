@@ -20,7 +20,7 @@ export const ResturentMenu = ()=> {
   }
 
   return(
-    <div key={1} className="menu-body">
+    <div key={1} className="py-28 px-52">
       <MenuHeader key={2} props={menuDetails}/>
       <TopPicksCards key={3} props={menuDetails}/>
       <MenuItems key={4} menuItems={menuDetails}/>

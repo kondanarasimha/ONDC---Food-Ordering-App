@@ -16,19 +16,19 @@ export const MenuItems = (props)=> {
   }
 
   return(
-    <div className="menuItems-container">
+    <div className="mt-4">
 
-      <div onClick={()=> {btnHandler()}} className="dropDown-heading-container">
-        <h3>{title}({itemCards.length})</h3>
+      <div onClick={()=> {btnHandler()}} className="border-b-[1px] border-gray-400 mb-2 cursor-pointer">
+        <h3 className="text-xl pb-1.5 font-semibold">{title}({itemCards.length})</h3>
       </div>
 
-      {isOpen ? <div className="dropDown-list">
+      {isOpen ? <div>
         {itemCards.map((itemCard)=> {
           return(<MenuItemCard key={itemCard.card.info.id} cardInfo={itemCard.card.info}/>)
         })} </div> : ''}
         
-        <div key={5} className="regular-items-container">
-        <h3 className="regular-items">Regular Menu</h3>
+        <div key={5} className="border-b-[1px] border-gray-400">
+        <h3 className="text-xl font-semibold pb-1.5">Regular Menu</h3>
         </div>
 
     </div>

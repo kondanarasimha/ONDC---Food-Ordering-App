@@ -10,8 +10,8 @@ export class AboutTextClass extends React.Component {
 
   render() {
     return(
-    <div className="text-container">
-      <p className="text">{this.state.text}</p>
+    <div className="mb-10">
+      <p className="text-justify">{this.state.text}</p>
     </div>
     )
   }

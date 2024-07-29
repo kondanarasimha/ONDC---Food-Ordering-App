@@ -633,9 +633,10 @@ class AboutClass extends (0, _reactDefault.default).Component {
     }
     render() {
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "about-body",
+            className: "py-24 px-24",
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                    className: "font-semibold text-4xl text-center mb-4 mt-4",
                     children: "ABOUT"
                 }, void 0, false, {
                     fileName: "src/components/AboutClass.js",
@@ -648,11 +649,11 @@ class AboutClass extends (0, _reactDefault.default).Component {
                     columnNumber: 11
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "profile-container",
+                    className: "flex gap-5 justify-center",
                     children: [
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "img-container",
                             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                className: "w-56 rounded-lg",
                                 src: this.state.profileData.avatar_url
                             }, void 0, false, {
                                 fileName: "src/components/AboutClass.js",
@@ -665,9 +666,10 @@ class AboutClass extends (0, _reactDefault.default).Component {
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                            className: "profile-details-container",
+                            className: "mt-1",
                             children: [
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                                    className: "text-3xl font-semibold text-gray-400 mb-1",
                                     children: "DEVELOPED BY"
                                 }, void 0, false, {
                                     fileName: "src/components/AboutClass.js",
@@ -675,6 +677,7 @@ class AboutClass extends (0, _reactDefault.default).Component {
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                    className: "text-2xl mb-0.5 font-bold",
                                     children: this.state.profileData.name
                                 }, void 0, false, {
                                     fileName: "src/components/AboutClass.js",
@@ -682,6 +685,7 @@ class AboutClass extends (0, _reactDefault.default).Component {
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                                    className: "text-1xl mb-0.5",
                                     children: this.state.profileData.bio
                                 }, void 0, false, {
                                     fileName: "src/components/AboutClass.js",
@@ -689,6 +693,7 @@ class AboutClass extends (0, _reactDefault.default).Component {
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                    className: "font-bold underline",
                                     href: this.state.profileData.html_url,
                                     target: "_blank",
                                     children: "GITHUB"
@@ -757,9 +762,9 @@ class AboutTextClass extends (0, _reactDefault.default).Component {
     }
     render() {
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "text-container",
+            className: "mb-10",
             children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
-                className: "text",
+                className: "text-justify",
                 children: this.state.text
             }, void 0, false, {
                 fileName: "src/components/AboutTextClass.js",

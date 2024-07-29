@@ -16,12 +16,13 @@ export const Body = ()=> {
   const [searchText, setSearchText] = useState(null);
   const btnStyle = {backgroundColor : 'rgb(50, 50, 56)', color : 'white'};
   
-  useEffect(()=> {restaurantData()},[]);
+  useEffect(()=> {fetchingRestaurantData()},[]);
 
-  async function restaurantData () {
+  async function fetchingRestaurantData () {
     const restaurantData = await useRestaurantsData();
     setRestaurantsData(restaurantData);
     setFilterRestaurants(restaurantData);
+    console.log(restaurantData);
   }
 
   if(restaurantsData === undefined || restaurantsData.length === 0) {
@@ -38,15 +39,17 @@ export const Body = ()=> {
   }
 
   return(
-    <div className="body-container">
+    <div className="py-32 px-24">
 
-      <div className="filterStrip-container">
-        <div className="search-container">
-          <input onChange={(keys)=> {
+      <h1 className='px-2 ml-3.5 mr-3.5 text-2xl font-semibold tracking-wide'>TOP RESTAURENTS</h1>
+
+      <div className="flex flex-row justify-between px-2 ml-3.5 mr-3.5 h-20">
+        <div className='flex items-center'>
+          <input className='p-1.5 pr-32 border border-gray-900' onChange={(keys)=> {
             setSearchText(keys.target.value);
           }} placeholder="Search Restaurants"/>
 
-          <button onClick={(event)=> {
+          <button className='ml-2 border border-gray-900  rounded-sm text-center my-6 p-1' onClick={(event)=> {
             if(searchText === null) {
               return alert('Enter Restaurent Name');
             }
@@ -55,18 +58,18 @@ export const Body = ()=> {
             setLowRsBtnSty(null);
             const searchedRestaurents = restaurantsData.filter(restaurantDetails=> (((restaurantDetails.info.name).toLowerCase()).includes((searchText).toLowerCase())));
             searchedRestaurents.length === 0 ? alert('No Such Restaurents Found') : (setFilterRestaurants(searchedRestaurents));
-          }}><img src={searchIcon}/></button>
+          }}><img className='w-7' src={searchIcon}/></button>
         </div>
         
-        <div className="filter-btn-container">
-          <button onClick={()=> {
+        <div className='flex items-center'>
+          <button className='ml-6 border border-gray-900  rounded-sm text-center my-16 p-1' onClick={()=> {
             setRatingBtnSty(null);
             setFstDelBtnSty(null);
             setLowRsBtnSty(null);
             setFilterRestaurants(restaurantsData);
-          }}><img className='reset-icon' src={restIcon}></img></button>
+          }}><img className='w-6' src={restIcon}></img></button>
 
-          <button style={ratingBtnSty} onClick={()=>{
+          <button className='ml-6 border border-gray-900 rounded-sm text-center my-16 p-1' style={ratingBtnSty} onClick={()=>{
             const topRatedRestaurants = restaurantsData.filter(restaurantData=> restaurantData.info.avgRating >= 4.0);
             ratingBtnSty === null ? (setRatingBtnSty(btnStyle), setFstDelBtnSty(null),
             setLowRsBtnSty(null), 
@@ -74,7 +77,7 @@ export const Body = ()=> {
             (setRatingBtnSty(null),setFilterRestaurants(restaurantsData));
           }}>Top Rating</button>
 
-          <button style={fstDelBtnSty} onClick={()=> {
+          <button className='ml-6 border border-gray-900 rounded-sm text-center my-16 p-1' style={fstDelBtnSty} onClick={()=> {
             const leastDelTime = Math.min(...restaurantsData.map(restaurantData => (restaurantData.info.sla.deliveryTime)));            
             const fastDelivery = restaurantsData.filter(restaurantData=> restaurantData.info.sla.deliveryTime <= leastDelTime + 10);
             fstDelBtnSty === null ? (setFstDelBtnSty(btnStyle), setRatingBtnSty(null), setLowRsBtnSty(null),
@@ -82,7 +85,7 @@ export const Body = ()=> {
             (setFstDelBtnSty(null), setFilterRestaurants(restaurantsData));
           }}>Fast Delivery</button>
 
-          <button style={lowRsBtnSty} onClick={()=> {
+          <button className='ml-6 border border-gray-900 rounded-sm text-center my-16 p-1' style={lowRsBtnSty} onClick={()=> {
             const lowPrice = restaurantsData.filter((restaurantData)=> (restaurantData.info.costForTwo <= `₹${200} for two`));
             lowRsBtnSty === null ? (setLowRsBtnSty(btnStyle), setFilterRestaurants(lowPrice), setRatingBtnSty(null),
             setFstDelBtnSty(null)) : 
@@ -91,7 +94,7 @@ export const Body = ()=> {
         </div>
       </div>
 
-      <div className='card-container'>{filterRestaurants.map((restaurantDetails)=> (
+      <div className='grid grid-cols-4 justify-items-center gap-6'>{filterRestaurants.map((restaurantDetails)=> (
         <Link key={restaurantDetails.info.id} to={`/restaurant/${restaurantDetails.info.id}`}> <CardDetails resDetails={restaurantDetails}/> </Link>
         ))}
       </div>
