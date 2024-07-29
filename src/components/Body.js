@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { CardDetails } from './CardDetails.js';
+import { CardDetails, IsVegCard } from './CardDetails.js';
 import searchIcon from '../../Images/search_24dp_FILL0_wght400_GRAD0_opsz24.png';
 import restIcon from '../../Images/reset_settings_24dp_FILL0_wght400_GRAD0_opsz24.png';
 import { ShimmerCards, ShimmerFilterStrip } from './ShimmerCards.js';
@@ -15,14 +15,14 @@ export const Body = ()=> {
   const [lowRsBtnSty, setLowRsBtnSty] = useState(null);
   const [searchText, setSearchText] = useState(null);
   const btnStyle = {backgroundColor : 'rgb(50, 50, 56)', color : 'white'};
-  
+  const VegCardDetails = IsVegCard(CardDetails);
+
   useEffect(()=> {fetchingRestaurantData()},[]);
 
   async function fetchingRestaurantData () {
     const restaurantData = await useRestaurantsData();
     setRestaurantsData(restaurantData);
     setFilterRestaurants(restaurantData);
-    console.log(restaurantData);
   }
 
   if(restaurantsData === undefined || restaurantsData.length === 0) {
@@ -94,11 +94,15 @@ export const Body = ()=> {
         </div>
       </div>
 
-      <div className='grid grid-cols-4 justify-items-center gap-6'>{filterRestaurants.map((restaurantDetails)=> (
-        <Link key={restaurantDetails.info.id} to={`/restaurant/${restaurantDetails.info.id}`}> <CardDetails resDetails={restaurantDetails}/> </Link>
-        ))}
-      </div>
+      <div className='grid grid-cols-4 justify-items-center gap-6'>{filterRestaurants.map((restaurantDetails)=> {
+        return (
+          <Link key={restaurantDetails.info.id} to={`/restaurant/${restaurantDetails.info.id}`}>
+            {restaurantDetails.info.veg  === true ? <VegCardDetails resDetails={restaurantDetails}/> :
+            <CardDetails resDetails={restaurantDetails}/>}
+          </Link>
+        )
 
+      })}</div>
     </div>
   )
 }

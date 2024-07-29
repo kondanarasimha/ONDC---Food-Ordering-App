@@ -34740,6 +34740,7 @@ const Body = ()=>{
         backgroundColor: "rgb(50, 50, 56)",
         color: "white"
     };
+    const VegCardDetails = (0, _cardDetailsJs.IsVegCard)((0, _cardDetailsJs.CardDetails));
     (0, _react.useEffect)(()=>{
         fetchingRestaurantData();
     }, []);
@@ -34748,7 +34749,6 @@ const Body = ()=>{
         const restaurantData = await (0, _useRestaurantsDataJs.useRestaurantsData)();
         setRestaurantsData(restaurantData);
         setFilterRestaurants(restaurantData);
-        console.log(restaurantData);
     }
     _s1(fetchingRestaurantData, "j1M98GZI7433Faz+TO6itXE5tlU=", false, function() {
         return [
@@ -34919,24 +34919,28 @@ const Body = ()=>{
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                 className: "grid grid-cols-4 justify-items-center gap-6",
-                children: filterRestaurants.map((restaurantDetails)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                children: filterRestaurants.map((restaurantDetails)=>{
+                    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                         to: `/restaurant/${restaurantDetails.info.id}`,
-                        children: [
-                            " ",
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDetailsJs.CardDetails), {
-                                resDetails: restaurantDetails
-                            }, void 0, false, {
-                                fileName: "src/components/Body.js",
-                                lineNumber: 98,
-                                columnNumber: 96
-                            }, undefined),
-                            " "
-                        ]
-                    }, restaurantDetails.info.id, true, {
+                        children: restaurantDetails.info.veg === true ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(VegCardDetails, {
+                            resDetails: restaurantDetails
+                        }, void 0, false, {
+                            fileName: "src/components/Body.js",
+                            lineNumber: 100,
+                            columnNumber: 53
+                        }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDetailsJs.CardDetails), {
+                            resDetails: restaurantDetails
+                        }, void 0, false, {
+                            fileName: "src/components/Body.js",
+                            lineNumber: 101,
+                            columnNumber: 13
+                        }, undefined)
+                    }, restaurantDetails.info.id, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 98,
-                        columnNumber: 9
-                    }, undefined))
+                        lineNumber: 99,
+                        columnNumber: 11
+                    }, undefined);
+                })
             }, void 0, false, {
                 fileName: "src/components/Body.js",
                 lineNumber: 97,
@@ -34969,6 +34973,7 @@ try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "CardDetails", ()=>CardDetails);
+parcelHelpers.export(exports, "IsVegCard", ()=>IsVegCard);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _urlsJs = require("../utiles/urls.js");
 var _directionsBike24DpFILL0Wght400GRAD0Opsz24Png = require("../../Images/directions_bike_24dp_FILL0_wght400_GRAD0_opsz24.png");
@@ -34987,7 +34992,7 @@ const CardDetails = (props)=>{
                     src: (0, _urlsJs.resturentImgsLink) + cloudinaryImageId
                 }, void 0, false, {
                     fileName: "src/components/CardDetails.js",
-                    lineNumber: 12,
+                    lineNumber: 11,
                     columnNumber: 5
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -34998,7 +35003,7 @@ const CardDetails = (props)=>{
                             children: name
                         }, void 0, false, {
                             fileName: "src/components/CardDetails.js",
-                            lineNumber: 14,
+                            lineNumber: 13,
                             columnNumber: 7
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35009,7 +35014,7 @@ const CardDetails = (props)=>{
                                     src: (0, _directionsBike24DpFILL0Wght400GRAD0Opsz24PngDefault.default)
                                 }, void 0, false, {
                                     fileName: "src/components/CardDetails.js",
-                                    lineNumber: 17,
+                                    lineNumber: 16,
                                     columnNumber: 7
                                 }, undefined),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("p", {
@@ -35019,13 +35024,13 @@ const CardDetails = (props)=>{
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/components/CardDetails.js",
-                                    lineNumber: 18,
+                                    lineNumber: 17,
                                     columnNumber: 7
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/CardDetails.js",
-                            lineNumber: 16,
+                            lineNumber: 15,
                             columnNumber: 7
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35040,13 +35045,13 @@ const CardDetails = (props)=>{
                                     ]
                                 }, void 0, true, {
                                     fileName: "src/components/CardDetails.js",
-                                    lineNumber: 23,
+                                    lineNumber: 22,
                                     columnNumber: 7
                                 }, undefined)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/CardDetails.js",
-                            lineNumber: 21,
+                            lineNumber: 20,
                             columnNumber: 7
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35055,12 +35060,12 @@ const CardDetails = (props)=>{
                                 children: costForTwo
                             }, void 0, false, {
                                 fileName: "src/components/CardDetails.js",
-                                lineNumber: 27,
+                                lineNumber: 26,
                                 columnNumber: 9
                             }, undefined)
                         }, void 0, false, {
                             fileName: "src/components/CardDetails.js",
-                            lineNumber: 26,
+                            lineNumber: 25,
                             columnNumber: 7
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h6", {
@@ -35068,7 +35073,7 @@ const CardDetails = (props)=>{
                             children: cuisines.join(", ")
                         }, void 0, false, {
                             fileName: "src/components/CardDetails.js",
-                            lineNumber: 30,
+                            lineNumber: 29,
                             columnNumber: 7
                         }, undefined),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
@@ -35076,24 +35081,24 @@ const CardDetails = (props)=>{
                             children: locality
                         }, void 0, false, {
                             fileName: "src/components/CardDetails.js",
-                            lineNumber: 31,
+                            lineNumber: 30,
                             columnNumber: 7
                         }, undefined)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/CardDetails.js",
-                    lineNumber: 13,
+                    lineNumber: 12,
                     columnNumber: 5
                 }, undefined)
             ]
         }, void 0, true, {
             fileName: "src/components/CardDetails.js",
-            lineNumber: 11,
+            lineNumber: 10,
             columnNumber: 3
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/CardDetails.js",
-        lineNumber: 10,
+        lineNumber: 9,
         columnNumber: 3
     }, undefined);
 };
@@ -35103,8 +35108,37 @@ _s(CardDetails, "cCaY/WDLYqtqLuHYGVdrETNX8TA=", false, function() {
     ];
 });
 _c = CardDetails;
-var _c;
+const IsVegCard = (CardDetails)=>{
+    return (props)=>{
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                    className: "absolute z-10 text-sm bg-green-500 pl-0.5 pr-0.5 mt-1 text-white rounded-l-sm shadow-md font-semibold",
+                    children: "VEG"
+                }, void 0, false, {
+                    fileName: "src/components/CardDetails.js",
+                    lineNumber: 41,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(CardDetails, {
+                    ...props
+                }, void 0, false, {
+                    fileName: "src/components/CardDetails.js",
+                    lineNumber: 42,
+                    columnNumber: 9
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/CardDetails.js",
+            lineNumber: 40,
+            columnNumber: 7
+        }, undefined);
+    };
+};
+_c1 = IsVegCard;
+var _c, _c1;
 $RefreshReg$(_c, "CardDetails");
+$RefreshReg$(_c1, "IsVegCard");
 
   $parcel$ReactRefreshHelpers$6320.postlude(module);
 } finally {

@@ -5,7 +5,6 @@ import { useStartRating } from '../utiles/useStartRating.js';
 export const CardDetails = (props)=> {
   const {name, cloudinaryImageId, avgRating, totalRatingsString,
         costForTwo, cuisines, locality, sla} = props.resDetails.info;
-
   return(
   <div className='hover:bg-white hover:rounded-md hover:drop-shadow-lg w-52'>
   <div>
@@ -34,3 +33,14 @@ export const CardDetails = (props)=> {
   </div>
 </div>
 )}
+
+export const IsVegCard = (CardDetails)=> {
+  return (props)=> {
+    return (
+      <div>
+        <h2 className='absolute z-10 text-sm bg-green-500 pl-0.5 pr-0.5 mt-1 text-white rounded-l-sm shadow-md font-semibold'>VEG</h2>
+        <CardDetails {...props}/>
+      </div>
+    )
+  }
+}
