@@ -5,7 +5,6 @@ import { useParams } from "react-router-dom";
 import { TopPicksCards } from "./TopPicksCards.js";
 import { MenuHeader } from "./MenuHeader.js";
 import { MenuItems } from "./MenuItems.js";
-import { MenuItemCard } from "./MenuItemCard.js";
 import { useMenuData } from "../utiles/useMenuData.js";
 
 export const ResturentMenu = ()=> {
@@ -13,7 +12,6 @@ export const ResturentMenu = ()=> {
   const restaurantId = paramId.id;
 
   const menuDetails = useMenuData(restaurantId);
-  const itemsData = menuDetails?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[4]?.card?.card.itemCards;
     
   if(menuDetails === null) {
     return
@@ -24,13 +22,6 @@ export const ResturentMenu = ()=> {
       <MenuHeader key={2} props={menuDetails}/>
       <TopPicksCards key={3} props={menuDetails}/>
       <MenuItems key={4} menuItems={menuDetails}/>
-      {itemsData && itemsData.map((itemCard)=> {
-        return(
-          <div className="regular-card-container">
-            <MenuItemCard key={itemCard.card.info.id} cardInfo={itemCard.card.info}/>
-          </div>
-        )
-      })}
     </div>
   )
 };

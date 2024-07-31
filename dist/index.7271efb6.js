@@ -35415,7 +35415,6 @@ var _menuHeaderJs = require("./MenuHeader.js");
 var _reactRouterDom = require("react-router-dom");
 var _topPicksCardsJs = require("./TopPicksCards.js");
 var _menuItemsJs = require("./MenuItems.js");
-var _menuItemCardJs = require("./MenuItemCard.js");
 var _useMenuDataJs = require("../utiles/useMenuData.js");
 var _s = $RefreshSig$();
 const ResturentMenu = ()=>{
@@ -35423,7 +35422,6 @@ const ResturentMenu = ()=>{
     const paramId = (0, _reactRouterDom.useParams)();
     const restaurantId = paramId.id;
     const menuDetails = (0, _useMenuDataJs.useMenuData)(restaurantId);
-    const itemsData = menuDetails?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[4]?.card?.card.itemCards;
     if (menuDetails === null) return;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "py-28 px-52",
@@ -35432,43 +35430,27 @@ const ResturentMenu = ()=>{
                 props: menuDetails
             }, 2, false, {
                 fileName: "src/components/ResturentMenu.js",
-                lineNumber: 24,
+                lineNumber: 22,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _topPicksCardsJs.TopPicksCards), {
                 props: menuDetails
             }, 3, false, {
                 fileName: "src/components/ResturentMenu.js",
-                lineNumber: 25,
+                lineNumber: 23,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _menuItemsJs.MenuItems), {
                 menuItems: menuDetails
             }, 4, false, {
                 fileName: "src/components/ResturentMenu.js",
-                lineNumber: 26,
+                lineNumber: 24,
                 columnNumber: 7
-            }, undefined),
-            itemsData && itemsData.map((itemCard)=>{
-                return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "regular-card-container",
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _menuItemCardJs.MenuItemCard), {
-                        cardInfo: itemCard.card.info
-                    }, itemCard.card.info.id, false, {
-                        fileName: "src/components/ResturentMenu.js",
-                        lineNumber: 30,
-                        columnNumber: 13
-                    }, undefined)
-                }, void 0, false, {
-                    fileName: "src/components/ResturentMenu.js",
-                    lineNumber: 29,
-                    columnNumber: 11
-                }, undefined);
-            })
+            }, undefined)
         ]
     }, 1, true, {
         fileName: "src/components/ResturentMenu.js",
-        lineNumber: 23,
+        lineNumber: 21,
         columnNumber: 5
     }, undefined);
 };
@@ -35487,7 +35469,7 @@ $RefreshReg$(_c, "ResturentMenu");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../utiles/urls":"aw5Ei","./MenuHeader.js":"fYuCi","react-router-dom":"9xmpe","./TopPicksCards.js":"cavOn","./MenuItems.js":"eO6OB","./MenuItemCard.js":"frB8e","../utiles/useMenuData.js":"47z5e","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"fYuCi":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../utiles/urls":"aw5Ei","./MenuHeader.js":"fYuCi","react-router-dom":"9xmpe","./TopPicksCards.js":"cavOn","./MenuItems.js":"eO6OB","../utiles/useMenuData.js":"47z5e","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"fYuCi":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$bcb5 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -35659,73 +35641,49 @@ var _carouselsMenu = require("./CarouselsMenu");
 const TopPicksCards = (props)=>{
     const carouselsData = props.props.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[1].card.card.carousel;
     const { title } = props.props.data.cards[4].groupedCard.cardGroupMap.REGULAR.cards[1].card.card;
-    if (carouselsData === undefined) return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "mt-10",
-        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-            className: "text-xl text-gray-600 text-center",
-            children: "- Menu -"
-        }, void 0, false, {
-            fileName: "src/components/TopPicksCards.js",
-            lineNumber: 7,
-            columnNumber: 35
-        }, undefined)
-    }, void 0, false, {
-        fileName: "src/components/TopPicksCards.js",
-        lineNumber: 7,
-        columnNumber: 12
-    }, undefined);
+    if (carouselsData === undefined) return;
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "mt-10 mb-10",
-        children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                className: "text-xl text-gray-600 text-center",
-                children: "- Menu -"
-            }, void 0, false, {
-                fileName: "src/components/TopPicksCards.js",
-                lineNumber: 11,
-                columnNumber: 7
-            }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "mt-3 mb-4",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                            className: "text-2xl font-semibold",
-                            children: title
-                        }, void 0, false, {
-                            fileName: "src/components/TopPicksCards.js",
-                            lineNumber: 14,
-                            columnNumber: 11
-                        }, undefined)
+        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "mt-3 mb-4",
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                        className: "text-2xl font-semibold",
+                        children: title
                     }, void 0, false, {
                         fileName: "src/components/TopPicksCards.js",
                         lineNumber: 13,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "grid grid-cols-4 gap-4",
-                        children: carouselsData.map((carouselData)=>{
-                            return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _carouselsMenu.CarouselsMenu), {
-                                data: carouselData
-                            }, carouselData.dish.info.id, false, {
-                                fileName: "src/components/TopPicksCards.js",
-                                lineNumber: 19,
-                                columnNumber: 20
-                            }, undefined);
-                        })
-                    }, void 0, false, {
-                        fileName: "src/components/TopPicksCards.js",
-                        lineNumber: 17,
-                        columnNumber: 9
+                        columnNumber: 11
                     }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/TopPicksCards.js",
-                lineNumber: 12,
-                columnNumber: 7
-            }, undefined)
-        ]
-    }, void 0, true, {
+                }, void 0, false, {
+                    fileName: "src/components/TopPicksCards.js",
+                    lineNumber: 12,
+                    columnNumber: 9
+                }, undefined),
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "grid grid-cols-4 gap-4",
+                    children: carouselsData.map((carouselData)=>{
+                        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _carouselsMenu.CarouselsMenu), {
+                            data: carouselData
+                        }, carouselData.dish.info.id, false, {
+                            fileName: "src/components/TopPicksCards.js",
+                            lineNumber: 18,
+                            columnNumber: 20
+                        }, undefined);
+                    })
+                }, void 0, false, {
+                    fileName: "src/components/TopPicksCards.js",
+                    lineNumber: 16,
+                    columnNumber: 9
+                }, undefined)
+            ]
+        }, void 0, true, {
+            fileName: "src/components/TopPicksCards.js",
+            lineNumber: 11,
+            columnNumber: 7
+        }, undefined)
+    }, void 0, false, {
         fileName: "src/components/TopPicksCards.js",
         lineNumber: 10,
         columnNumber: 5
@@ -35769,7 +35727,7 @@ const CarouselsMenu = (props)=>{
                 className: "flex justify-between w-48 pl-4 pr-1 absolute z-40 -mt-9",
                 children: [
                     price === undefined ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
-                        className: "text-white shadow-md text-2xl",
+                        className: "text-white shadow-sm text-md font-semibold",
                         children: [
                             "\u20B9",
                             (defaultPrice / 100).toFixed()
@@ -35779,7 +35737,7 @@ const CarouselsMenu = (props)=>{
                         lineNumber: 10,
                         columnNumber: 34
                     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
-                        className: "text-white shadow-md text-lg",
+                        className: "text-white shadow-md text-sm font-semibold",
                         children: [
                             "\u20B9",
                             (price / 100).toFixed()
@@ -35787,7 +35745,7 @@ const CarouselsMenu = (props)=>{
                     }, void 0, true, {
                         fileName: "src/components/CarouselsMenu.js",
                         lineNumber: 10,
-                        columnNumber: 119
+                        columnNumber: 132
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                         className: "bg-white w-[65px] h-[25px] rounded-md font-semibold text-green-600 active:opacity-90",
@@ -35831,85 +35789,48 @@ parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "MenuItems", ()=>MenuItems);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
-var _menuItemCardJs = require("./MenuItemCard.js");
+var _itemCategoryJs = require("./ItemCategory.js");
 var _s = $RefreshSig$();
 const MenuItems = (props)=>{
     _s();
-    const [isOpen, setIsOpen] = (0, _react.useState)(true);
     const menuData = props?.menuItems?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards;
-    const recommendData = menuData[2].card.card;
-    const { title, itemCards } = recommendData;
-    function btnHandler() {
-        setIsOpen(!isOpen);
-    }
-    if (itemCards === undefined) return;
+    const itemsCategoryData = menuData.filter((menuCard)=>{
+        return menuCard?.card?.card["@type"] === "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory";
+    });
+    const [showingIndex, setShowingIndex] = (0, _react.useState)(0);
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "mt-4",
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                onClick: ()=>{
-                    btnHandler();
-                },
-                className: "border-b-[1px] border-gray-400 mb-2 cursor-pointer",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                    className: "text-xl pb-1.5 font-semibold",
-                    children: [
-                        title,
-                        "(",
-                        itemCards.length,
-                        ")"
-                    ]
-                }, void 0, true, {
-                    fileName: "src/components/MenuItems.js",
-                    lineNumber: 22,
-                    columnNumber: 9
-                }, undefined)
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                className: "text-xl text-gray-600 text-center mb-5",
+                children: "- Menu -"
             }, void 0, false, {
                 fileName: "src/components/MenuItems.js",
-                lineNumber: 21,
+                lineNumber: 11,
                 columnNumber: 7
             }, undefined),
-            isOpen ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                children: [
-                    itemCards.map((itemCard)=>{
-                        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _menuItemCardJs.MenuItemCard), {
-                            cardInfo: itemCard.card.info
-                        }, itemCard.card.info.id, false, {
-                            fileName: "src/components/MenuItems.js",
-                            lineNumber: 27,
-                            columnNumber: 18
-                        }, undefined);
-                    }),
-                    " "
-                ]
-            }, void 0, true, {
-                fileName: "src/components/MenuItems.js",
-                lineNumber: 25,
-                columnNumber: 17
-            }, undefined) : "",
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "border-b-[1px] border-gray-400",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                    className: "text-xl font-semibold pb-1.5",
-                    children: "Regular Menu"
-                }, void 0, false, {
+            itemsCategoryData.map((itemCategory, i)=>{
+                return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _itemCategoryJs.ItemCategory), {
+                    data: itemCategory?.card?.card,
+                    isItemsDisplay: i === showingIndex ? true : false,
+                    setShowingIndex: ()=>{
+                        setShowingIndex(i);
+                    }
+                }, i, false, {
                     fileName: "src/components/MenuItems.js",
-                    lineNumber: 31,
-                    columnNumber: 9
-                }, undefined)
-            }, 5, false, {
-                fileName: "src/components/MenuItems.js",
-                lineNumber: 30,
-                columnNumber: 9
-            }, undefined)
+                    lineNumber: 14,
+                    columnNumber: 16
+                }, undefined);
+            }),
+            ";"
         ]
     }, void 0, true, {
         fileName: "src/components/MenuItems.js",
-        lineNumber: 19,
+        lineNumber: 10,
         columnNumber: 5
     }, undefined);
 };
-_s(MenuItems, "mEi83NlPXQzy/XIDfTYWzOSvaHw=");
+_s(MenuItems, "DathsotUjW3STjZKAIagiWUDaGs=");
 _c = MenuItems;
 var _c;
 $RefreshReg$(_c, "MenuItems");
@@ -35919,164 +35840,236 @@ $RefreshReg$(_c, "MenuItems");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./MenuItemCard.js":"frB8e","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"frB8e":[function(require,module,exports) {
-var $parcel$ReactRefreshHelpers$be0e = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./ItemCategory.js":"24Zmk"}],"24Zmk":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$ea8a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
-$parcel$ReactRefreshHelpers$be0e.prelude(module);
+$parcel$ReactRefreshHelpers$ea8a.prelude(module);
 
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "MenuItemCard", ()=>MenuItemCard);
+parcelHelpers.export(exports, "ItemCategory", ()=>ItemCategory);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _urlsJs = require("../utiles/urls.js");
-var _useStartRatingJs = require("../utiles/useStartRating.js");
-var _usePricePisaJs = require("../utiles/usePricePisa.js");
+var _react = require("react");
+var _categoryItemList = require("./CategoryItemList");
 var _s = $RefreshSig$();
-const MenuItemCard = (props)=>{
+const ItemCategory = (props, isItemsShowing)=>{
     _s();
-    const { name, itemAttribute, price, ratings, description, imageId, defaultPrice } = props.cardInfo;
+    const [MenuitemCards, setItemCards] = (0, _react.useState)();
+    const { title, itemCards } = props.data;
+    const { isItemsDisplay } = props;
+    function btnHandler() {
+        props.setShowingIndex();
+    }
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "flex justify-between ml-1 mr-1 mb-5 mt-1 pb-8 border-b-[1px] border-gray-300",
+        className: "mb-2",
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "ml-1",
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                onClick: ()=>{
+                    btnHandler();
+                },
+                className: "text-xl font-semibold mb-1 border-b-[1px] border-gray-500 pb-1 cursor-pointer",
                 children: [
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                        className: "font-semibold mt-1 mb-1",
-                        children: itemAttribute.vegClassifier
-                    }, void 0, false, {
-                        fileName: "src/components/MenuItemCard.js",
-                        lineNumber: 12,
-                        columnNumber: 9
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                        className: "text-xl font-medium max-w-[650px] mb-1",
-                        children: name
-                    }, void 0, false, {
-                        fileName: "src/components/MenuItemCard.js",
-                        lineNumber: 13,
-                        columnNumber: 9
-                    }, undefined),
-                    price === undefined ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                        className: "mb-1 text-lg",
-                        children: [
-                            " \u20B9 ",
-                            (0, _usePricePisaJs.usePisaToRupee)(defaultPrice)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/MenuItemCard.js",
-                        lineNumber: 14,
-                        columnNumber: 32
-                    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                        className: "mb-1 text-lg",
-                        children: [
-                            "\u20B9 ",
-                            (0, _usePricePisaJs.usePisaToRupee)(price)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/MenuItemCard.js",
-                        lineNumber: 14,
-                        columnNumber: 102
-                    }, undefined),
-                    ratings.aggregatedRating.rating === undefined ? null : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "w-5 flex mb-1",
-                        children: [
-                            (0, _useStartRatingJs.useStartRating)(ratings.aggregatedRating.rating),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
-                                children: [
-                                    ratings.aggregatedRating.rating,
-                                    "(",
-                                    ratings.aggregatedRating.ratingCountV2,
-                                    ")"
-                                ]
-                            }, void 0, true, {
-                                fileName: "src/components/MenuItemCard.js",
-                                lineNumber: 16,
-                                columnNumber: 90
-                            }, undefined)
-                        ]
-                    }, void 0, true, {
-                        fileName: "src/components/MenuItemCard.js",
-                        lineNumber: 16,
-                        columnNumber: 10
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "max-w-[650px]",
-                        children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h6", {
-                            className: "text-justify max-w-[600px] text-gray-500 text-[14px]",
-                            children: description
-                        }, void 0, false, {
-                            fileName: "src/components/MenuItemCard.js",
-                            lineNumber: 19,
-                            columnNumber: 11
-                        }, undefined)
-                    }, void 0, false, {
-                        fileName: "src/components/MenuItemCard.js",
-                        lineNumber: 18,
-                        columnNumber: 9
-                    }, undefined)
+                    title,
+                    " (",
+                    itemCards.length,
+                    ")"
                 ]
             }, void 0, true, {
-                fileName: "src/components/MenuItemCard.js",
-                lineNumber: 11,
-                columnNumber: 7
+                fileName: "src/components/ItemCategory.js",
+                lineNumber: 16,
+                columnNumber: 9
             }, undefined),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                children: [
-                    imageId === undefined ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                        className: "w-[100px] h-[100px] mr-4"
-                    }, void 0, false, {
-                        fileName: "src/components/MenuItemCard.js",
-                        lineNumber: 24,
-                        columnNumber: 34
-                    }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                        className: "w-[100px] h-[100px] object-cover rounded-xl relative mr-4",
-                        src: (0, _urlsJs.itemImgUrl) + imageId
-                    }, void 0, false, {
-                        fileName: "src/components/MenuItemCard.js",
-                        lineNumber: 24,
-                        columnNumber: 80
-                    }, undefined),
-                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                        className: "bg-white w-14 text-green-500 drop-shadow-lg rounded-md absolute z-30 ml-[25px] -mt-2 active:opacity-80",
-                        children: "ADD"
-                    }, void 0, false, {
-                        fileName: "src/components/MenuItemCard.js",
-                        lineNumber: 25,
-                        columnNumber: 9
-                    }, undefined)
-                ]
-            }, void 0, true, {
-                fileName: "src/components/MenuItemCard.js",
-                lineNumber: 23,
-                columnNumber: 7
+            isItemsDisplay && /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _categoryItemList.CategoryItemList), {
+                data: props.data.itemCards
+            }, void 0, false, {
+                fileName: "src/components/ItemCategory.js",
+                lineNumber: 17,
+                columnNumber: 28
             }, undefined)
         ]
     }, void 0, true, {
-        fileName: "src/components/MenuItemCard.js",
-        lineNumber: 9,
-        columnNumber: 5
+        fileName: "src/components/ItemCategory.js",
+        lineNumber: 15,
+        columnNumber: 7
     }, undefined);
 };
-_s(MenuItemCard, "LqMkMDK8xowFhZQKBHu2e8HgmHE=", false, function() {
-    return [
-        (0, _usePricePisaJs.usePisaToRupee),
-        (0, _usePricePisaJs.usePisaToRupee),
-        (0, _useStartRatingJs.useStartRating)
-    ];
-});
-_c = MenuItemCard;
+_s(ItemCategory, "S/U886Uzcc3h5hKxQzEbJ3RU3VM=");
+_c = ItemCategory;
 var _c;
-$RefreshReg$(_c, "MenuItemCard");
+$RefreshReg$(_c, "ItemCategory");
 
-  $parcel$ReactRefreshHelpers$be0e.postlude(module);
+  $parcel$ReactRefreshHelpers$ea8a.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","../utiles/urls.js":"aw5Ei","../utiles/useStartRating.js":"2TSoR","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","../utiles/usePricePisa.js":"kxdIu"}],"kxdIu":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./CategoryItemList":"ilbVp","react":"21dqq"}],"ilbVp":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$bafb = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$bafb.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "CategoryItemList", ()=>CategoryItemList);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _urlsJs = require("../utiles/urls.js");
+var _useStartRatingJs = require("../utiles/useStartRating.js");
+var _usePricePisaJs = require("../utiles/usePricePisa.js");
+var _categoryItemListJs = require("./CategoryItemList.js");
+const CategoryItemList = (props)=>{
+    var _s = $RefreshSig$();
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: props.data.map(_s((itemDetails)=>{
+            _s();
+            return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex justify-between ml-1 mr-1 mb-5 mt-1 pb-8 border-b-[1px] border-gray-300",
+                children: [
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "ml-1",
+                        children: [
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                                className: "font-semibold mt-1 mb-1",
+                                children: itemDetails.card.info.itemAttribute.vegClassifier
+                            }, void 0, false, {
+                                fileName: "src/components/CategoryItemList.js",
+                                lineNumber: 14,
+                                columnNumber: 15
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
+                                className: "text-xl font-medium max-w-[650px] mb-1",
+                                children: itemDetails.card.info.name
+                            }, void 0, false, {
+                                fileName: "src/components/CategoryItemList.js",
+                                lineNumber: 15,
+                                columnNumber: 15
+                            }, undefined),
+                            itemDetails.card.info.price === undefined ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                                className: "mb-1 text-lg",
+                                children: [
+                                    " \u20B9 ",
+                                    (0, _usePricePisaJs.usePisaToRupee)(itemDetails.card.info.defaultPrice)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/CategoryItemList.js",
+                                lineNumber: 16,
+                                columnNumber: 60
+                            }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
+                                className: "mb-1 text-lg",
+                                children: [
+                                    "\u20B9 ",
+                                    (0, _usePricePisaJs.usePisaToRupee)(itemDetails.card.info.price)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/CategoryItemList.js",
+                                lineNumber: 16,
+                                columnNumber: 152
+                            }, undefined),
+                            itemDetails.card.info.ratings.aggregatedRating.rating === undefined ? null : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "w-5 flex mb-1",
+                                children: [
+                                    (0, _useStartRatingJs.useStartRating)(itemDetails.card.info.ratings.aggregatedRating.rating),
+                                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h5", {
+                                        children: [
+                                            itemDetails.card.info.ratings.aggregatedRating.rating,
+                                            "(",
+                                            itemDetails.card.info.ratings.aggregatedRating.ratingCountV2,
+                                            ")"
+                                        ]
+                                    }, void 0, true, {
+                                        fileName: "src/components/CategoryItemList.js",
+                                        lineNumber: 19,
+                                        columnNumber: 15
+                                    }, undefined)
+                                ]
+                            }, void 0, true, {
+                                fileName: "src/components/CategoryItemList.js",
+                                lineNumber: 18,
+                                columnNumber: 16
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "max-w-[650px]",
+                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h6", {
+                                    className: "text-justify max-w-[600px] text-gray-500 text-[14px]",
+                                    children: itemDetails.card.info.description
+                                }, void 0, false, {
+                                    fileName: "src/components/CategoryItemList.js",
+                                    lineNumber: 21,
+                                    columnNumber: 17
+                                }, undefined)
+                            }, void 0, false, {
+                                fileName: "src/components/CategoryItemList.js",
+                                lineNumber: 20,
+                                columnNumber: 15
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/CategoryItemList.js",
+                        lineNumber: 13,
+                        columnNumber: 13
+                    }, undefined),
+                    /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        children: [
+                            itemDetails.card.info.imageId === undefined ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                                className: "w-[100px] h-[100px] mr-4"
+                            }, void 0, false, {
+                                fileName: "src/components/CategoryItemList.js",
+                                lineNumber: 25,
+                                columnNumber: 62
+                            }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                                className: "w-[100px] h-[100px] object-cover rounded-xl relative mr-4",
+                                src: (0, _urlsJs.itemImgUrl) + itemDetails.card.info.imageId
+                            }, void 0, false, {
+                                fileName: "src/components/CategoryItemList.js",
+                                lineNumber: 25,
+                                columnNumber: 108
+                            }, undefined),
+                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                                className: "bg-white w-14 text-green-500 drop-shadow-lg rounded-md absolute z-30 ml-[25px] -mt-2 active:opacity-80",
+                                children: "ADD"
+                            }, void 0, false, {
+                                fileName: "src/components/CategoryItemList.js",
+                                lineNumber: 26,
+                                columnNumber: 15
+                            }, undefined)
+                        ]
+                    }, void 0, true, {
+                        fileName: "src/components/CategoryItemList.js",
+                        lineNumber: 24,
+                        columnNumber: 13
+                    }, undefined)
+                ]
+            }, void 0, true, {
+                fileName: "src/components/CategoryItemList.js",
+                lineNumber: 12,
+                columnNumber: 11
+            }, undefined);
+        }, "LqMkMDK8xowFhZQKBHu2e8HgmHE=", false, function() {
+            return [
+                (0, _usePricePisaJs.usePisaToRupee),
+                (0, _usePricePisaJs.usePisaToRupee),
+                (0, _useStartRatingJs.useStartRating)
+            ];
+        }))
+    }, 7, false, {
+        fileName: "src/components/CategoryItemList.js",
+        lineNumber: 9,
+        columnNumber: 5
+    }, undefined);
+};
+_c = (0, _categoryItemListJs.CategoryItemList);
+var _c;
+$RefreshReg$(_c, "CategoryItemList");
+
+  $parcel$ReactRefreshHelpers$bafb.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"../utiles/urls.js":"aw5Ei","../utiles/useStartRating.js":"2TSoR","../utiles/usePricePisa.js":"kxdIu","./CategoryItemList.js":"ilbVp","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","react/jsx-dev-runtime":"iTorj","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kxdIu":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "usePisaToRupee", ()=>usePisaToRupee);
