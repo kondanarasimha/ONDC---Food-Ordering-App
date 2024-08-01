@@ -62,13 +62,6 @@ export const Body = ()=> {
         </div>
         
         <div className='flex items-center'>
-          <button className='ml-6 border border-gray-900  rounded-sm text-center my-16 p-1' onClick={()=> {
-            setRatingBtnSty(null);
-            setFstDelBtnSty(null);
-            setLowRsBtnSty(null);
-            setFilterRestaurants(restaurantsData);
-          }}><img className='w-6' src={restIcon}></img></button>
-
           <button className='ml-6 border border-gray-900 rounded-sm text-center my-16 p-1' style={ratingBtnSty} onClick={()=>{
             const topRatedRestaurants = restaurantsData.filter(restaurantData=> restaurantData.info.avgRating >= 4.0);
             ratingBtnSty === null ? (setRatingBtnSty(btnStyle), setFstDelBtnSty(null),

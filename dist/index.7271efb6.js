@@ -34845,27 +34845,6 @@ const Body = ()=>{
                         className: "flex items-center",
                         children: [
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                                className: "ml-6 border border-gray-900  rounded-sm text-center my-16 p-1",
-                                onClick: ()=>{
-                                    setRatingBtnSty(null);
-                                    setFstDelBtnSty(null);
-                                    setLowRsBtnSty(null);
-                                    setFilterRestaurants(restaurantsData);
-                                },
-                                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                                    className: "w-6",
-                                    src: (0, _resetSettings24DpFILL0Wght400GRAD0Opsz24PngDefault.default)
-                                }, void 0, false, {
-                                    fileName: "src/components/Body.js",
-                                    lineNumber: 70,
-                                    columnNumber: 14
-                                }, undefined)
-                            }, void 0, false, {
-                                fileName: "src/components/Body.js",
-                                lineNumber: 65,
-                                columnNumber: 11
-                            }, undefined),
-                            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
                                 className: "ml-6 border border-gray-900 rounded-sm text-center my-16 p-1",
                                 style: ratingBtnSty,
                                 onClick: ()=>{
@@ -34875,7 +34854,7 @@ const Body = ()=>{
                                 children: "Top Rating"
                             }, void 0, false, {
                                 fileName: "src/components/Body.js",
-                                lineNumber: 72,
+                                lineNumber: 65,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -34889,7 +34868,7 @@ const Body = ()=>{
                                 children: "Fast Delivery"
                             }, void 0, false, {
                                 fileName: "src/components/Body.js",
-                                lineNumber: 80,
+                                lineNumber: 73,
                                 columnNumber: 11
                             }, undefined),
                             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -34902,7 +34881,7 @@ const Body = ()=>{
                                 children: "Rs < 200"
                             }, void 0, false, {
                                 fileName: "src/components/Body.js",
-                                lineNumber: 88,
+                                lineNumber: 81,
                                 columnNumber: 11
                             }, undefined)
                         ]
@@ -34926,24 +34905,24 @@ const Body = ()=>{
                             resDetails: restaurantDetails
                         }, void 0, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 100,
+                            lineNumber: 93,
                             columnNumber: 53
                         }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDetailsJs.CardDetails), {
                             resDetails: restaurantDetails
                         }, void 0, false, {
                             fileName: "src/components/Body.js",
-                            lineNumber: 101,
+                            lineNumber: 94,
                             columnNumber: 13
                         }, undefined)
                     }, restaurantDetails.info.id, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 99,
+                        lineNumber: 92,
                         columnNumber: 11
                     }, undefined);
                 })
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 97,
+                lineNumber: 90,
                 columnNumber: 7
             }, undefined)
         ]
@@ -35821,8 +35800,7 @@ const MenuItems = (props)=>{
                     lineNumber: 14,
                     columnNumber: 16
                 }, undefined);
-            }),
-            ";"
+            })
         ]
     }, void 0, true, {
         fileName: "src/components/MenuItems.js",
@@ -35840,7 +35818,7 @@ $RefreshReg$(_c, "MenuItems");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./ItemCategory.js":"24Zmk"}],"24Zmk":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./ItemCategory.js":"24Zmk","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"24Zmk":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$ea8a = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -35905,7 +35883,7 @@ $RefreshReg$(_c, "ItemCategory");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./CategoryItemList":"ilbVp","react":"21dqq"}],"ilbVp":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./CategoryItemList":"ilbVp","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"ilbVp":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$bafb = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -36069,7 +36047,7 @@ $RefreshReg$(_c, "CategoryItemList");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"../utiles/urls.js":"aw5Ei","../utiles/useStartRating.js":"2TSoR","../utiles/usePricePisa.js":"kxdIu","./CategoryItemList.js":"ilbVp","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","react/jsx-dev-runtime":"iTorj","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kxdIu":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","../utiles/urls.js":"aw5Ei","../utiles/useStartRating.js":"2TSoR","../utiles/usePricePisa.js":"kxdIu","./CategoryItemList.js":"ilbVp","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kxdIu":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "usePisaToRupee", ()=>usePisaToRupee);

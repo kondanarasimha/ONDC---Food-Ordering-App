@@ -13,7 +13,7 @@ export const MenuItems = (props)=> {
       {itemsCategoryData.map((itemCategory,i)=> {
         return(<ItemCategory key={i} data={itemCategory?.card?.card} 
           isItemsDisplay = {i === showingIndex ? true : false} setShowingIndex={()=> {setShowingIndex(i)}}/>)
-      })};
+      })}
 
     </div>
   )
