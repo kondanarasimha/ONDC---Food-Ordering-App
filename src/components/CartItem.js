@@ -1,20 +1,18 @@
 import { itemImgUrl } from "../utiles/urls.js";
 import { useStartRating } from '../utiles/useStartRating.js';
 import { usePisaToRupee } from "../utiles/usePricePisa.js";
-import { CategoryItemList } from "./CategoryItemList.js";
 import { itemImgUrl } from "../utiles/urls.js";
 import { useDispatch } from "react-redux";
-import { addItems } from "../utiles/cartSlice.js";
+import { removeItems } from "../utiles/cartSlice.js";
 
-
-export const CategoryItemList = (props)=> { 
-  const dispatch = useDispatch(); 
-  const addBtnHandler = (item)=> {
-    dispatch(addItems(item))
-  };
+export const CartItem = (props)=> {
+  const dispatch = useDispatch();
+  const removeBtnHandler = (itemIndex)=> {
+    dispatch(removeItems(itemIndex))
+  }
   return(
-    <div key={7}>
-      {props.data.map((itemDetails)=> {
+    <div>
+      {props.data.map((itemDetails, index)=> {
         return(
           <div className="flex justify-between ml-1 mr-1 mb-5 mt-1 pb-8 border-b-[1px] border-gray-300">
             <div className="ml-1">
@@ -30,14 +28,15 @@ export const CategoryItemList = (props)=> {
             </div>
             <div>
               {itemDetails.card.info.imageId === undefined ? <div className="w-[100px] h-[100px] mr-4"/> : <img className="w-[100px] h-[100px] object-cover rounded-xl relative mr-4 mt-2" src={itemImgUrl+itemDetails.card.info.imageId}></img>}
-              <button className="bg-white w-16 text-green-500 drop-shadow-lg rounded-sm absolute z-30 ml-[20px] -mt-2 active:opacity-95 font-semibold" onClick={()=> {
-                addBtnHandler(itemDetails);
-              }}>ADD</button>
+              <button className="bg-white w-20 text-red-600 drop-shadow-lg rounded-sm absolute z-30 ml-[10px] -mt-2 active:opacity-95 font-semibold" onClick={()=> {
+                removeBtnHandler(index);
+              }}>REMOVE</button>
             </div>
 
           </div>
           )
         })}
-        
-    </div>)  
+    </div>
+  )
+  
 }

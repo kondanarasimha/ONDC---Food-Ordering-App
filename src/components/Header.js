@@ -1,8 +1,10 @@
+import { useSelector } from 'react-redux';
 import logo from '../../Images/ONDC-logo.png';
 import { Link } from 'react-router-dom';
 
 
 export const Header = ()=> {
+  const cartItems = useSelector((store)=> store.cart.items);
   return(
   <div className='bg-white w-full rounded-b-xl drop-shadow-lg flex flex-row justify-between items-center fixed z-50'>
     <div className='ml-5'>
@@ -13,7 +15,7 @@ export const Header = ()=> {
         <li><Link to="/">HOME</Link></li>
         <li><Link to="/contact">CONTACT</Link></li>
         <li><Link to="/about">ABOUT</Link></li>
-        <li><Link to="/cart">CART</Link></li>
+        <li><Link to="/cart">CART({cartItems.length})</Link></li>
       </ul>
     </div>
   </div>

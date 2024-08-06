@@ -8,15 +8,19 @@ import { Cart } from './components/Cart.js';
 import { Error } from './components/Error.js';
 import { ResturentMenu } from './components/ResturentMenu.js';
 import { AboutClassShimmer } from './components/AboutClassShimmer.js';
+import { Provider } from 'react-redux';
+import { appStore } from './utiles/appStore.js';
 
 const AboutClass = lazy(()=> import('./components/AboutClass.js'));
 
 const AppLayout = ()=> {
   return(
-  <div className='app'>
-    <Header/>
-    <Outlet/>
-  </div>
+    <Provider store={appStore}>
+      <div className='app'>
+        <Header/>
+        <Outlet/>
+      </div>
+    </Provider>
 )}
 
 const appRouter = createBrowserRouter([
