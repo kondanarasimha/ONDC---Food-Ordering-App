@@ -29,9 +29,9 @@ export const Body = ()=> {
     const shimmerLen = Array(20).fill(1);
     
     return (
-      <div className='body-container'>
+      <div className='py-32 px-24'>
         <ShimmerFilterStrip/>
-        <div className="card-container">
+        <div className="grid grid-cols-4 justify-items-center gap-4 max-md:grid-cols-2 max-sm:grid-cols-1 max-lg:grid-cols-3">
           {shimmerLen.map((data,index)=> <ShimmerCards key={index}/>)}
         </div>
       </div>

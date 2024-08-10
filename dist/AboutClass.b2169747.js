@@ -618,6 +618,7 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _useGitHubApiJs = require("../utiles/useGitHubApi.js");
 var _aboutTextClassJs = require("./AboutTextClass.js");
+var _aboutClassShimmerJs = require("./AboutClassShimmer.js");
 class AboutClass extends (0, _reactDefault.default).Component {
     constructor(props){
         super(props);
@@ -640,12 +641,12 @@ class AboutClass extends (0, _reactDefault.default).Component {
                     children: "ABOUT"
                 }, void 0, false, {
                     fileName: "src/components/AboutClass.js",
-                    lineNumber: 22,
+                    lineNumber: 23,
                     columnNumber: 11
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _aboutTextClassJs.AboutTextClass), {}, void 0, false, {
                     fileName: "src/components/AboutClass.js",
-                    lineNumber: 24,
+                    lineNumber: 25,
                     columnNumber: 11
                 }, this),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -657,12 +658,12 @@ class AboutClass extends (0, _reactDefault.default).Component {
                                 src: this.state.profileData.avatar_url
                             }, void 0, false, {
                                 fileName: "src/components/AboutClass.js",
-                                lineNumber: 28,
+                                lineNumber: 29,
                                 columnNumber: 15
                             }, this)
                         }, void 0, false, {
                             fileName: "src/components/AboutClass.js",
-                            lineNumber: 27,
+                            lineNumber: 28,
                             columnNumber: 13
                         }, this),
                         /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -673,7 +674,7 @@ class AboutClass extends (0, _reactDefault.default).Component {
                                     children: "DEVELOPED BY"
                                 }, void 0, false, {
                                     fileName: "src/components/AboutClass.js",
-                                    lineNumber: 31,
+                                    lineNumber: 32,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
@@ -681,7 +682,7 @@ class AboutClass extends (0, _reactDefault.default).Component {
                                     children: this.state.profileData.name
                                 }, void 0, false, {
                                     fileName: "src/components/AboutClass.js",
-                                    lineNumber: 32,
+                                    lineNumber: 33,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
@@ -689,7 +690,7 @@ class AboutClass extends (0, _reactDefault.default).Component {
                                     children: this.state.profileData.bio
                                 }, void 0, false, {
                                     fileName: "src/components/AboutClass.js",
-                                    lineNumber: 33,
+                                    lineNumber: 34,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -699,7 +700,7 @@ class AboutClass extends (0, _reactDefault.default).Component {
                                     children: "GITHUB"
                                 }, void 0, false, {
                                     fileName: "src/components/AboutClass.js",
-                                    lineNumber: 34,
+                                    lineNumber: 35,
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
@@ -709,25 +710,25 @@ class AboutClass extends (0, _reactDefault.default).Component {
                                     children: "LINKEDIN"
                                 }, void 0, false, {
                                     fileName: "src/components/AboutClass.js",
-                                    lineNumber: 35,
+                                    lineNumber: 36,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "src/components/AboutClass.js",
-                            lineNumber: 30,
+                            lineNumber: 31,
                             columnNumber: 13
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "src/components/AboutClass.js",
-                    lineNumber: 26,
+                    lineNumber: 27,
                     columnNumber: 11
                 }, this)
             ]
         }, void 0, true, {
             fileName: "src/components/AboutClass.js",
-            lineNumber: 21,
+            lineNumber: 22,
             columnNumber: 9
         }, this);
     }
@@ -739,7 +740,7 @@ exports.default = AboutClass;
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../utiles/useGitHubApi.js":"kYohE","./AboutTextClass.js":"81Wk1","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kYohE":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","../utiles/useGitHubApi.js":"kYohE","./AboutTextClass.js":"81Wk1","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./AboutClassShimmer.js":"gqDaP"}],"kYohE":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "useGitHubApi", ()=>useGitHubApi);

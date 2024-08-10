@@ -1,6 +1,7 @@
 import React from "react";
 import { useGitHubApi } from "../utiles/useGitHubApi.js";
 import { AboutTextClass } from "./AboutTextClass.js";
+import { AboutClassShimmer } from "./AboutClassShimmer.js";
 
 
 class AboutClass extends React.Component {

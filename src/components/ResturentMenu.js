@@ -11,9 +11,16 @@ export const ResturentMenu = ()=> {
   const restaurantId = paramId.id;
 
   const menuDetails = useMenuData(restaurantId);
+  
     
   if(menuDetails === null) {
-    return
+    const itemsLen = Array(20).fill(1);
+    return(
+      <div className="py-28 px-52">
+        <div className="bg-gray-100 w-auto h-[120px] rounded-lg mt-9"></div>
+        {itemsLen.map(()=> (<div className="mt-24 bg-gray-100 w-auto h-[200px]"></div>))}
+      </div>
+    )
   }
 
   return(

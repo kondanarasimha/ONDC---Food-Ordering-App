@@ -35832,7 +35832,7 @@ const Body = ()=>{
     if (restaurantsData === undefined || restaurantsData.length === 0) {
         const shimmerLen = Array(20).fill(1);
         return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "body-container",
+            className: "py-32 px-24",
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerCardsJs.ShimmerFilterStrip), {}, void 0, false, {
                     fileName: "src/components/Body.js",
@@ -35840,7 +35840,7 @@ const Body = ()=>{
                     columnNumber: 9
                 }, undefined),
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "card-container",
+                    className: "grid grid-cols-4 justify-items-center gap-4 max-md:grid-cols-2 max-sm:grid-cols-1 max-lg:grid-cols-3",
                     children: shimmerLen.map((data, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerCardsJs.ShimmerCards), {}, index, false, {
                             fileName: "src/components/Body.js",
                             lineNumber: 35,
@@ -36276,35 +36276,35 @@ $parcel$ReactRefreshHelpers$f77b.prelude(module);
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-parcelHelpers.export(exports, "ShimmerCards", ()=>ShimmerCards);
 parcelHelpers.export(exports, "ShimmerFilterStrip", ()=>ShimmerFilterStrip);
+parcelHelpers.export(exports, "ShimmerCards", ()=>ShimmerCards);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-const ShimmerCards = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "shimmer-card-container",
+const ShimmerFilterStrip = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "mb-10 mt-11 max-sm:mb-5 max-sm:mt-4",
         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-            className: "shimmer-img-container"
+            className: "bg-gray-100 h-9 rounded-sm ml-6 mr-6 max-sm:w-[315px] max-sm:-ml-3"
         }, void 0, false, {
             fileName: "src/components/ShimmerCards.js",
             lineNumber: 3,
-            columnNumber: 11
+            columnNumber: 5
         }, undefined)
     }, void 0, false, {
         fileName: "src/components/ShimmerCards.js",
         lineNumber: 2,
-        columnNumber: 9
-    }, undefined);
-_c = ShimmerCards;
-const ShimmerFilterStrip = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "Shimmer-filter-container"
-    }, void 0, false, {
-        fileName: "src/components/ShimmerCards.js",
-        lineNumber: 9,
         columnNumber: 3
     }, undefined);
-_c1 = ShimmerFilterStrip;
+_c = ShimmerFilterStrip;
+const ShimmerCards = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "bg-gray-100 w-[200px] h-[220px] rounded-sm"
+    }, void 0, false, {
+        fileName: "src/components/ShimmerCards.js",
+        lineNumber: 8,
+        columnNumber: 9
+    }, undefined);
+_c1 = ShimmerCards;
 var _c, _c1;
-$RefreshReg$(_c, "ShimmerCards");
-$RefreshReg$(_c1, "ShimmerFilterStrip");
+$RefreshReg$(_c, "ShimmerFilterStrip");
+$RefreshReg$(_c1, "ShimmerCards");
 
   $parcel$ReactRefreshHelpers$f77b.postlude(module);
 } finally {
@@ -40759,7 +40759,32 @@ const ResturentMenu = ()=>{
     const paramId = (0, _reactRouterDom.useParams)();
     const restaurantId = paramId.id;
     const menuDetails = (0, _useMenuDataJs.useMenuData)(restaurantId);
-    if (menuDetails === null) return;
+    if (menuDetails === null) {
+        const itemsLen = Array(20).fill(1);
+        return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+            className: "py-28 px-52",
+            children: [
+                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    className: "bg-gray-100 w-auto h-[120px] rounded-lg mt-9"
+                }, void 0, false, {
+                    fileName: "src/components/ResturentMenu.js",
+                    lineNumber: 20,
+                    columnNumber: 9
+                }, undefined),
+                itemsLen.map(()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                        className: "mt-24 bg-gray-100 w-auto h-[200px]"
+                    }, void 0, false, {
+                        fileName: "src/components/ResturentMenu.js",
+                        lineNumber: 21,
+                        columnNumber: 29
+                    }, undefined))
+            ]
+        }, void 0, true, {
+            fileName: "src/components/ResturentMenu.js",
+            lineNumber: 19,
+            columnNumber: 7
+        }, undefined);
+    }
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "py-28 px-52",
         children: [
@@ -40767,20 +40792,20 @@ const ResturentMenu = ()=>{
                 props: menuDetails
             }, 2, false, {
                 fileName: "src/components/ResturentMenu.js",
-                lineNumber: 21,
+                lineNumber: 28,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _menuItemsJs.MenuItems), {
                 menuItems: menuDetails
             }, 3, false, {
                 fileName: "src/components/ResturentMenu.js",
-                lineNumber: 22,
+                lineNumber: 29,
                 columnNumber: 7
             }, undefined)
         ]
     }, 1, true, {
         fileName: "src/components/ResturentMenu.js",
-        lineNumber: 20,
+        lineNumber: 27,
         columnNumber: 5
     }, undefined);
 };
@@ -41310,9 +41335,10 @@ parcelHelpers.export(exports, "AboutClassShimmer", ()=>AboutClassShimmer);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 const AboutClassShimmer = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-        className: "about-body",
+        className: "py-24 px-24",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                className: "font-semibold text-4xl text-center mb-4 mt-4 max-sm:mt-10",
                 children: "ABOUT"
             }, void 0, false, {
                 fileName: "src/components/AboutClassShimmer.js",
@@ -41320,16 +41346,16 @@ const AboutClassShimmer = ()=>{
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-text-container"
+                className: "bg-gray-100 w-auto h-[200px] rounded-sm"
             }, void 0, false, {
                 fileName: "src/components/AboutClassShimmer.js",
                 lineNumber: 5,
                 columnNumber: 5
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                className: "shimmer-profile-container",
+                className: "mt-10 flex justify-center items-center",
                 children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    className: "shimmer-profile-data"
+                    className: "bg-gray-100 w-[400px] h-[200px] rounded-sm"
                 }, void 0, false, {
                     fileName: "src/components/AboutClassShimmer.js",
                     lineNumber: 7,
