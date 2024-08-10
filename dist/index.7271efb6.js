@@ -40626,9 +40626,16 @@ const CartEmpty = ()=>{
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "max-sm:mt-5",
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                className: "text-center mb-2 text-2xl",
-                children: "Your cart is empty"
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                className: "flex justify-center items-center",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                    className: "mb-2 text-2xl text-center text-nowrap",
+                    children: "Your cart is empty"
+                }, void 0, false, {
+                    fileName: "src/components/CartEmpty.js",
+                    lineNumber: 7,
+                    columnNumber: 7
+                }, undefined)
             }, void 0, false, {
                 fileName: "src/components/CartEmpty.js",
                 lineNumber: 6,
@@ -40640,26 +40647,26 @@ const CartEmpty = ()=>{
                     children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
                         to: "/",
                         children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                            className: "align-middle text-xl font-semibold bg-orange-400 text-white w-80 h-8 rounded-md active:opacity-95",
+                            className: "align-middle text-xl font-semibold bg-orange-400 text-white w-80 h-8 rounded-md active:opacity-95 max-sm:text-nowrap",
                             children: "See restaurants near you"
                         }, void 0, false, {
                             fileName: "src/components/CartEmpty.js",
-                            lineNumber: 9,
+                            lineNumber: 11,
                             columnNumber: 21
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/CartEmpty.js",
-                        lineNumber: 9,
+                        lineNumber: 11,
                         columnNumber: 7
                     }, undefined)
                 }, void 0, false, {
                     fileName: "src/components/CartEmpty.js",
-                    lineNumber: 8,
+                    lineNumber: 10,
                     columnNumber: 7
                 }, undefined)
             }, void 0, false, {
                 fileName: "src/components/CartEmpty.js",
-                lineNumber: 7,
+                lineNumber: 9,
                 columnNumber: 7
             }, undefined)
         ]
@@ -40771,12 +40778,12 @@ const ResturentMenu = ()=>{
                     lineNumber: 20,
                     columnNumber: 9
                 }, undefined),
-                itemsLen.map(()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                itemsLen.map((data, index)=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
                         className: "mt-24 bg-gray-100 w-auto h-[200px]"
-                    }, void 0, false, {
+                    }, index, false, {
                         fileName: "src/components/ResturentMenu.js",
                         lineNumber: 21,
-                        columnNumber: 29
+                        columnNumber: 39
                     }, undefined))
             ]
         }, void 0, true, {

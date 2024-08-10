@@ -18,7 +18,7 @@ export const ResturentMenu = ()=> {
     return(
       <div className="py-28 px-52">
         <div className="bg-gray-100 w-auto h-[120px] rounded-lg mt-9"></div>
-        {itemsLen.map(()=> (<div className="mt-24 bg-gray-100 w-auto h-[200px]"></div>))}
+        {itemsLen.map((data,index)=> (<div className="mt-24 bg-gray-100 w-auto h-[200px]" key={index}></div>))}
       </div>
     )
   }

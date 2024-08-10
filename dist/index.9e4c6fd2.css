@@ -412,6 +412,10 @@ img, video {
   margin-top: 2.25rem;
 }
 
+.mr-10 {
+  margin-right: 2.5rem;
+}
+
 .block {
   display: block;
 }
@@ -978,6 +982,18 @@ img, video {
     margin-top: 1.25rem;
   }
 
+  .max-sm\:ml-4 {
+    margin-left: 1rem;
+  }
+
+  .max-sm\:mr-4 {
+    margin-right: 1rem;
+  }
+
+  .max-sm\:mr-9 {
+    margin-right: 2.25rem;
+  }
+
   .max-sm\:grid {
     display: grid;
   }
@@ -1042,6 +1058,10 @@ img, video {
     padding-right: 11rem;
   }
 
+  .max-sm\:text-center {
+    text-align: center;
+  }
+
   .max-sm\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
@@ -1055,6 +1075,11 @@ img, video {
   .max-sm\:text-xs {
     font-size: .75rem;
     line-height: 1rem;
+  }
+
+  .max-sm\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
   }
 
   .max-sm\:font-semibold {
