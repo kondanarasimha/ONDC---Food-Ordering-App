@@ -636,7 +636,7 @@ class AboutClass extends (0, _reactDefault.default).Component {
             className: "py-24 px-24",
             children: [
                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                    className: "font-semibold text-4xl text-center mb-4 mt-4",
+                    className: "font-semibold text-4xl text-center mb-4 mt-4 max-sm:mt-10",
                     children: "ABOUT"
                 }, void 0, false, {
                     fileName: "src/components/AboutClass.js",
@@ -669,7 +669,7 @@ class AboutClass extends (0, _reactDefault.default).Component {
                             className: "mt-1",
                             children: [
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                                    className: "text-3xl font-semibold text-gray-400 mb-1",
+                                    className: "text-3xl font-semibold text-gray-400 mb-1 max-sm:text-sm",
                                     children: "DEVELOPED BY"
                                 }, void 0, false, {
                                     fileName: "src/components/AboutClass.js",
@@ -677,7 +677,7 @@ class AboutClass extends (0, _reactDefault.default).Component {
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h3", {
-                                    className: "text-2xl mb-0.5 font-bold",
+                                    className: "text-2xl mb-0.5 font-bold max-sm:text-sm",
                                     children: this.state.profileData.name
                                 }, void 0, false, {
                                     fileName: "src/components/AboutClass.js",
@@ -685,7 +685,7 @@ class AboutClass extends (0, _reactDefault.default).Component {
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h4", {
-                                    className: "text-1xl mb-0.5",
+                                    className: "text-1xl mb-0.5 max-sm:text-sm",
                                     children: this.state.profileData.bio
                                 }, void 0, false, {
                                     fileName: "src/components/AboutClass.js",
@@ -693,13 +693,23 @@ class AboutClass extends (0, _reactDefault.default).Component {
                                     columnNumber: 15
                                 }, this),
                                 /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
-                                    className: "font-bold underline",
+                                    className: "font-bold underline block max-sm:text-sm",
                                     href: this.state.profileData.html_url,
                                     target: "_blank",
                                     children: "GITHUB"
                                 }, void 0, false, {
                                     fileName: "src/components/AboutClass.js",
                                     lineNumber: 34,
+                                    columnNumber: 15
+                                }, this),
+                                /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("a", {
+                                    className: "font-bold underline block max-sm:text-sm",
+                                    href: `https://in.linkedin.com/in/konda-narasimha-29a905250`,
+                                    target: "_blank",
+                                    children: "LINKEDIN"
+                                }, void 0, false, {
+                                    fileName: "src/components/AboutClass.js",
+                                    lineNumber: 35,
                                     columnNumber: 15
                                 }, this)
                             ]

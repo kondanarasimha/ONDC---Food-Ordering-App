@@ -8,7 +8,7 @@ export const MenuItems = (props)=> {
   
   return(
     <div className="mt-4">
-      <h4 className="text-xl text-gray-600 text-center mb-5">- Menu -</h4>
+      <h4 className="text-xl text-gray-600 text-center mb-5 max-sm:text-lg text-nowrap">- Menu -</h4>
 
       {itemsCategoryData.map((itemCategory,i)=> {
         return(<ItemCategory key={i} data={itemCategory?.card?.card} 

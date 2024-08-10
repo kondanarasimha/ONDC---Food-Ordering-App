@@ -2,7 +2,7 @@ import { Link } from "react-router-dom"
 
 export const CartEmpty = ()=> {
   return(
-    <div>
+    <div className="max-sm:mt-5">
       <h1 className="text-center mb-2 text-2xl">Your cart is empty</h1>
       <div>
       <div className="flex p-1 rounded-sm justify-center">
